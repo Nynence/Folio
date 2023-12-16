@@ -8,6 +8,15 @@
     src:url(./fonts/CircularSp-Bold-79ebb2bdea919cebedea4884d08c499e.woff)
 }
 
+
+
+h2{
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: cbold;
+    color: white;
+    letter-spacing: -1px;
+}
 body{
     display: flex;
     background-color: black;
@@ -89,10 +98,10 @@ body{
 /* Styling the sidebar */
 .sidebar {
     width: 400px; /* Initial width */
-    height: 89vh; /* Set as needed */
     position: relative;
     overflow: hidden;
     border-radius: 0 0 8px 8px;
+    flex: 0 0 auto;
 }
 
 .sidebar ul li{
@@ -116,21 +125,29 @@ body{
 .home-page {
     border-radius: 8px;
     margin-left: 8px;
-    flex: 1;
+    flex: 1 1 auto;
     background-color: #121212;
-    display: block;
     overflow: hidden;
     justify-content: flex-end;
-    height: 89vh;
+    align-items: top;
+}
+
+
+.container {
+    display: flex;
+    height: 90vh; /* Adjust as needed */
+    flex: 1;
+
 }
 
 .custom-scroll {
     /* Set a fixed height to allow scrolling */
-    height: calc(100% - 40px); /* Adjust as needed */
+    max-height: 60vh;    
     overflow-y: auto; /* Allow vertical scrollbar if needed */
     position: relative;
     background-color: #121212;
     padding-right: 10px; /* Add padding for scrollbar */
+    margin-left: 30px;
 }
  
  /* For WebKit (Safari/Chrome) */
