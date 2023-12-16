@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rishab Kiran</title>
+	<link rel="stylesheet" href="home.css">
+	<!--Font Family - Spotify Circular-->
+	<link href="https://encore.scdn.co/fonts/CircularSp-Book-4eaffdf96f4c6f984686e93d5d9cb325.woff2" rel="preload" type="font/woff2">
+	<link href="https://encore.scdn.co/fonts/CircularSp-Bold-fe1cfc14b7498b187c78fa72fb72d148.woff2" rel="preload" type="font/woff2">
+	<link href="https://encore.scdn.co/fonts/CircularSpTitle-Bold-2fbf72b606d7f0b0f771ea4956a8b4d6.woff2" rel="preload" type="font/woff2">
+	<link href="https://encore.scdn.co/fonts/CircularSpTitle-Black-3f9afb402080d53345ca1850226ca724.woff2" rel="preload" type="font/woff2">
+	<link href="https://open.spotifycdn.com/cdn/fonts/spoticon_regular_2.d728648c.woff2" rel="preload" type="font/woff2">
+	<!-- favicon -->
+	<link rel="shortcut icon" href="" type="image/x-icon">
+
+</head>
+<body>
+	<div class="sidebar" id="sidebar">
+		<!-- top navigation -->
+		<div class="navigation">
+				<ul class="navpadding">
+					<li class="paddinghome">
+						<!-- page logo on side bare -->
+						<a href="">
+							<img  class="logo" src="./Images/Spotify-Logo.png" alt="logo">
+						</a>	
+					</li>
+					<li class="paddinghome">
+						<a href="" class="home">
+							<svg data-encore-id="icon" role="img" aria-hidden="true" class="home-active" viewBox="0 0 24 24">
+								<path d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"></path>
+							</svg>
+							<span>Home</span>
+						</a>
+					</li>
+					<li>
+						<a href="" class="search">
+							<svg data-encore-id="icon" role="img" aria-hidden="true" class="search-inactive" viewBox="0 0 24 24">
+								<path d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"></path>
+							</svg>
+							<span>Search</span>
+						</a>
+					</li>
+				</ul>
+		
+		</div>
+		<div class="resize-handle" id="resizeHandle"></div>
+		<!-- bottom navigation -->
+		<div class="bottomnav">
+			
+		</div>
+	</div>
+	<!-- rightside -->
+	<section class="home-page">
+		<div class="sticky-top-bar">
+			<!-- Sticky content -->
+			<div class="backforward">
+				<button class="back" onclick="goBack()" title="Go back">
+					<svg data-encore-id="icon" role="img" aria-hidden="true" class="backarrow" viewBox="0 0 16 16">
+						<path d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"></path>
+					</svg>
+				</button>
+				<button class="forward" onclick="goForward()" title="Go forward">
+					<svg data-encore-id="icon" role="img" aria-hidden="true" class="forwardarrow" viewBox="0 0 16 16">
+						<path d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z"></path>
+					</svg>
+				</button>
+
+
+			</div>		
+			
+			<a href="index.html"> hi</a>
+			
+		
+		</div>
+		
+		<div class="custom-scroll">
+			
+        <span class="ButtonInner-sc-14ud5tc-0 hBkswG encore-over-media-set">
+           				hi This code will calculate the scrollDelta based on e.deltaY and a sensitivity factor (scrollStep). Then it ensures that the scrollTop property stays within the scrollable range by using Math.max and Math.min.Replace your hi bye existing scrollHandler function with this revised version in your JavaScript, and let's see if this adjustment resolves the issue.
+
+        </span>
+   
+		</div>
+	</section>
+
+	<!-- javascrips -->
+	<script src="resize.js"></script>
+	<script src="backforward.js"></script>
+
+
+</body>
+

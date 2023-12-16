@@ -1,0 +1,252 @@
+@font-face{
+    font-family: CBook; 
+    src:url(./fonts/CircularSp-Book-4f217aebee53ffc72f4444f79041ffa5.woff)
+}
+
+@font-face{
+    font-family: CBold; 
+    src:url(./fonts/CircularSp-Bold-79ebb2bdea919cebedea4884d08c499e.woff)
+}
+
+body{
+    display: flex;
+    background-color: black;
+}
+
+.home {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    margin-block: 0px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: cbold;
+    color: white;
+    text-decoration: none;
+}
+
+.search{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    margin-block: 0px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: cbold;
+    color: rgb(206, 206, 206);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.search:hover{
+    color: white;
+}
+ 
+.logo{
+    width: 6em;
+}
+
+.navigation{
+    background-color: #121212;
+    border-radius: 8px;  
+}
+
+.bottomnav{
+    background-color: #121212;
+    border-radius: 8px; 
+    margin-top: 8px;  
+    height: 73vh; /* Subtracting the top navigation's height from the viewport height */
+    /* Add some content or text to make it visible */
+    /* For example: */
+    color: white;
+}
+
+.home-active{
+    color: inherit;
+}
+
+.search-inactive{
+    color: inherit;
+}
+
+
+.navigation li{
+    padding: 10px 12px;
+}
+
+.navpadding{
+    margin: 0px;
+    padding: 12px 12px;
+}
+
+.navigation .navpadding li a svg {
+    vertical-align: middle; /* Align the SVG vertically with the text */
+    width: 1.5em; /* Set the width relative to the font size */
+    height: 1.5em; /* Set the height relative to the font size */
+    fill: currentColor; /* Makes the SVG inherit the text color */
+    margin-right: 15px; /* Adjust the spacing between the SVG and text */
+    margin-top: -4px;
+}
+
+/* Styling the sidebar */
+.sidebar {
+    width: 400px; /* Initial width */
+    height: 89vh; /* Set as needed */
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 8px 8px;
+}
+
+.sidebar ul li{
+    list-style: none
+}
+
+/* Styling the resize handle */
+.resize-handle {
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -10px; /* Adjusted to create space from the edge */
+    padding: 0 5px; /* Padding to avoid overlapping with rounded corners */
+    cursor: ew-resize; /* Cursor type for resizing */
+    background-color: transparent;
+    z-index: 1; /* Ensure the handle is above other elements */
+}
+
+
+.home-page {
+    border-radius: 8px;
+    margin-left: 8px;
+    flex: 1;
+    background-color: #121212;
+    display: block;
+    overflow: hidden;
+    justify-content: flex-end;
+    height: 89vh;
+}
+
+.custom-scroll {
+    /* Set a fixed height to allow scrolling */
+    height: calc(100% - 40px); /* Adjust as needed */
+    overflow-y: auto; /* Allow vertical scrollbar if needed */
+    position: relative;
+    background-color: #121212;
+    padding-right: 10px; /* Add padding for scrollbar */
+}
+ 
+ /* For WebKit (Safari/Chrome) */
+ .custom-scroll::-webkit-scrollbar {
+     width: 10px; /* Width of the scrollbar */
+ }
+ 
+ /* For WebKit (Safari/Chrome) - Track */
+ .custom-scroll::-webkit-scrollbar-track {
+     background-color: transparent; /* Transparent background */
+ }
+ 
+ /* For WebKit (Safari/Chrome) - Handle */
+ .custom-scroll::-webkit-scrollbar-thumb {
+     background-color: rgba(128, 128, 128, 0.699); /* Color of the scrollbar */
+     border-radius: 0px; /* Rounded corners for the scrollbar */
+     
+ }
+    
+
+.sticky-top-bar {
+    height: auto;
+    top: 0;
+    background-color: #121212;
+    /* Other styles for the sticky bar */
+    padding: 20px 20px 20px 25px;
+}
+
+
+.backforward {
+    display: flex;
+    gap: 8px;
+}
+
+.back{
+  
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        background-color: rgba(0,0,0,.7);
+        border: none;
+        border-radius: 50%;
+        color: #fff;
+        cursor: pointer;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        height: 32px;
+        justify-content: center;
+        position: relative;
+        width: 32px;
+    
+}
+
+.forward{
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: rgba(0,0,0,.7);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    height: 32px;
+    justify-content: center;
+    position: relative;
+    width: 32px;
+}
+
+.backarrow{
+    fill: currentcolor;
+    width: var(--encore-graphic-size-decorative-smaller,16px);
+    height: var(--encore-graphic-size-decorative-smaller,16px);
+    opacity: .6;
+}
+
+.forwardarrow{
+    fill: currentcolor;
+    width: var(--encore-graphic-size-decorative-smaller,16px);
+    height: var(--encore-graphic-size-decorative-smaller,16px);
+    opacity: .6;
+}
+
+/* Opacity settings for arrows */
+.backarrow, .forwardarrow {
+    opacity: 0.6;
+}
+
+/* Disable pointer events and change cursor for disabled buttons */
+.back.disabled, .forward.disabled {
+    cursor: not-allowed;
+}
+
+/* Increase opacity when navigating is possible */
+.back:not(.disabled) .backarrow, .forward:not(.disabled) .forwardarrow {
+    opacity: 1;
+}
+
+/* Tooltip on hover for enabled buttons */
+.back:not(.disabled):hover::after, .forward:not(.disabled):hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 4px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+}
