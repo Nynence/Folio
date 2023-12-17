@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     let isResizing = false;
     let initialX = 0;
-    let sidebarWidth = 400; // Initial sidebar width
+    let sidebarWidth = 360; // Initial sidebar width
     const minSidebarWidth = 220; // Set your minimum sidebar width here
     const maxSidebarWidth = window.innerWidth * 0.7; // Set max width to 70% of viewport
 

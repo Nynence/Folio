@@ -115,7 +115,7 @@ body{
 
 /* Styling the sidebar */
 .sidebar {
-    width: 400px; /* Initial width */
+    width: 360px; /* Initial width */
     position: relative;
     overflow: hidden;
     border-radius: 0 0 8px 8px;
@@ -161,7 +161,7 @@ body{
 
 .custom-scroll {
     /* Set a fixed height to allow scrolling */
-    max-height: 60vh;    
+    max-height: 90%;    
     overflow-y: auto; /* Allow vertical scrollbar if needed */
     position: relative;
     background-color: #121212;
@@ -293,22 +293,27 @@ body{
     padding: 20px 30px;
 }
 
-.projects .list{
-    display: flex;
-    gap: 20px;
-    overflow: hidden;
+.projects .list {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 30px; /* Set the gap between grid items */
+    justify-content: space-around; /* Adjust alignment if needed */
+    width: 100%; /* Ensure the grid fills the width of its container */
 }
 
-.projects .list .item{
-    min-width: 150px;
-    width: 160px;
+.projects .list .item {
     padding: 15px;
     background-color: #181818;
     border-radius: 6px;
     cursor: pointer;
-    transition: all ease 0.4s;    
-    height: 250px;
+    transition: all ease 0.4s;
+    width: calc(100% - 20px); /* Set width minus the gap to maintain consistent gaps */
+    max-width: 160px; /* Set maximum width for the item */
+
 }
+
+
 
 .projects .list .item:hover{
     background-color: #252525;
