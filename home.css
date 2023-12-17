@@ -18,27 +18,92 @@
     src:url(./fonts/CircularStd-Light.otf)
 }
 
+:root {
+    --bg-color: #000000; /* Background color */
+    /* section */
+    --sec-color: #121212;
+    /* base white text */
+    --t1-color: #ffffff; /* Text color */
+    /* text hover colors */
+    --t2-color: rgb(206, 206, 206);
+    /* card subtext */
+    
+    --t3-color: #919191;
+    /* custom scroll */
+    --scroll-color: rgba(128, 128, 128, 0.699);
+    /* cards */
+    --c-color: #181818;
+    --c2-color: #252525;
+    --arrow-color: rgba(0,0,0,.7);
+    --accent-color: #1ed760 ;
+
+}
 
 h2{
     font-size: 2rem;
     font-weight: 800;
     font-family: cbold;
-    color: white;
+    color: var(--t1-color);
     letter-spacing: -1px;
 }
 
 h3{
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 100;
     font-family: cmed;
-    color: white;
+    color: var(--t1-color);
     letter-spacing: 0px;
 }
 
-body{
+/* Define your color variables for dark mode */
+
+/* Apply the default dark mode colors */
+body {
     display: flex;
-    background-color: black;
+    background-color: var(--bg-color);
+    color: var(--t1-color);
+
+
 }
+
+/* Define styles for light mode using the opposite colors */
+body.light-mode {
+    --bg-color: #D7D7D7; /* Background color */
+    --t1-color: #000000; /* Text color */
+    --t2-color: rgb(85, 85, 85);
+    --t3-color: #050505;
+
+
+    --sec-color: #eeeeee;
+    --scroll-color: rgb(54, 54, 54);
+    --c-color: #e7e7e7;
+    --c2-color: #ffffff;
+    --arrow-color: rgba(211, 211, 211, 0.7);
+
+}
+
+/* Update your styles for light mode using inverted colors */
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode p {
+    /* Inverted text styles */
+    color: var(--t1-color);
+}
+
+body.light-mode svg path {
+    /* Inverted SVG color */
+    filter: invert(1);
+}
+
+body.light-mode svg:not(.projects .list .item .play svg) {
+    filter: invert(100%);
+}
+
+
+
+/* Your existing dark mode styles */
+/* Define your dark mode styles here */
+
 
 .home {
     box-sizing: border-box;
@@ -47,7 +112,7 @@ body{
     font-size: 1rem;
     font-weight: 600;
     font-family: cbold;
-    color: white;
+    color: var(--t1-color);
     text-decoration: none;
 }
 
@@ -58,13 +123,13 @@ body{
     font-size: 1rem;
     font-weight: 600;
     font-family: cbold;
-    color: rgb(206, 206, 206);
+    color: var(--t2-color);
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 }
 
 .search:hover{
-    color: white;
+    color: var(--t1-color);
 }
  
 .logo{
@@ -72,18 +137,18 @@ body{
 }
 
 .navigation{
-    background-color: #121212;
+    background-color: var(--sec-color);
     border-radius: 8px;  
 }
 
 .bottomnav{
-    background-color: #121212;
+    background-color: var(--sec-color);
     border-radius: 8px; 
     margin-top: 8px;  
     height: 73vh; /* Subtracting the top navigation's height from the viewport height */
     /* Add some content or text to make it visible */
     /* For example: */
-    color: white;
+    /* color: white; */
 }
 
 .home-active{
@@ -115,7 +180,7 @@ body{
 
 /* Styling the sidebar */
 .sidebar {
-    width: 360px; /* Initial width */
+    width: 400px; /* Initial width */
     position: relative;
     overflow: hidden;
     border-radius: 0 0 8px 8px;
@@ -134,7 +199,8 @@ body{
     top: 0;
     right: -10px; /* Adjusted to create space from the edge */
     padding: 0 5px; /* Padding to avoid overlapping with rounded corners */
-    cursor: ew-resize; /* Cursor type for resizing */
+    cursor: col-resize; /* Cursor type for resizing */
+    
     background-color: transparent;
     z-index: 1; /* Ensure the handle is above other elements */
 }
@@ -144,7 +210,7 @@ body{
     border-radius: 8px;
     margin-left: 8px;
     flex: 1 1 auto;
-    background-color: #121212;
+    background-color: var(--sec-color);
     overflow: hidden;
     justify-content: flex-end;
     align-items: top;
@@ -164,7 +230,7 @@ body{
     max-height: 90%;    
     overflow-y: auto; /* Allow vertical scrollbar if needed */
     position: relative;
-    background-color: #121212;
+    background-color: var(--sec-color);
     padding-right: 10px; /* Add padding for scrollbar */
 }
  
@@ -180,7 +246,7 @@ body{
  
  /* For WebKit (Safari/Chrome) - Handle */
  .custom-scroll::-webkit-scrollbar-thumb {
-     background-color: rgba(128, 128, 128, 0.699); /* Color of the scrollbar */
+     background-color: var(--t2-color); /* Color of the scrollbar */
      border-radius: 0px; /* Rounded corners for the scrollbar */
      
  }
@@ -189,7 +255,7 @@ body{
 .sticky-top-bar {
     height: auto;
     top: 0;
-    background-color: #121212;
+    background-color: var(--sec-color);
     /* Other styles for the sticky bar */
     padding: 20px 20px 20px 25px;
 }
@@ -207,7 +273,7 @@ body{
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        background-color: rgba(0,0,0,.7);
+        background-color: var(--arrow-color);
         border: none;
         border-radius: 50%;
         color: #fff;
@@ -228,7 +294,7 @@ body{
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: rgba(0,0,0,.7);
+    background-color: var(--arrow-color);
     border: none;
     border-radius: 50%;
     color: #fff;
@@ -297,33 +363,38 @@ body{
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 30px; /* Set the gap between grid items */
+    grid-row-gap: 15px;
+    grid-column-gap: 30px;
+
     justify-content: space-around; /* Adjust alignment if needed */
     width: 100%; /* Ensure the grid fills the width of its container */
 }
 
 .projects .list .item {
-    padding: 15px;
-    background-color: #181818;
+    padding: 15px 15px 0px 15px;
+    background-color: var(--c-color);
     border-radius: 6px;
     cursor: pointer;
     transition: all ease 0.4s;
-    width: calc(100% - 20px); /* Set width minus the gap to maintain consistent gaps */
+    width: calc(100% - 30px); /* Set width minus the gap to maintain consistent gaps */
     max-width: 160px; /* Set maximum width for the item */
+    height: calc(100% - 12%);
 
 }
 
 
 
 .projects .list .item:hover{
-    background-color: #252525;
+    background-color: var(--c2-color);
 
 }
 
 .projects .list .item img{
     width: 100%;
     border-radius: 6px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0 8px 24px rgba(0,0,0,.5);
+    box-shadow: 0 8px 24px rgba(0,0,0,.5);
 }
 
 
@@ -335,13 +406,15 @@ body{
 .projects .list .item svg{
     position: absolute;
     right: 10px;
-    top: -60px;
+    top: -70px;
     padding: 12px;
     fill: #000000;
-    background-color: #1ed760;
+    background-color: var(--accent-color);
     border-radius: 100%;
     opacity: 0;
     transition: all ease 0.4s;
+    -webkit-box-shadow: 0 8px 8px rgba(0,0,0,.3);
+    box-shadow: 0 8px 8px rgba(0,0,0,.3);
 }
 
 .projects .list .item:hover .play svg{
@@ -350,10 +423,14 @@ body{
 
 }
 
-
 .projects .list .item .play svg:hover{
-    background-color: #19e05e;
-    scale: 1.05;
+    transition: transform 0.4s ease-in-out; /* Transition for transform */
+    filter: brightness(1.02);
+    scale: 1.04;
+}
+.projects .list .item .play svg:hover:not(:focus){
+    transition: none; /* Remove the transition for filter */
+    filter: brightness(1.02);
 }
 
 .projects .list .item h3{
@@ -364,8 +441,10 @@ body{
 .projects .list .item p{
     position: relative;
     top: -28px;
-    font-size: 0.8rem;
-    font-weight: 800;
+    font-size: 0.88rem;
+    font-weight: 500;
     font-family: cbook;
-    color: #6a6a6a;
+    color: var(--t3-color);
 }
+
+

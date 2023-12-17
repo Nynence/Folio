@@ -4,9 +4,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     let isResizing = false;
     let initialX = 0;
-    let sidebarWidth = 360; // Initial sidebar width
-    const minSidebarWidth = 220; // Set your minimum sidebar width here
-    const maxSidebarWidth = window.innerWidth * 0.7; // Set max width to 70% of viewport
+
+    // Retrieve stored sidebarWidth from localStorage or set initial width
+    let sidebarWidth = localStorage.getItem('sidebarWidth') || '400px';
+    sidebar.style.width = sidebarWidth; // Apply stored width or initial width
 
     resizeHandle.addEventListener('mousedown', function (e) {
         isResizing = true;
@@ -17,7 +18,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
         if (!isResizing) return;
 
         const movementX = e.clientX - initialX;
-        sidebarWidth += movementX;
+        sidebarWidth = parseInt(sidebarWidth) + movementX;
+
+        // Set minimum and maximum width
+        const minSidebarWidth = 300;
+        const maxSidebarWidth = window.innerWidth * 0.75;
 
         // Check if the width goes below the minimum width
         if (sidebarWidth >= minSidebarWidth && sidebarWidth <= maxSidebarWidth) {
@@ -36,5 +41,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     document.addEventListener('mouseup', function (e) {
         isResizing = false;
+        // Store the updated sidebar width in localStorage
+        localStorage.setItem('sidebarWidth', sidebar.style.width);
     });
 });
