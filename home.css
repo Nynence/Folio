@@ -37,6 +37,10 @@
     --arrow-color: rgba(0,0,0,.7);
     --accent-color: #1ed760 ;
 
+    --transition-speed: 0.7s; /* Define transition speed */
+
+
+
 }
 
 h2{
@@ -62,6 +66,9 @@ body {
     display: flex;
     background-color: var(--bg-color);
     color: var(--t1-color);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+
+
 
 
 }
@@ -79,7 +86,10 @@ body.light-mode {
     --c-color: #e7e7e7;
     --c2-color: #ffffff;
     --arrow-color: rgba(211, 211, 211, 0.7);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
 
+
+    
 }
 
 /* Update your styles for light mode using inverted colors */
@@ -88,15 +98,22 @@ body.light-mode h3,
 body.light-mode p {
     /* Inverted text styles */
     color: var(--t1-color);
+    color: var(--t1-color);
+    transition: color var(--transition-speed);
 }
 
 body.light-mode svg path {
     /* Inverted SVG color */
     filter: invert(1);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+
 }
 
 body.light-mode svg:not(.projects .list .item .play svg) {
     filter: invert(100%);
+
+    transition: filter var(--transition-speed);
+
 }
 
 
@@ -212,8 +229,8 @@ body.light-mode svg:not(.projects .list .item .play svg) {
     flex: 1 1 auto;
     background-color: var(--sec-color);
     overflow: hidden;
-    justify-content: flex-end;
-    align-items: top;
+    display: flex; /* Allow flex children to fill available space */
+    flex-direction: column; /* Stack the child elements vertically */
 }
 
 
@@ -226,14 +243,13 @@ body.light-mode svg:not(.projects .list .item .play svg) {
 }
 
 .custom-scroll {
-    /* Set a fixed height to allow scrolling */
-    max-height: 90%;    
-    overflow-y: auto; /* Allow vertical scrollbar if needed */
+    /* Remove max-height to allow the component to auto-adjust */
+    overflow-y: auto;
+    flex: 1; /* Fill available vertical space */
     position: relative;
     background-color: var(--sec-color);
-    padding-right: 10px; /* Add padding for scrollbar */
+    padding-right: 10px;
 }
- 
  /* For WebKit (Safari/Chrome) */
  .custom-scroll::-webkit-scrollbar {
      width: 10px; /* Width of the scrollbar */
@@ -337,20 +353,37 @@ body.light-mode svg:not(.projects .list .item .play svg) {
     opacity: 1;
 }
 
-/* Tooltip on hover for enabled buttons */
-.back:not(.disabled):hover::after, .forward:not(.disabled):hover::after {
+
+
+.back:not(.disabled):after, .forward:not(.disabled):after {
     content: attr(title);
     position: absolute;
-    bottom: -20px;
+    bottom: -38px;
     left: 50%;
+    font-family: cbook;
+    font-weight: 400;
+    letter-spacing: 0px;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgb(66, 66, 66);
     color: #fff;
-    padding: 4px;
+    padding: 5px 10px 7px 10px;
     border-radius: 4px;
-    font-size: 12px;
+    font-size: 0.8rem;
     white-space: nowrap;
+    -webkit-box-shadow: 0 7px 10px rgba(0,0,0,.3);
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.4s, transform 0.4s ease; /* Add opacity transition */
+    transition-delay: 0.3s; /* Delay the transition by 0.2s */
+
 }
+
+.back:not(.disabled):hover::after, .forward:not(.disabled):hover::after {
+
+    opacity: 1; /* Fade in on hover */
+}
+
+
 
 
 /* grid for playlists */
@@ -448,3 +481,14 @@ body.light-mode svg:not(.projects .list .item .play svg) {
 }
 
 
+/* Other styles */
+
+#colorDisplay {
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+}
+
+/* Additional styles for the color picker */
