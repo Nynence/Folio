@@ -75,16 +75,16 @@ body {
 
 /* Define styles for light mode using the opposite colors */
 body.light-mode {
-    --bg-color: #D7D7D7; /* Background color */
+    --bg-color: #ffffff; /* Background color */
     --t1-color: #000000; /* Text color */
     --t2-color: rgb(85, 85, 85);
     --t3-color: #050505;
 
 
     --sec-color: #eeeeee;
-    --scroll-color: rgb(54, 54, 54);
-    --c-color: #e7e7e7;
-    --c2-color: #ffffff;
+    --scroll-color: rgb(219, 219, 219);
+    --c-color: white;
+    --c2-color: #e7e7e7;
     --arrow-color: rgba(211, 211, 211, 0.7);
     transition: background-color var(--transition-speed), color var(--transition-speed);
 
@@ -262,19 +262,99 @@ body.light-mode svg:not(.projects .list .item .play svg) {
  
  /* For WebKit (Safari/Chrome) - Handle */
  .custom-scroll::-webkit-scrollbar-thumb {
-     background-color: var(--t2-color); /* Color of the scrollbar */
+     background-color: var(--scroll-color); /* Color of the scrollbar */
      border-radius: 0px; /* Rounded corners for the scrollbar */
      
  }
     
 
 .sticky-top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: auto;
     top: 0;
     background-color: var(--sec-color);
     /* Other styles for the sticky bar */
     padding: 20px 20px 20px 25px;
+    
 }
+
+
+
+.color-picker-container {
+    position: relative;
+}
+
+#colorSwatch {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    cursor: pointer;
+}
+
+.colourbtns{
+
+    display: flex; /* To make buttons align horizontally */
+    gap: 10px;
+}
+
+/* Hide the input checkbox */
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+
+}
+
+.toggle-switch {
+    display: flex;
+    align-items: center;
+    width: 70px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #ddd;
+    position: relative;
+    cursor: pointer;
+    padding: 2px;
+
+}
+
+.toggle-switch input:checked + .moon {
+    transform: translateX(40px);
+
+
+
+}
+
+.toggle-switch .moon,
+.toggle-switch .sun {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    padding: 2px;
+    box-sizing: content-box;
+    
+}
+
+
+
+.toggle-switch .moon {
+    background-color: #000;
+    left: 2px;
+    transform: translateX(0); /* Initially hide the moon on the left */
+}
+
+
+
 
 
 .backforward {
