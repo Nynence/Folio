@@ -35,4 +35,5 @@ accentColorPicker.addEventListener('input', (event) => {
 });
 
 
+// change icon based on contrast ratio:
 

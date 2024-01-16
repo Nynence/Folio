@@ -284,6 +284,8 @@ body.light-mode svg:not(.projects .list .item .play svg) {
 
 .color-picker-container {
     position: relative;
+    display: inline-block; /* To make sure the SVG overlay stays within the container */
+
 }
 
 #colorSwatch {
@@ -292,6 +294,18 @@ body.light-mode svg:not(.projects .list .item .play svg) {
     border-radius: 50%;
     background-color: var(--accent-color);
     cursor: pointer;
+}
+
+.svg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Ensure the overlay does not interfere with button clicks */
+}
+
+#svgOverlay svg path{
+    fill: var(--svg-fill-color, white);
+    ; /* Example: Set the fill color of the SVG to white */
 }
 
 .colourbtns{
