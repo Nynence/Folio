@@ -102,20 +102,19 @@ body.light-mode p {
     transition: color var(--transition-speed);
 }
 
-body.light-mode svg path {
-    /* Inverted SVG color */
+/* body.light-mode svg path {
     filter: invert(1);
     transition: background-color var(--transition-speed), color var(--transition-speed);
 
-}
+} */
 
-body.light-mode svg:not(.projects .list .item .play svg) {
+
+/* body.light-mode svg:not(.projects .list .item .play svg) {
     filter: invert(100%);
 
     transition: filter var(--transition-speed);
 
-}
-
+} */
 
 
 /* Your existing dark mode styles */
@@ -281,21 +280,27 @@ body.light-mode svg:not(.projects .list .item .play svg) {
 }
 
 
+.colored-path {
+    fill: var(--svg-fill-color, white);
+  }
 
 .color-picker-container {
     position: relative;
     display: inline-block; /* To make sure the SVG overlay stays within the container */
+    
 
 }
-
 #colorSwatch {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     background-color: var(--accent-color);
     cursor: pointer;
-}
-
+    scale: 0.80;
+    border: 8px solid #000000a4; /* Add a 20px black border */
+    margin-top: -px;
+  }
+  
 .svg-overlay {
     position: absolute;
     top: 0;
@@ -312,6 +317,7 @@ body.light-mode svg:not(.projects .list .item .play svg) {
 
     display: flex; /* To make buttons align horizontally */
     gap: 10px;
+    
 }
 
 /* Hide the input checkbox */
@@ -535,7 +541,7 @@ body.light-mode svg:not(.projects .list .item .play svg) {
     right: 10px;
     top: -70px;
     padding: 12px;
-    fill: #000000;
+    fill: var(--svg-fill-color);
     background-color: var(--accent-color);
     border-radius: 100%;
     opacity: 0;

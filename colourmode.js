@@ -20,20 +20,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// change colour accent
-const colorSwatch = document.getElementById('colorSwatch');
-const accentColorPicker = document.getElementById('accentColorPicker');
+// // change colour accent
+// const colorSwatch = document.getElementById('colorSwatch');
+// const accentColorPicker = document.getElementById('accentColorPicker');
 
-colorSwatch.addEventListener('click', () => {
-    accentColorPicker.click();
-});
+// colorSwatch.addEventListener('click', () => {
+//     accentColorPicker.click();
+// });
 
-accentColorPicker.addEventListener('input', (event) => {
-    const newAccentColor = event.target.value;
-    document.documentElement.style.setProperty('--accent-color', newAccentColor);
-    colorSwatch.style.backgroundColor = newAccentColor;
-});
+// accentColorPicker.addEventListener('input', (event) => {
+//     const newAccentColor = event.target.value;
+//     document.documentElement.style.setProperty('--accent-color', newAccentColor);
+//     colorSwatch.style.backgroundColor = newAccentColor;
+// });
 
 
-// change icon based on contrast ratio:
+// // change icon based on contrast ratio:
 
