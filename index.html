@@ -6,6 +6,8 @@
 	<title>Rishab Kiran</title>
 	<link rel="stylesheet" href="home.css">
 	<link rel="stylesheet" href="lightdark.css">
+	<link rel="stylesheet" href="player.css">
+
 
 	<!--Font Family - Spotify Circular-->
 	<link href="https://encore.scdn.co/fonts/CircularSp-Book-4eaffdf96f4c6f984686e93d5d9cb325.woff2" rel="preload" type="font/woff2">
@@ -29,7 +31,7 @@
 					<ul class="navpadding">
 						<!-- page logo on side bare -->
 						<a href="">
-							<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 600 90" width="400" height="100%" class="logo">
+							<svg  id="Layer 1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 600 90" width="400" height="100%" class="logo">
 							
 
 							  <path class="cls-1" d="M20.39.01c-1.27,1.35-2.27,2.92-2.94,4.61-.67,1.7-1.03,3.52-1.03,5.38v12.41c0,5.67-4.59,10.27-10.26,10.27-1.74,0-3.45-.43-4.98-1.25l-1.18-.64c1.06-.39,1.93-1.09,2.55-1.97.61-.89.96-1.96.96-3.08v-12.82C3.51,5.79,9.29.01,16.42.01h3.97Z"/>
@@ -88,11 +90,20 @@
 					</svg>
 					<span>About</span>
 				</a>
+				<div class="buttons">
+					<button class="me">
+					Me
+				</button>
+				<button class="contact">
+					Contact
+				</button></div>
+				
 				
 			</div>
 		</div>
 		<!-- rightside -->
 		<section class="home-page">
+			
 
 			
 			
@@ -113,8 +124,14 @@
 						</button>
 					</div>
 					<div class="search-box" id="searchBox">
+						<div class="search-icon">
+							<svg data-encore-id="icon" role="img" aria-hidden="true" class="search-icon-svg" viewBox="0 0 24 24">
+								<path d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"></path>
+							</svg>
+						</div>
 						<input type="text" id="searchInput" placeholder="Search projects...">
 					</div>
+					
 					<span class="colourbtns">
 					
 	
@@ -156,9 +173,9 @@
 					<img width="100%" src="./Images/banner.jpg" alt="">
 
 				<h2>Browse projects</h2>
-					<div class="list">
-						<div class="item" data-tags="">
-							<img src="./Images/thumbnailph.jpeg" alt="">
+					<div class="list" id="card"   >
+						<div  class="item"  data-tags="">
+							<img   src="./Images/thumbnailph.jpeg" alt="" >
 							<div class="play">
 								<span>
 									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
@@ -217,6 +234,21 @@
 	   
 			</div>
 		</section>
+
+		<div class="music-player">
+			<div class="song-details">
+				<div class="song-title">Song Title</div>
+				<div class="artist">Artist Name</div>
+			</div>
+			<div class="controls">
+				<button class="control-button">Previous</button>
+				<button class="control-button">Play/Pause</button>
+				<button class="control-button">Next</button>
+			</div>
+			<div class="progress-bar-container">
+				<div class="progress-bar"></div>
+			</div>
+		</div>
 	</div>
 	
 
@@ -226,6 +258,8 @@
 	<script src="colourmode.js"></script>
 	<script src="accent.js"></script> 
 	<script src="search.js"></script> 
+	<script src="cardhover.js"></script> 
+
 
 
 

@@ -37,8 +37,11 @@
     --arrow-color: rgba(0,0,0,.7);
     --accent-color: #1ed760 ;
     --accent-pickerbg: #000000a4;
-
+    --searchbox: #252525;
+    --searchbox-hover: #303030;
+    --back-hover: rgb(22, 22, 22);
     --transition-speed: 0.7s; /* Define transition speed */
+    --black: black;
 
 
 
@@ -93,6 +96,13 @@ body.light-mode {
     --c2-color: #e7e7e7;
     --arrow-color: rgba(211, 211, 211, 0.7);
     transition: background-color var(--transition-speed), color var(--transition-speed);
+    --searchbox: white;
+    --searchbox-hover: #eeeeee;
+    --back-hover: rgb(245, 245, 245);
+    --black: white;
+
+
+    
 
 
     
@@ -145,6 +155,8 @@ body.light-mode p {
 }
 
 
+
+
 .home {
     color: var(--t1-color);
     transition: color 0.3s ease;  /* Adjust the duration and timing function as needed */
@@ -161,10 +173,9 @@ body.light-mode p {
     color: inherit;
 }
 
-
 .greyed-out {
     color: var(--t2-color);  /* Adjust the color to your desired grey color */
-    transition: color 0.3s ease;  /* Adjust the duration and timing function as needed */
+    transition: all 0.3s ease;  /* Adjust the duration and timing function as needed */
 
 }
 
@@ -173,6 +184,26 @@ body.light-mode p {
     transition: color 0.3s ease;  /* Adjust the duration and timing function as needed */
 
 }
+
+.home:not(.home-greyed-out):hover {
+    color: var(--t1-color); /* Change to your desired color on hover */
+    fill: var(--t1-color);
+    transition: all 0.3s ease;  /* Adjust the duration and timing function as needed */
+
+
+}
+
+
+.home:not(.home-greyed-out):hover path,
+.greyed-out:not(.home-greyed-out) path {
+    stroke: var(--t1-color);
+
+    transition: all 0.3s ease;  /* Adjust the duration and timing function as needed */
+
+}
+
+
+
 
 
 .search{
@@ -193,24 +224,88 @@ body.light-mode p {
 /* Hide the search box by default */
 .search-box {
     display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    width: 40%;
 }
 
-
+#card {
+    transition: all 0.5s ease-out; /* Adjust the duration and easing as needed */
+  }
 
 /* Style the search input */
 #searchInput {
-    width: 100%;
     padding: 8px;
     margin: 10px 0;
     box-sizing: border-box;
     border-radius: 100px;
-    background-color: #242424;
+    background-color: var(--searchbox);
+    box-shadow: none; /* Set box-shadow to none or customize it as needed */
+    border-style:solid;
+    border-color: transparent;
+    width: calc(100% - 30px); /* Adjust the width to accommodate the icon */
+    padding-left: 40px; /* Add padding to the left of the input */
+    font-family: cmed; /* Replace "Your Preferred Font" with the desired font-family */
+    font-size: 16px; /* Adjust the font size as needed */
+    height: 43px;
+    color: var(--t1-color);
+
 }
+
+/* Additional styling for the input, if necessary */
+#searchInput::placeholder {
+    color: #888; /* Adjust the color of the placeholder text */
+    font-family: cbook;
+}
+
+#searchInput:hover{
+    z-index: -1;
+    background-color: var(--searchbox-hover);
+    transition: background-color 0.1s ease-in-out;
+}
+#searchInput:focus {
+        color: var(--t1-color); /* Change the text color on focus */
+        appearance: none;
+        outline: solid 2px var(--t1-color);
+        
+
+}
+
+#searchInput:focus + .search-box .search-icon .search-icon-svg {
+    fill: white;
+}
+
+
+
+.search-icon {
+    z-index: 10;
+    position: absolute;
+    top: 52%;
+    left: 12px;
+    transform: translateY(-50%);
+}
+
+.search-icon-svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--t2-color); /* Adjust the color of the search icon */
+}
+
+#searchInput:focus .search-icon svg {
+    fill: red; /* Change the color of the search icon SVG when the input is in focus */
+}
+
+
+
 
 /* Add this to your CSS */
 .search.active {
     color: var(--t1-color);
 }
+
 
 
 
@@ -256,6 +351,13 @@ a .cls-1 {
 .navigation{
     background-color: var(--sec-color);
     border-radius: 8px;  
+    transition: all  0.3s ease-in-out;
+
+}
+
+.navigation:hover{
+    background-color: var(--back-hover);
+    transition: all  0.3s ease-in-out;
 }
 
 .bottomnav{
@@ -267,9 +369,14 @@ a .cls-1 {
     /* For example: */
     /* color: white; */
     padding: 22px 24px;
-
-
+    transition: all  0.3s ease-in-out;
 }
+
+.bottomnav:hover{
+    background-color: var(--back-hover);
+    transition: all  0.3s ease-in-out;
+}
+
 
 .home-active{
     color: inherit;
@@ -351,16 +458,16 @@ a .cls-1 {
     z-index: 1; /* Ensure the handle is above other elements */
 }
 
-
 .home-page {
     border-radius: 8px;
     margin-left: 8px;
     flex: 1 1 auto;
-    background-color: var(--sec-color);
     overflow: hidden;
-    display: flex; /* Allow flex children to fill available space */
-    flex-direction: column; /* Stack the child elements vertically */
+    display: flex;
+    flex-direction: column;
+    background-color: var(--sec-color)
 }
+
 
 
 .container {
@@ -368,6 +475,7 @@ a .cls-1 {
     height: 89vh; /* Adjust as needed */
     flex: 1;
     max-width: 100%;
+
 
 }
 
@@ -379,7 +487,19 @@ a .cls-1 {
     background-color: var(--sec-color);
     padding-right: 0px;
     z-index: 400;
+    transition: background-color 0.3s ease-in-out;
+
+
 }
+
+
+.custom-scroll:hover {
+    /* background-color: rgba(var(--back-hover)0.5); */
+
+    transition: background-color 0.3s ease-in-out;
+
+}
+
  /* For WebKit (Safari/Chrome) */
  .custom-scroll::-webkit-scrollbar {
      width: 10px; /* Width of the scrollbar */
@@ -405,7 +525,7 @@ a .cls-1 {
     justify-content: space-between;
     height: auto;
     top: 0; 
-    background-color: var(--sec-color);
+    background-color: transparent ;
     /* background-color: var(--sec-color); */
     /* Other styles for the sticky bar */
     padding: 20px 25px 20px 25px;
@@ -432,8 +552,14 @@ a .cls-1 {
     background-color: red;
     cursor: pointer;
     border: 5px solid var(--accent-pickerbg); /* Add a 20px black border */
+    transition: border 0.3s ease-in-out
+
   }
   
+#colorSwatch:hover{
+    border: 5px solid var(--accent-color); /* Add a 20px black border */
+    transition: border 0.3s ease-in-out
+}
 .svg-overlay {
     position: absolute;
     top: 0;
@@ -467,49 +593,6 @@ a .cls-1 {
     border: 0;
 
 }
-
-.toggle-switch {
-    display: flex;
-    align-items: center;
-    width: 60px;
-    height: 30px;
-    border-radius: 25px;
-    background-color: #ddd;
-    position: relative;
-    cursor: pointer;
-    padding: 0px;
-    border: none;
-
-}
-
-.toggle-switch input:checked + .moon {
-    transform: translateX(33px);
-
-
-
-}
-
-.toggle-switch .moon,
-.toggle-switch .sun {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    transition: transform 0.3s ease;
-    padding: 0px;
-    box-sizing: content-box;
-    
-}
-
-
-
-.toggle-switch .moon {
-    background-color: #000;
-    left: 2px;
-    transform: translateX(0); /* Initially hide the moon on the left */
-}
-
-
 
 
 
@@ -732,3 +815,46 @@ a .cls-1 {
 }
 
 /* Additional styles for the color picker */
+
+
+.buttons{
+    display: flex;
+    flex-direction: right;
+}
+
+
+.me{
+    margin-top: 20px;
+    padding: 6px 13px;
+    border-radius: 600px;
+    background-color: var(--t1-color);
+    color: var(--black);
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.8125rem;
+
+    cursor: pointer;
+    font-family: cbook;
+    margin-right: 10px; /* Adjust the margin between buttons as needed */
+}
+
+
+.contact{
+    margin-top: 20px;
+    flex-direction: right;
+    padding: 6px 13px;
+    border-radius: 600px;
+    background-color: #222222;
+    color: var(--t1-color);
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.8125rem;
+
+    cursor: pointer;
+    font-family: cbook;
+
+
+}
+

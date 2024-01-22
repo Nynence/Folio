@@ -10,6 +10,7 @@ accentColorPicker.value = initialAccentColor;
 
 // Set the initial background color and SVG path color
 document.documentElement.style.setProperty('--accent-color', initialAccentColor);
+
 colorSwatch.style.backgroundColor = initialAccentColor;
 
 // Set the initial SVG path color to black
