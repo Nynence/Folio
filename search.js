@@ -12,11 +12,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Toggle visibility of banner image and "Browse projects" text with opacity transition
         if (isSearchBoxOpen) {
-            bannerImage.style.opacity = '1';
-            browseProjectsText.style.opacity = '1';
+            bannerImage.style.display = 'block';
+            browseProjectsText.style.display = 'block';
             setTimeout(function () {
-                bannerImage.style.display = 'block';
-                browseProjectsText.style.display = 'block';
+                bannerImage.style.opacity = '1';
+                browseProjectsText.style.opacity = '1';
             }, 50); // Delay the opacity transition for a smooth effect
         } else {
             bannerImage.style.opacity = '0';
@@ -35,7 +35,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Toggle the active class for search button
         searchButton.classList.toggle('active', !isSearchBoxOpen);
+
+        
     });
+
 
     searchInput.addEventListener('input', function () {
         var searchTerm = searchInput.value.toLowerCase();
@@ -54,3 +57,5 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
