@@ -5,8 +5,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let isResizing = false;
     let initialX = 0;
 
-    // Retrieve stored sidebarWidth from localStorage or set initial width
-    let sidebarWidth = localStorage.getItem('sidebarWidth') || '400px';
+    // Retrieve stored sidebarWidth from sessionStorage or set initial width
+    let sidebarWidth = sessionStorage.getItem('sidebarWidth') || '400px';
     sidebar.style.width = sidebarWidth; // Apply stored width or initial width
 
     resizeHandle.addEventListener('mousedown', function (e) {
@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     document.addEventListener('mouseup', function (e) {
         isResizing = false;
-        // Store the updated sidebar width in localStorage
-        localStorage.setItem('sidebarWidth', sidebar.style.width);
+        // Store the updated sidebar width in sessionStorage
+        sessionStorage.setItem('sidebarWidth', sidebar.style.width);
     });
 });
