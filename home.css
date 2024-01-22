@@ -36,6 +36,7 @@
     --c2-color: #252525;
     --arrow-color: rgba(0,0,0,.7);
     --accent-color: #1ed760 ;
+    --accent-pickerbg: #000000a4;
 
     --transition-speed: 0.7s; /* Define transition speed */
 
@@ -79,6 +80,7 @@ body.light-mode {
     --t1-color: #000000; /* Text color */
     --t2-color: rgb(85, 85, 85);
     --t3-color: #050505;
+    --accent-pickerbg: #ffffffad;
 
 
     --sec-color: #eeeeee;
@@ -120,17 +122,56 @@ body.light-mode p {
 /* Your existing dark mode styles */
 /* Define your dark mode styles here */
 
+.projects img,
+.projects h2 {
+    transition: opacity 0.3s ease-in-out;
+}
 
-.home {
+.home,
+.greyed-out {
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
     margin-block: 0px;
     font-size: 1rem;
     font-weight: 600;
     font-family: cbold;
-    color: var(--t1-color);
     text-decoration: none;
+    transition: stroke 0.3s ease, fill 0.3s ease;  /* Add transition for both stroke and fill */
+
+    
 }
+
+.home {
+    color: var(--t1-color);
+    transition: color 0.3s ease;  /* Adjust the duration and timing function as needed */
+    transition: stroke 0.3s ease, fill 0.3s ease;  /* Add transition for both stroke and fill */
+
+
+}
+
+.greyed-out path {
+    transition: stroke 0.3s ease;  /* Adjust the duration and timing function as needed */
+    fill: none;
+    stroke: var(--t2-color);
+    stroke-width: 2px;
+    color: inherit;
+    transition: color 0.3s ease, fill 0.3s ease;  /* Add transition for both stroke and fill */
+
+    
+}
+
+.greyed-out {
+    color: var(--t2-color);  /* Adjust the color to your desired grey color */
+    transition: color 0.3s ease;  /* Adjust the duration and timing function as needed */
+
+}
+
+.greyed-out .home {
+    color: var(--t2-color);  /* Adjust the color to your desired grey color */
+    transition: color 0.3s ease;  /* Adjust the duration and timing function as needed */
+
+}
+
 
 .search{
     box-sizing: border-box;
@@ -139,18 +180,72 @@ body.light-mode p {
     font-size: 1rem;
     font-weight: 600;
     font-family: cbold;
-    color: var(--t2-color);
     text-decoration: none;
     transition: color 0.3s ease-in-out;
+    color: var(--t2-color);
+
 }
 
-.search:hover{
+/* Hide the search box by default */
+.search-box {
+    display: none;
+}
+
+
+
+/* Style the search input */
+#searchInput {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+/* Add this to your CSS */
+.search.active {
     color: var(--t1-color);
 }
- 
-.logo{
-    width: 6em;
+
+
+
+/* Change color on hover */
+.search:hover {
+    color: var(--t1-color);
 }
+
+/* Change the color when the search box is open */
+.search-box-open .search {
+    color: var(--t1-color);
+}
+
+/* Initially hide the first child path */
+.search-inactive path:first-child {
+    fill: transparent;
+    transition: fill 0.3s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+
+/* Show the first child path when the search box is open */
+.search.active path:first-child {
+    fill: var(--t1-color); /* Use 'currentColor' or the desired color value */
+}
+
+
+
+.cls-1{
+    fill: var(--t1-color);
+    stroke-width: 0px;
+    text-decoration: none;
+}
+
+a .cls-1 {
+    transition: fill 0.5s ease; /* Add a smooth transition effect */
+  }
+
+  a:hover .cls-1 {
+    fill: var(--accent-color);
+
+  }
+
 
 .navigation{
     background-color: var(--sec-color);
@@ -165,6 +260,9 @@ body.light-mode p {
     /* Add some content or text to make it visible */
     /* For example: */
     /* color: white; */
+    padding: 22px 24px;
+
+
 }
 
 .home-active{
@@ -176,6 +274,32 @@ body.light-mode p {
 }
 
 
+
+.about{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    margin-block: 0px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: cbold;
+    color: var(--t2-color);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+.about svg{
+
+    vertical-align: middle; /* Align the SVG vertically with the text */
+    width: 1.5em; /* Set the width relative to the font size */
+    height: 1.5em; /* Set the height relative to the font size */
+    fill: currentColor; /* Makes the SVG inherit the text color */
+    margin-right: 15px; /* Adjust the spacing between the SVG and text */
+    margin-top: -4px;
+}
+.bottomnav:hover a.about {
+    color: var(--t1-color);
+
+    fill: var(--t1-color); /* Set the fill color to white when hovering over .bottomnav */
+}
 .navigation li{
     padding: 10px 12px;
 }
@@ -235,7 +359,7 @@ body.light-mode p {
 
 .container {
     display: flex;
-    height: 90vh; /* Adjust as needed */
+    height: 89vh; /* Adjust as needed */
     flex: 1;
     max-width: 100%;
 
@@ -247,7 +371,8 @@ body.light-mode p {
     flex: 1; /* Fill available vertical space */
     position: relative;
     background-color: var(--sec-color);
-    padding-right: 10px;
+    padding-right: 0px;
+    z-index: 400;
 }
  /* For WebKit (Safari/Chrome) */
  .custom-scroll::-webkit-scrollbar {
@@ -265,18 +390,22 @@ body.light-mode p {
      border-radius: 0px; /* Rounded corners for the scrollbar */
      
  }
-    
+ 
 
 .sticky-top-bar {
+    z-index: 500;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: auto;
-    top: 0;
+    top: 0; 
     background-color: var(--sec-color);
+    /* background-color: var(--sec-color); */
     /* Other styles for the sticky bar */
-    padding: 20px 20px 20px 25px;
-    
+    padding: 20px 25px 20px 25px;
+    position: sticky;
+    /* backdrop-filter: blur(10px); Adjust the blur amount as needed
+    transition: backdrop-filter 1s ease; Add a transition for a smoother effect */
 }
 
 
@@ -291,14 +420,12 @@ body.light-mode p {
 
 }
 #colorSwatch {
-    width: 30px;
-    height: 30px;
+    width: 23px;
+    height: 23px;
     border-radius: 50%;
     background-color: var(--accent-color);
     cursor: pointer;
-    scale: 0.80;
-    border: 8px solid #000000a4; /* Add a 20px black border */
-    margin-top: -px;
+    border: 5px solid var(--accent-pickerbg); /* Add a 20px black border */
   }
   
 .svg-overlay {
@@ -317,6 +444,7 @@ body.light-mode p {
 
     display: flex; /* To make buttons align horizontally */
     gap: 10px;
+    align-items: center;
     
 }
 
@@ -332,47 +460,6 @@ body.light-mode p {
     border: 0;
 
 }
-
-.toggle-switch {
-    display: flex;
-    align-items: center;
-    width: 70px;
-    height: 30px;
-    border-radius: 20px;
-    background-color: #ddd;
-    position: relative;
-    cursor: pointer;
-    padding: 2px;
-
-}
-
-.toggle-switch input:checked + .moon {
-    transform: translateX(40px);
-
-
-
-}
-
-.toggle-switch .moon,
-.toggle-switch .sun {
-    position: absolute;
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-    padding: 2px;
-    box-sizing: content-box;
-    
-}
-
-
-
-.toggle-switch .moon {
-    background-color: #000;
-    left: 2px;
-    transform: translateX(0); /* Initially hide the moon on the left */
-}
-
 
 
 
@@ -510,7 +597,7 @@ body.light-mode p {
     cursor: pointer;
     transition: all ease 0.4s;
     width: calc(100% - 30px); /* Set width minus the gap to maintain consistent gaps */
-    max-width: 160px; /* Set maximum width for the item */
+    /* max-width: 500px; Set maximum width for the item */
     height: calc(100% - 12%);
 
 }
@@ -552,7 +639,7 @@ body.light-mode p {
 
 .projects .list .item:hover .play svg{
     opacity: 1;
-    transform: translateY(-10px);
+    transform: translateY(-11px);
 
 }
 

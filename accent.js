@@ -44,3 +44,8 @@ function getContrastColor(color) {
 
   return brightness > 128 ? '#000000' : '#ffffff'; // return black for light backgrounds, white for dark backgrounds
 }
+
+
+
+
+

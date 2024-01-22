@@ -1,3 +1,5 @@
+
+// dark mode to light mode
 const modeToggle = document.getElementById('modeToggle');
 const body = document.body;
 
@@ -18,7 +20,24 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+// storage to remember light or dark mode for just toggle appearence
 
+document.addEventListener('DOMContentLoaded', function () {
+    // Retrieve the current state from local storage
+    const savedState = localStorage.getItem('darkMode');
+
+    // Get the toggle switch element
+    const toggleSwitch = document.getElementById('modeToggle');
+
+    // Set the initial state based on local storage or default to light mode
+    toggleSwitch.checked = savedState === 'darkMode';
+
+    // Add an event listener to the toggle switch to update local storage on change
+    toggleSwitch.addEventListener('change', function () {
+        const newState = toggleSwitch.checked ? 'darkMode' : 'lightMode';
+        localStorage.setItem('darkMode', newState);
+    });
+});
 
 // // change colour accent
 // const colorSwatch = document.getElementById('colorSwatch');
