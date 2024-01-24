@@ -18,10 +18,19 @@
     src:url(./fonts/CircularStd-Light.otf)
 }
 
+@font-face{
+    font-family: CBook2; 
+    src:url(./fonts/CircularSpUIv3T-Book.ttf)
+}
+
 :root {
     --bg-color: #000000; /* Background color */
     /* section */
     --sec-color: #121212;
+    --secgrad-color1: rgba(18, 18, 18, 0);
+    --secgrad-color2: rgba(18, 18, 18, 1);
+
+
     /* base white text */
     --t1-color: #ffffff; /* Text color */
     /* text hover colors */
@@ -40,8 +49,12 @@
     --searchbox: #252525;
     --searchbox-hover: #303030;
     --back-hover: rgb(22, 22, 22);
+    --buttondef: #222222;
     --transition-speed: 0.7s; /* Define transition speed */
     --black: black;
+    --buttonhov: #333333;
+    --artist: #b3b3b3;
+
 
 
 
@@ -64,6 +77,7 @@ h3{
     color: var(--t1-color);
     letter-spacing: 0px;
     -webkit-font-smoothing: antialiased;
+    
 
 }
 
@@ -91,6 +105,10 @@ body.light-mode {
 
 
     --sec-color: #eeeeee;
+    --secgrad-color1: rgba(238, 238, 238, 0);
+    --secgrad-color2: rgba(238, 238, 238, 1);
+
+
     --scroll-color: rgb(219, 219, 219);
     --c-color: white;
     --c2-color: #e7e7e7;
@@ -100,6 +118,12 @@ body.light-mode {
     --searchbox-hover: #eeeeee;
     --back-hover: rgb(245, 245, 245);
     --black: white;
+    --buttondef: #ffffff;
+    --buttonhov: #cacaca;
+    --artist: #414141;
+
+
+
 
 
     
@@ -193,16 +217,20 @@ body.light-mode p {
 
 }
 
+.hover-on-search-box-open .home:hover svg path {
+    stroke: var(--t1-color);
+}
 
+
+
+/* 
 .home:not(.home-greyed-out):hover path,
 .greyed-out:not(.home-greyed-out) path {
     stroke: var(--t1-color);
 
     transition: all 0.3s ease;  /* Adjust the duration and timing function as needed */
 
-}
-
-
+/* Add this rule to apply hover effect when the search box is open */
 
 
 
@@ -472,7 +500,7 @@ a .cls-1 {
 
 .container {
     display: flex;
-    height: 89vh; /* Adjust as needed */
+    height: 90vh; /* Adjust as needed */
     flex: 1;
     max-width: 100%;
 
@@ -481,6 +509,7 @@ a .cls-1 {
 
 .custom-scroll {
     /* Remove max-height to allow the component to auto-adjust */
+    overflow-x: hidden;
     overflow-y: auto;
     flex: 1; /* Fill available vertical space */
     position: relative;
@@ -525,14 +554,31 @@ a .cls-1 {
     justify-content: space-between;
     height: auto;
     top: 0; 
-    background-color: transparent ;
-    /* background-color: var(--sec-color); */
+    background: var(--sec-color);
+    /* background: linear-gradient(to top, var(--secgrad-color1) 0%, var(--secgrad-color2) 90%); */
     /* Other styles for the sticky bar */
-    padding: 20px 25px 20px 25px;
+    padding: 20px 25px;
     position: sticky;
-    /* backdrop-filter: blur(10px); Adjust the blur amount as needed
-    transition: backdrop-filter 1s ease; Add a transition for a smoother effect */
+    /* backdrop-filter: blur(5px); 
+    transition: backdrop-filter 1s ease;  */
+
 }
+
+.backgradient{
+    top: 0;
+    width: 100%;
+    height:100px;
+    margin-bottom: -100px;
+    position: sticky;
+    background: red;
+    background: linear-gradient(to top, var(--secgrad-color1) 0%, var(--secgrad-color2) 30%);
+    z-index: 400;
+    opacity: 1;
+
+
+
+}
+
 
 
 .colored-path {
@@ -542,6 +588,7 @@ a .cls-1 {
 .color-picker-container {
     position: relative;
     display: inline-block; /* To make sure the SVG overlay stays within the container */
+
     
 
 }
@@ -552,13 +599,14 @@ a .cls-1 {
     background-color: red;
     cursor: pointer;
     border: 5px solid var(--accent-pickerbg); /* Add a 20px black border */
-    transition: border 0.3s ease-in-out
+    transition: border 0.3s ease-in-out;
+
 
   }
   
 #colorSwatch:hover{
     border: 5px solid var(--accent-color); /* Add a 20px black border */
-    transition: border 0.3s ease-in-out
+    transition: border 0.3s ease-in-out;
 }
 .svg-overlay {
     position: absolute;
@@ -799,7 +847,7 @@ a .cls-1 {
     top: -28px;
     font-size: 0.88rem;
     font-weight: 500;
-    font-family: cbook;
+    font-family: cbook2;
     color: var(--t3-color);
 }
 
@@ -823,38 +871,102 @@ a .cls-1 {
 }
 
 
-.me{
-    margin-top: 20px;
-    padding: 6px 13px;
-    border-radius: 600px;
-    background-color: var(--t1-color);
-    color: var(--black);
-    border: none;
-    text-align: center;
-    text-decoration: none;
-    font-size: 0.8125rem;
 
-    cursor: pointer;
-    font-family: cbook;
-    margin-right: 10px; /* Adjust the margin between buttons as needed */
-}
-
-
-.contact{
+.me, .contact{
     margin-top: 20px;
     flex-direction: right;
     padding: 6px 13px;
     border-radius: 600px;
-    background-color: #222222;
+    background-color: var(--buttondef);
     color: var(--t1-color);
     border: none;
     text-align: center;
     text-decoration: none;
     font-size: 0.8125rem;
+    margin-right: 10px; /* Adjust the margin between buttons as needed */
+
 
     cursor: pointer;
     font-family: cbook;
+    transition: all 0.2s ease-in-out;
+
 
 
 }
 
+.me:focus, .me.active {
+    background-color: var(--t1-color);
+    color: var(--black);
+    transition: all 0.2s ease-in-out;
+
+
+}
+
+.contact:focus, .contact.active {
+    background-color: var(--t1-color);
+    color: var(--black);
+    transition: all 0.2s ease-in-out;
+
+}
+.me:not(:focus):hover, .contact:not(:focus):hover {
+        background-color: var(--buttonhov);
+        transition: all 0.2s ease-in-out;
+}
+
+.color-picker-container:hover::before {
+    content: attr(title);  /* Set the content to the 'title' attribute */
+    position: absolute;
+    bottom: -38px;
+    left: 50%;
+    font-family: cbook;
+    font-weight: 400;
+    letter-spacing: 0px;
+    transform: translateX(-50%);
+    background-color: rgb(66, 66, 66);
+    color: #ffffff;
+    padding: 5px 10px 7px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    -webkit-box-shadow: 0 7px 10px rgba(0,0,0,.3);
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.4s, transform 0.4s ease; /* Add opacity transition */
+    transition-delay: 0.3s; /* Delay the transition by 0.2s */
+    -webkit-font-smoothing: antialiased;
+    z-index: 10;
+
+}
+
+/* Show the caption on hover */
+.color-picker-container:hover::before {
+    opacity: 1;
+}
+
+.toggle-switch:hover::before {
+    content: attr(title);  /* Set the content to the 'title' attribute */
+    position: absolute;
+    bottom: -38px;
+    left: 50%;
+    font-family: cbook;
+    font-weight: 400;
+    letter-spacing: 0px;
+    transform: translateX(-50%);
+    background-color: rgb(66, 66, 66);
+    color: #ffffff;
+    padding: 5px 10px 7px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    -webkit-box-shadow: 0 7px 10px rgba(0,0,0,.3);
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.4s, transform 0.4s ease; /* Add opacity transition */
+    transition-delay: 0.3s; /* Delay the transition by 0.2s */
+    -webkit-font-smoothing: antialiased;
+    z-index: 10;
+}
+
+.toggle-switch:hover::before {
+    opacity: 1;
+}

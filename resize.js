@@ -2,13 +2,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const sidebar = document.getElementById('sidebar');
     const resizeHandle = document.getElementById('resizeHandle');
 
+
+
     let isResizing = false;
     let initialX = 0;
 
     // Retrieve stored sidebarWidth from sessionStorage or set initial width
     let sidebarWidth = sessionStorage.getItem('sidebarWidth') || '400px';
     sidebar.style.width = sidebarWidth; // Apply stored width or initial width
-
+    
     resizeHandle.addEventListener('mousedown', function (e) {
         isResizing = true;
         initialX = e.clientX;
@@ -37,6 +39,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
             sidebar.style.width = `${maxSidebarWidth}px`;
             initialX = e.clientX;
         }
+
+
     });
 
     document.addEventListener('mouseup', function (e) {
@@ -44,4 +48,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
         // Store the updated sidebar width in sessionStorage
         sessionStorage.setItem('sidebarWidth', sidebar.style.width);
     });
+
+    
+
 });
+

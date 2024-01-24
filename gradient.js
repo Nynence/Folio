@@ -30,23 +30,13 @@ document.addEventListener('DOMContentLoaded', function () {
         // Toggle visibility of search box
         searchBox.style.display = (searchBox.style.display === 'none' || searchBox.style.display === '') ? 'block' : 'none';
         searchInput.focus();
-        homeItem.classList.toggle('greyed-out');
+        homeItem.classList.toggle('greyed-out', isSearchBoxOpen);
         homeItem.classList.toggle('home-greyed-out', isSearchBoxOpen);
-
-        // Toggle the active class for search button
         searchButton.classList.toggle('active', !isSearchBoxOpen);
 
-        if (!isSearchBoxOpen) {
-            homeItem.classList.toggle('hover-on-search-box-open');
-        }
-
-        
-        
-        
-
-        
+        // Add a class to homeItem when the search box is open
+        homeItem.classList.toggle('search-box-open', isSearchBoxOpen);
     });
-
 
     searchInput.addEventListener('input', function () {
         var searchTerm = searchInput.value.toLowerCase();
@@ -63,9 +53,5 @@ document.addEventListener('DOMContentLoaded', function () {
             // Toggle the visibility based on matches
             item.style.display = matches ? 'block' : 'none';
         });
-
-
     });
 });
-
-

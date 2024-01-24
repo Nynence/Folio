@@ -91,12 +91,9 @@
 					<span>About</span>
 				</a>
 				<div class="buttons">
-					<button class="me">
-					Me
-				</button>
-				<button class="contact">
-					Contact
-				</button></div>
+					<button class="me" onclick="toggleButtons(this)">Me</button>
+					<button class="contact" onclick="toggleButtons(this)">Contact</button>
+				</div>
 				
 				
 			</div>
@@ -104,10 +101,13 @@
 		<!-- rightside -->
 		<section class="home-page">
 			
+			
 
 			
 			
-			<div class="custom-scroll">
+			<div class="custom-scroll" onscroll="updateProgressBar()">
+				<div class="backgradient"></div>
+
 				<div class="sticky-top-bar" id="stickyTopBar">
 					
 					<!-- Sticky content -->
@@ -135,14 +135,14 @@
 					<span class="colourbtns">
 					
 	
-						<label class="toggle-switch" for="modeToggle">
+						<label class="toggle-switch" for="modeToggle" title="Mode">
 							<input type="checkbox" id="modeToggle" checked />
 							<span class="slider"></span>
-						  </label>
+						</label>
 						
 	
 						
-						<div class="color-picker-container">
+						<div class="color-picker-container" title="Accent">
 							<div id="colorSwatch"></div>
 							<input type="color" id="accentColorPicker" style="position: absolute; top: 50; opacity: 0; pointer-events: none;">
 							<div id="svgOverlay" class="svg-overlay">
@@ -169,6 +169,7 @@
 						
 				
 				</div>
+
 				<div class="projects">
 					<img width="100%" src="./Images/banner.jpg" alt="">
 
@@ -234,22 +235,46 @@
 	   
 			</div>
 		</section>
-
 		<div class="music-player">
 			<div class="song-details">
-				<div class="song-title">Song Title</div>
-				<div class="artist">Artist Name</div>
+				<div class="albumcover"> <img src="./Images/thumbnailph.jpeg" alt=""> </div>
+				<div class="song-info"> 
+					<div class="song-title">Twisted Fate</div>
+					<div class="artist">Artist Name</div>
+				</div>
+				
 			</div>
-			<div class="controls">
-				<button class="control-button">Previous</button>
-				<button class="control-button">Play/Pause</button>
-				<button class="control-button">Next</button>
+			<div class="player">
+				<div class="controls" >
+					<button class="control-button">Previous</button>
+					<button class="control-button">Play/Pause</button>
+					<button class="control-button">Next</button>
+				</div>
+				<!-- <div class="progress-bar-container" onmousedown="startDrag(event)">
+					<div class="progress-bar"></div>
+					<div class="slider-marker"></div> <!-- Add this line -->
+
+				<!-- </div> --> -->
+
+
+				<div class="progress-bar-container" onmousedown="startDrag(event)" >
+					<div class="progress-bar"></div>
+					<div class="circle"></div>
+				</div>
+			
+				
+				
 			</div>
-			<div class="progress-bar-container">
-				<div class="progress-bar"></div>
+			<div class="sideplayer">
+					hi
 			</div>
+			
 		</div>
+
+		
 	</div>
+
+	
 	
 
 	<!-- javascrips -->
@@ -259,10 +284,9 @@
 	<script src="accent.js"></script> 
 	<script src="search.js"></script> 
 	<script src="cardhover.js"></script> 
-
-
-
-
+	<script src="about.js"></script> 
+	<script src="gradient.js"></script> 
+	<script src="player.js"> </script>
 
 
 
