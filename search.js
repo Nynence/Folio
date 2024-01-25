@@ -40,6 +40,11 @@ document.addEventListener('DOMContentLoaded', function () {
             homeItem.classList.toggle('hover-on-search-box-open');
         }
 
+        // if (isSearchBoxOpen) {
+        //     homeItem.classList.toggle('hover-on-search-box-open');
+        // }
+
+
         
         
         

@@ -54,6 +54,8 @@
     --black: black;
     --buttonhov: #333333;
     --artist: #b3b3b3;
+    --progress: hsla(0,0%,100%,.3);
+    --leftright: hsla(0,0%,100%,.7);
 
 
 
@@ -121,6 +123,9 @@ body.light-mode {
     --buttondef: #ffffff;
     --buttonhov: #cacaca;
     --artist: #414141;
+    --progress: #b8b8b8;
+    --leftright: #585858;
+
 
 
 
@@ -236,6 +241,7 @@ body.light-mode p {
 
 .search{
     -webkit-font-smoothing: antialiased;
+    z-index: 600;
 
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
@@ -247,10 +253,13 @@ body.light-mode p {
     transition: color 0.3s ease-in-out;
     color: var(--t2-color);
 
+
 }
 
 /* Hide the search box by default */
 .search-box {
+    z-index: 600;
+
     display: none;
     position: absolute;
     top: 50%;
