@@ -495,6 +495,7 @@ a .cls-1 {
     z-index: 1; /* Ensure the handle is above other elements */
 }
 
+
 .home-page {
     border-radius: 8px;
     margin-left: 8px;
@@ -502,7 +503,7 @@ a .cls-1 {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background-color: var(--sec-color)
+    background-color: var(--sec-color);
 }
 
 
@@ -985,12 +986,95 @@ a .cls-1 {
     display: none;
 }
 
+.phonelogo {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-color: var(--accent-color);
+    padding: 7px;
+    border-radius: 100px;
+    margin: auto;
+    margin-right: 10px; /* Add spacing between the logo and buttons if needed */
+
+    vertical-align: middle; /* Adjust vertical alignment */
+
+    background: linear-gradient(-45deg,  var(--accent-color), var(--accent-color), var(--accent-color), rgb(124, 240, 16), #d9e900,  #FFA63D, #FF3D77,  #338AFF, #3CF0C5, var(--accent-color), var(--accent-color));
+    background-size: 800%;
+    animation: anime 16s linear infinite;
+}
+
+@keyframes anime {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+  .phonenav {
+    display: none;
+    /* display: flex; */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+
+  }
+  
+
+  
+  .phonenav svg {
+
+    width: 16px; /* Adjust the width of the SVG as needed */
+    /* height: 16px; Maintain the aspect ratio */
+    fill: var(--black);
+    
+  }
+  
+  .phonebtn1, .phonebtn2, .phonebtn3 {
+    display: none;
+    /* margin-top: 20px; */
+    flex-direction: right;
+    padding: 6px 13px;
+    border-radius: 600px;
+    background-color: var(--buttondef);
+    color: var(--t1-color);
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.8125rem;
+    margin-right: 10px; /* Adjust the margin between buttons as needed */
+
+
+    cursor: pointer;
+    font-family: cbook;
+    transition: all 0.2s ease-in-out;
+
+}
 
 
 
 /* Small screens (phones) */
 @media only screen and (max-width: 850px) {
     /* Styles for small screens go here */
+
+   
+    .backgradient{
+        display: none;
+        
+    
+    }
+
+    .slider{
+        scale: 0.95;
+
+    }
+
+    .phonenav{
+        display: block;
+        display: flex;
+        gap: 0px;
+    }
 
     .sidebar {
         width: 400px; /* Initial width */
@@ -1003,12 +1087,24 @@ a .cls-1 {
     }
 
     .custom-scroll{
+        
+        
     }
+
+    .custom-scroll::-webkit-scrollbar {
+        display: none; 
+   }
 
     :root {
         background-color: var(--sec-color);
+        position: fixed;
+
     }
 
+    .container{
+
+    }    
+    
     .home-page {
         margin-left: 0px;
         border-radius: 0;
@@ -1028,5 +1124,98 @@ a .cls-1 {
         display: none;
     }
 
+
+
+    .projects .list {
+   
+        /* grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); */
+        grid-row-gap: 15px;
+        grid-column-gap: 20px;
+
+    }
+    
+    .projects .list .item {
+        padding: 15px 15px 0px 15px;
+
+    
+        width: calc(100% - 30px); /* Set width minus the gap to maintain consistent gaps */
+        /* max-width: 500px; Set maximum width for the item */
+        height: calc(100% - 12%);
+    
+    }
+
+    .phonenav{
+        display: flex;
+    }
+
+    .phonebtn1, .phonebtn2, .phonebtn3 {
+        display: flex;
+
   }
+
+  .phonebtn1{
+    background-color: var(--accent-color);
+    color: var(--black);
+} 
   
+}
+
+  @media only screen and (max-width: 430px) {
+    .projects .list {
+   
+        grid-template-columns: repeat(auto-fill, minmax(calc(50% - 10px), 1fr)); /* Each column is at least 50% width */
+     
+    }
+    
+    .projects{
+        padding: 20px 10px;
+    }
+
+    .sticky-top-bar {
+        z-index: 500;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 4``````````````````````````````````````0px;
+        top: 0; 
+        background: var(--sec-color);
+        /* background: linear-gradient(to top, var(--secgrad-color1) 0%, var(--secgrad-color2) 90%); */
+        /* Other styles for the sticky bar */
+        padding: 5px 10px;
+        box-shadow: 0 5px 16px var(--sec-color); /* horizontal offset, vertical offset, blur radius, color */
+
+        
+
+  }
+
+}
+
+
+@media only screen and (max-width: 380px) {
+
+
+        .phonebtn1, .phonebtn2, .phonebtn3 {
+            padding: 6px 12px;
+            border-radius: 600px;
+   
+            font-size: 0.8125rem;
+
+        
+        }
+
+       
+    }
+
+  @media only screen and (max-width: 320px) {
+    .projects .list {
+   
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+     
+    }
+    
+    .projects{
+        padding: 20px 10px;
+    }
+
+  }
+
