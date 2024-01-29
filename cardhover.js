@@ -1,20 +1,11 @@
 var card = document.getElementById('card');
-
 var mouseHover = false;
 var mousePosition = { x: 0, y: 0 };
 var cardSize = { width: 0, height: 0 };
 var SCALE_X = 4;
 var SCALE_Y = 8;
 
-card.onblur = function() {
-  mouseHover = false;
-};
-
-card.onfocus = function() {
-  mouseHover = true;
-};
-
-card.onmousemove = function(e) {
+function handleMouseMove(e) {
   if (!mouseHover) return;
   var rect = card.getBoundingClientRect();
   var x = e.clientX - rect.left;
@@ -29,13 +20,20 @@ card.onmousemove = function(e) {
   }deg) rotateY(${
     (mousePosition.x / cardSize.width) * (SCALE_X * 2) - SCALE_X
   }deg) translateZ(10px)`;
-};
+}
 
-card.onmouseout = function() {
+function handleMouseOut() {
   mouseHover = false;
   card.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
-};
+}
 
-card.onmouseover = function() {
+function handleMouseOver() {
   mouseHover = true;
-};
+}
+
+if (window.innerWidth > 1024) {
+  // Add event listeners only for screens wider than 1024 pixels
+  card.addEventListener('mousemove', handleMouseMove);
+  card.addEventListener('mouseout', handleMouseOut);
+  card.addEventListener('mouseover', handleMouseOver);
+}

@@ -42,6 +42,11 @@
     position: relative;
 }
 
+.song-title,
+        .artist {
+            transition: transform 0.3s ease;
+            transform-origin: Bottom left; /* Set the transform origin to top right */
+        }
 
 .albumcover{
     margin-bottom: 50px;
@@ -76,8 +81,8 @@
 .controls {
     display: flex;
 
-    max-width: 722px;
-    width: 40%;
+    max-width: 1000px;
+    width: 60%;
     align-items: center;
     justify-content: center; /* Updated from align-items to justify-content */
     margin: 0 auto; 
@@ -95,7 +100,7 @@
     align-items: center;
     background-color: var(--t1-color);
     border: none;
-    border-radius: 40px;
+    border-radius: 100px;
     color: #000;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -108,7 +113,6 @@
     transition-property: all;
     /* transition: transform 0.1s ease-in-out; */
     fill: var(--black);
-
 }
 
 .play-button svg{
@@ -278,17 +282,448 @@
 
 }
 
-.sideplayer{
-    margin-right: 20px;
+.sideplayer {
+    margin-right: 16px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex: 1;
-    align-items: flex-end; /* Adjusted from center to flex-end */
+    align-items: center; /* Align items to the center of the container */
     position: relative;
-
+    justify-content: flex-end; /* Align content to the end of the container */
+    bottom: 0;
+    gap: 16px;
+    top: 16px;
 }
+
+
 
 #startTime{
     text-align: right;
 
 }
+
+
+
+
+.slider-container {
+    position: relative;
+    width: 93px;
+    height: 4px;
+    background-color: var(--progress);
+    border-radius: 4px;
+}
+.slider-bar {
+    width: 50%;
+    height: inherit;
+    background-color: var(--t1-color);
+    border-radius: 4px;
+    position: relative;
+
+}
+
+.slider-handle {
+    position: absolute;
+    top: -5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--t1-color);
+    display: none;
+    cursor: pointer;
+    left: 50%;
+
+}
+
+.slider-container:hover .slider-bar,
+.slider-container:active .slider-bar {
+    background-color: var(--accent-color);
+}
+
+.slider-container:hover .slider-handle,
+.slider-container:active .slider-handle {
+    display: block;
+}
+
+#share{
+    /* stroke-width: 3px; */
+    justify-self: right;
+    /* margin: 0 auto; Added to remove default margin */
+    fill: white;
+    color: white;
+    max-width: 22px;
+    max-height: 28px;
+    flex-direction: flex end;
+    margin-left: auto; /* Align to the right */
+    align-items: right; /* Adjusted from center to flex-end */
+    fill: var(--leftright);   
+    stroke-width: 1px; 
+    cursor: pointer;
+
+
+
+
+
+    
+
+}
+
+.rabbitslider {
+    display: flex;
+    flex-direction: row; /* or column, depending on your layout */
+    align-items: center;
+    gap: 3px;
+}
+
+
+.rabbit {
+    /* stroke-width: 1px; */
+    margin-left: auto; /* Align to the right */
+    max-width: 24px;
+    max-height: 100px;
+    margin-left: 0; /* Align to the right */
+    fill: var(--leftright);  
+    stroke-width: 1px; 
+    /* stroke: var(--leftright); */
+    margin-right: 0;
+    
+
+
+
+
+  }
+
+
+  .slider-container:hover .rabbit,
+  .slider-container:active .rabbit {
+      fill: white;
+  }
+
+.fullscreen{
+    fill: white;
+    /* stroke-width: 1px; */
+    color: aliceblue;
+    margin-left: auto; /* Align to the right */
+    max-width: 24px;
+    max-height: 100px;
+    margin-left: 0; /* Align to the right */
+    cursor: pointer;
+    fill: var(--leftright);   
+
+
+
+
+}
+
+
+.fullscreen-size {
+    display: none;
+    width: 10px;
+    max-height: 100px;
+    margin-left: auto; /* Align to the right */
+
+
+}
+
+.fullscreen:hover, #share:hover, .rabbit:hover{
+    fill: var(--t1-color);   
+    transition: all 0.1s ease-in-out;
+
+}
+
+
+
+
+
+.sharetitle {
+    position: relative;
+    display: inline-block;
+    width: 21px;
+    height: 16px;
+    overflow: visible; /* or auto, scroll, hidden, depending on your layout */
+    z-index: 100;
+
+}
+
+.sharetitle .tooltip-text {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    font-family: 'cbook';
+    font-weight: 400;
+    letter-spacing: 0px;
+    transform: translateX(-50%);
+    background-color: rgb(66, 66, 66);
+    color: #ffffff;
+    padding: 5px 10px 7px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    -webkit-box-shadow: 0 7px 10px rgba(0,0,0,.3);
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.2s, transform 0.2s ease; /* Add opacity transition */
+    transition-delay: 0.2s; /* Delay the transition by 0.2s */
+    -webkit-font-smoothing: antialiased;
+    z-index: 100;
+    overflow: visible; /* or auto, scroll, hidden, depending on your layout */
+
+}
+
+.sharetitle:hover .tooltip-text {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+    overflow: visible; /* or auto, scroll, hidden, depending on your layout */
+    z-index: 100;
+
+}
+
+
+.rabbittitle {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 15px;
+    overflow: visible; /* or auto, scroll, hidden, depending on your layout */
+    z-index: 100;
+
+}
+
+.rabbittitle .tooltip-text {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    font-family: 'cbook';
+    font-weight: 400;
+    letter-spacing: 0px;
+    transform: translateX(-50%);
+    background-color: rgb(66, 66, 66);
+    color: #ffffff;
+    padding: 5px 10px 7px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    -webkit-box-shadow: 0 7px 10px rgba(0,0,0,.3);
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.2s, transform 0.2s ease; /* Add opacity transition */
+    transition-delay: 0.2s; /* Delay the transition by 0.2s */
+    -webkit-font-smoothing: antialiased;
+    z-index: 100;
+    overflow: visible; /* or auto, scroll, hidden, depending on your layout */
+
+}
+
+.rabbittitle:hover .tooltip-text {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+    overflow: visible; /* or auto, scroll, hidden, depending on your layout */
+    z-index: 100;
+
+}
+
+
+.fstitle {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 15px;
+    overflow: visible; /* or auto, scroll, hidden, depending on your layout */
+    z-index: 100;
+
+}
+
+.fstitle .fs-text {
+    position: absolute;
+    bottom: 25px;
+    left: -50%;
+    font-family: 'cbook';
+    font-weight: 400;
+    letter-spacing: 0px;
+    transform: translateX(-50%);
+    background-color: rgb(66, 66, 66);
+    color: #ffffff;
+    padding: 5px 10px 7px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    -webkit-box-shadow: 0 7px 10px rgba(0,0,0,.3);
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.2s, transform 0.2s ease; /* Add opacity transition */
+    transition-delay: 0.2s; /* Delay the transition by 0.2s */
+    -webkit-font-smoothing: antialiased;
+    z-index: 100;
+    overflow: visible; /* or auto, scroll, hidden, depending on your layout */
+
+}
+
+.fstitle:hover .fs-text {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+    overflow: visible; /* or auto, scroll, hidden, depending on your layout */
+    z-index: 100;
+
+}
+
+
+
+/* Medium screens (tablets) */
+
+
+@media only screen and (min-width: 1300px) and (max-width: 1600px) {
+    /* Styles for medium screens go here */
+
+    .time {
+        width: 113.5%;
+       
+    }
+
+
+
+  }
+  
+@media only screen and (min-width: 1100px) and (max-width: 1300px) {
+    /* Styles for medium screens go here */
+
+    .time {
+        width: 116.5%;
+       
+    }
+
+
+
+  }
+  
+
+  @media only screen and (min-width: 600px) and (max-width: 1100px) {
+    /* Styles for medium screens go here */
+
+    .time {
+        width: 120.5%;
+       
+    }
+
+
+
+  }
+
+
+
+
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    font-family: -apple-system,BlinkMacSystemFont,San Francisco,Helvetica Neue,Helvetica,Ubuntu,Roboto,Noto,Segoe UI,Arial,sans-serif;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
+  }
+  
+  button, .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #777;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+  }
+  
+  button:hover, .button:hover {
+    border-color: #cdd;
+  }
+  
+  .share-button, .copy-link {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  .share-button, .share-dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .share-dialog {
+    display: none;
+    width: 95%;
+    max-width: 500px;
+    box-shadow: 0 8px 16px rgba(0,0,0,.15);
+    z-index: -1;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  .share-dialog.is-open {
+    display: block;
+    z-index: 2;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .targets {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .close-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+  
+  .close-button svg {
+    margin-right: 0;
+  }
+  
+  .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #eee;
+  }
+  
+  .pen-url {
+    margin-right: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }

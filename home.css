@@ -524,7 +524,7 @@ a .cls-1 {
     position: relative;
     background-color: var(--sec-color);
     padding-right: 0px;
-    z-index: 400;
+    z-index: 0;
     transition: background-color 0.3s ease-in-out;
 
 
@@ -979,3 +979,54 @@ a .cls-1 {
 .toggle-switch:hover::before {
     opacity: 1;
 }
+
+#sharedialog{
+    width: 0;
+    display: none;
+}
+
+
+
+
+/* Small screens (phones) */
+@media only screen and (max-width: 850px) {
+    /* Styles for small screens go here */
+
+    .sidebar {
+        width: 400px; /* Initial width */
+        position: relative;
+        overflow: hidden;
+        border-radius: 0 0 8px 8px;
+        flex: 0 0 auto;
+        display: none;
+
+    }
+
+    .custom-scroll{
+    }
+
+    :root {
+        background-color: var(--sec-color);
+    }
+
+    .home-page {
+        margin-left: 0px;
+        border-radius: 0;
+
+        
+       
+    }
+
+    .color-picker-container {
+        display: none; /* To make sure the SVG overlay stays within the container */
+    
+        
+    
+    }
+
+    .backforward{
+        display: none;
+    }
+
+  }
+  

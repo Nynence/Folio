@@ -49,6 +49,8 @@
                     isDragging = false;
                     return;
                 }
+
+                
         
                 const containerRect = progressBarContainer.getBoundingClientRect();
                 const mouseX = event.clientX - containerRect.left;

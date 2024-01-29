@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // ... (rest of the code remains unchanged)
 
 let autoPlayInterval;
-let currentPercent = 0.1; // Initial value
+let intervalValue = 50; // Default interval value
 
 function startAutoPlay() {
     autoPlayInterval = setInterval(function () {
@@ -45,13 +45,106 @@ function startAutoPlay() {
         incrementProgressBar(100 - remainingPercentage);
 
         // Increment the current position
-        customScroll.scrollTop += 2; // Adjust the increment value as needed
-    }, 50); // Adjust the interval as needed (make it smaller for faster playback)
+        customScroll.scrollTop += 1; // Adjust the increment value as needed
+    }, intervalValue); // Set the interval using the dynamic value
 }
+
+
+
+// function for ramp slider for how fast it scrolls
+
+
+let isDragging2 = false;
+
+
+
+
+function updateramp() {
+    const sliderBar = document.querySelector('.slider-bar');
+    const sliderhandle = document.querySelector('.slider-handle');
+
+
+
+        // Update progress bar
+        const scrollPercentage = (customScroll.scrollTop / (customScroll.scrollHeight - customScroll.clientHeight)) * 100;
+        progressBar.style.width = `${scrollPercentage}%`;
+        sliderMarker.style.left = `calc(${scrollPercentage}% - 7.5px)`; // Adjusted for half of the marker's width
+
+        // Update start time based on the scroll position
+        
+        
+        // No overflow, set slider to start and make it non-responsive
+        sliderBar.style.width = '0%';
+        sliderhandle.style.left = '0%';
+        // Reset the time to '00'
+    
+}
+
+
+
+
+const sliderBarContainer = document.querySelector('.slider-container');
+sliderBarContainer.addEventListener('mousedown', startDragEvent);
+sliderBarContainer.addEventListener('click', handleClickEvent);
+
+
+function startDragEvent() {
+    isDragging2 = true;
+
+    document.addEventListener('mousemove', handleDragEvent);
+    document.addEventListener('mouseup', stopDragEvent);
+}
+
+
+
+function handleClickEvent(event) {
+    if (!isDragging2) {
+        const sliderBarContainer = document.querySelector('.slider-container');
+        const containerRect = sliderBarContainer.getBoundingClientRect();
+        const mouseX = event.clientX - containerRect.left;
+        const percent = (mouseX / containerRect.width) * 100;
+
+        const cappedPercent = Math.min(100, Math.max(0, percent));
+        intervalValue = Math.round(cappedPercent * 1.5);
+
+        const sliderBar = document.querySelector('.slider-bar');
+        const sliderHandle = document.querySelector('.slider-handle');
+
+        sliderBar.style.width = `${cappedPercent}%`;
+        sliderHandle.style.left = `${cappedPercent}%`;
+    }
+}
+function handleDragEvent(event) {
+    const sliderBarContainer = document.querySelector('.slider-container');
+    const sliderBar = document.querySelector('.slider-bar');
+    const sliderHandle = document.querySelector('.slider-handle');
+
+    const containerRect = sliderBarContainer.getBoundingClientRect();
+    const mouseX = event.clientX - containerRect.left;
+    const percent = (mouseX / containerRect.width) * 100;
+
+    // Cap the position between 0 and 100
+    const cappedPercent = Math.min(100, Math.max(0, percent));
+    intervalValue = Math.round(cappedPercent * 1.5); // Adjust the multiplier as needed
+
+    sliderBar.style.width = `${cappedPercent}%`;
+    sliderHandle.style.left = `${cappedPercent}%`; // Adjust the position of the slider handle
+}
+
+    function stopDragEvent() {
+        isDragging2 = false;
+
+        document.removeEventListener('mousemove', handleDragEvent);
+        document.removeEventListener('mouseup', stopDragEvent);
+    }
+
+
 
 function stopAutoPlay() {
     clearInterval(autoPlayInterval);
 }
+
+
 
 function incrementProgressBar(percent) {
     const progressBarContainer = document.querySelector('.progress-bar-container');
@@ -106,12 +199,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const customScroll = document.querySelector('.custom-scroll');
 
     totopButton.addEventListener('click', function () {
-        // Scroll to the top of the custom scroll container
-        customScroll.scrollTop = 0;
+        // Scroll to the top of the custom scroll container smoothly
+        customScroll.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 
     tobottomButton.addEventListener('click', function () {
-        // Scroll to the bottom of the custom scroll container
-        customScroll.scrollTop = customScroll.scrollHeight;
+        // Scroll to the bottom of the custom scroll container smoothly
+        customScroll.scrollTo({
+            top: customScroll.scrollHeight,
+            behavior: 'smooth'
+        });
     });
 });
+
+
