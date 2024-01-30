@@ -62,6 +62,9 @@ sliderContainer.addEventListener('mouseup', () => {
 //web share demo
 
 
+const currentUrl = window.location.href;
+
+
 const shareButton = document.querySelector('.sharetitle');
 const shareDialog = document.querySelector('#shareDialog');
 // const closeButton = document.querySelector('.close-button');
@@ -70,7 +73,7 @@ shareButton.addEventListener('click', event => {
     if (navigator.share) {
         navigator.share({
             title: 'WebShare API Demo',
-            url: 'https://codepen.io/ayoisaiah/pen/YbNazJ'
+            url: currentUrl
         }).then(() => {
             console.log('Thanks for sharing!');
         })
@@ -83,7 +86,6 @@ shareButton.addEventListener('click', event => {
 closeButton.addEventListener('click', event => {
     shareDialog.classList.remove('is-open');
 });
-
 
 
 

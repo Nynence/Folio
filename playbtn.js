@@ -105,7 +105,7 @@ function handleClickEvent(event) {
         const percent = (mouseX / containerRect.width) * 100;
 
         const cappedPercent = Math.min(100, Math.max(0, percent));
-        intervalValue = Math.round(cappedPercent * 1.5);
+        intervalValue = Math.round((100 - cappedPercent) * 1.5);
 
         const sliderBar = document.querySelector('.slider-bar');
         const sliderHandle = document.querySelector('.slider-handle');
@@ -125,7 +125,7 @@ function handleDragEvent(event) {
 
     // Cap the position between 0 and 100
     const cappedPercent = Math.min(100, Math.max(0, percent));
-    intervalValue = Math.round(cappedPercent * 1.5); // Adjust the multiplier as needed
+    intervalValue = Math.round((100 - cappedPercent) * 1.5);
 
     sliderBar.style.width = `${cappedPercent}%`;
     sliderHandle.style.left = `${cappedPercent}%`; // Adjust the position of the slider handle

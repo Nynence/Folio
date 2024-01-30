@@ -56,6 +56,7 @@
     --artist: #b3b3b3;
     --progress: hsla(0,0%,100%,.3);
     --leftright: hsla(0,0%,100%,.7);
+    --logo-color: #ed0000;
 
 
 
@@ -513,7 +514,6 @@ a .cls-1 {
     height: 90vh; /* Adjust as needed */
     flex: 1;
     max-width: 100%;
-
 
 }
 
@@ -1058,6 +1058,13 @@ a .cls-1 {
 @media only screen and (max-width: 850px) {
     /* Styles for small screens go here */
 
+    .toggle-switch:hover::before {
+      display: none;
+    }
+    
+
+    
+
    
     .backgradient{
         display: none;
@@ -1087,6 +1094,9 @@ a .cls-1 {
     }
 
     .custom-scroll{
+        padding-bottom: 200px;
+        
+
         
         
     }
@@ -1096,18 +1106,35 @@ a .cls-1 {
    }
 
     :root {
-        background-color: var(--sec-color);
+        /* background-color: var(--sec-color); */
+        /* background-color: var(--sec-color); */
+
         position: fixed;
+        
 
     }
 
+    body {
+        display: flex;
+        background: transparent;
+        padding: 0;
+        color: var(--sec-color);
+        transition: background-color var(--transition-speed), color var(--transition-speed);    
+    }
+
+    body.l
     .container{
+        height: 100vh;
 
     }    
     
     .home-page {
-        margin-left: 0px;
+        margin-left: -8px;
         border-radius: 0;
+        margin-top: -8px;
+        margin-right: -8px;
+
+        
 
         
        
@@ -1157,6 +1184,27 @@ a .cls-1 {
     background-color: var(--accent-color);
     color: var(--black);
 } 
+
+
+.sticky-top-bar {
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: space-between;
+    height: 50px;
+    top: 0; 
+    background: var(--sec-color);
+    /* background: linear-gradient(to top, var(--secgrad-color1) 0%, var(--secgrad-color2) 90%); */
+    /* Other styles for the sticky bar */
+    padding: 5px 25px;
+    box-shadow: 0 5px 16px var(--sec-color); /* horizontal offset, vertical offset, blur radius, color */
+    padding-top: 10px;
+
+}
+
+
+
   
 }
 
@@ -1168,25 +1216,28 @@ a .cls-1 {
     }
     
     .projects{
-        padding: 20px 10px;
+        padding: 20px 15px;
     }
 
-    .sticky-top-bar {
-        z-index: 500;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 4``````````````````````````````````````0px;
-        top: 0; 
-        background: var(--sec-color);
-        /* background: linear-gradient(to top, var(--secgrad-color1) 0%, var(--secgrad-color2) 90%); */
-        /* Other styles for the sticky bar */
-        padding: 5px 10px;
-        box-shadow: 0 5px 16px var(--sec-color); /* horizontal offset, vertical offset, blur radius, color */
 
-        
 
-  }
+
+  .sticky-top-bar {
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: space-between;
+    height: 50px;
+    top: 0; 
+    background: var(--sec-color);
+    /* background: linear-gradient(to top, var(--secgrad-color1) 0%, var(--secgrad-color2) 90%); */
+    /* Other styles for the sticky bar */
+    padding: 5px 15px;
+    box-shadow: 0 5px 16px var(--sec-color); /* horizontal offset, vertical offset, blur radius, color */
+    padding-top: 10px;
+
+}
 
 }
 
@@ -1198,9 +1249,14 @@ a .cls-1 {
             padding: 6px 12px;
             border-radius: 600px;
    
-            font-size: 0.8125rem;
+            font-size: 0.7125rem;
 
         
+        }
+
+        .slider{
+            scale: 0.90;
+    
         }
 
        

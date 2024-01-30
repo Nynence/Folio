@@ -1,4 +1,9 @@
- let isDragging = false;
+if (window.innerWidth < 850) {
+    // Do nothing or show a message indicating that the functionality is not available on small screens
+} else {
+
+
+let isDragging = false;
 
  function updateProgressBarAndTime() {
     const customScroll = document.querySelector('.custom-scroll');
@@ -169,3 +174,4 @@ document.querySelector('.slider-marker').addEventListener('mousedown', startDrag
 
 
 
+}

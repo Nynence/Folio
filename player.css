@@ -1,4 +1,17 @@
+.bottomplayer{
+    position: fixed;
+    bottom: 10px;
+    height: 11vh;
+    
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .music-player {
+    -webkit-user-drag: none;
     position: fixed;
     bottom: 10px;
     height: 11vh;
@@ -77,6 +90,11 @@
     
 
 }
+
+
+
+
+
 
 .controls {
     display: flex;
@@ -567,6 +585,19 @@
 
 
 
+#phonesharetitle{
+    display: none;  
+
+}
+
+
+.phone-toggle, #phone-toggle, .phone-button {
+    display: none;
+}
+
+
+
+
 /* Medium screens (tablets) */
 
 
@@ -609,13 +640,331 @@
 
   @media only screen and (max-width: 850px) {
 
+
+    .phoneprogress-container {
+        margin-bottom: -69px;
+        position: absolute;
+        width: 100%;
+        height: 10px;
+        background-color: var(--progress);
+        z-index: 10000;
+
+    }
+    
+    /* .phoneprogress-container:hover .phoneprogress-bar, .phoneprogress-container:active .phoneprogress-bar {
+        background-color: var(--accent-color);
+    } */
+    
+    .phoneprogress-container:hover .phonecircle, .phoneprogress-container:active .phonecircle {
+        display: block;
+    }
+    
+    .phoneprogress-bar {
+        width: 0%;
+        position: absolute;
+        height: inherit;
+        background-color: var(--t1-color);
+        border-radius: 4px;
+    }
+    
+
+
+    .phone-button {
+        width: 32px;
+        height: 32px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        align-items: center;
+        background-color: white;
+        border: none;
+        border-radius: 100px;
+        color: #000;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        -webkit-transition: none 33ms cubic-bezier(.3, 0, .7, 1);
+        transition: none 33ms cubic-bezier(.3, 0, .7, 1);
+        -webkit-transition-property: all;
+        transition-property: all;
+        /* transition: transform 0.1s ease-in-out; */
+        fill: var(--black);
+    }
+    
+    .phone-button svg {
+        width: 18px;
+        fill: black;
+    }
+    
+    .phone-button:active {
+        transform: scale(1.1);
+    }
+    
+    .phone-toggle {
+        display: none;
+    }
+    
+
+    .phone-button svg.phone-swap {
+        display: none;
+    }
+    
+    .phone-toggle:checked + .phone-button svg.phone-swap {
+        display: block;
+    }
+    
+    .phone-toggle:checked + .phone-button svg.phone-start {
+        display: none;
+    }
+    
+
+    .totop:hover, .tobottom:hover{
+        fill: white;
+    }
+
   .sideplayer{
     display: none;
 }
 
 
+.time{
+    display: none;
+
+}
+
+.progress-bar-container{
+    display: none;
+}
+
+
+.music-player{
+    background-color: var(--logo-color);
+    vertical-align: middle;
+    z-index: 100000;
+    overflow: hidden;
+    
+}
+
+.play-button{
+    background-color: white;
+}
+
+.play-button svg{
+    fill: black;
+}
+
+.controls {
+    justify-content: flex-end; /* Align content to the end of the container */
+    display: flex;
+
+    max-width: auto;
+    width: auto;
+    align-items: center;
+    /* justify-content: center; Updated from align-items to justify-content */
+    margin: 0;
+    /* margin-right: -200px;  */
+    /* margin-top: -5px; */
+    /* margin-right: -20px; */
+    margin-left: auto; /* Push controls to the right */
+ 
+
+}
+
+.slider-bar{
+    display: none;
+
+}
+
+
+.music-player {
+    position: fixed;
+    bottom: 10px;
+    height: 65px;
+    width: 95%;
+    justify-self: middle;
+    vertical-align: middle;
+    
+    border-radius: 10px;    
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+
+
+    
+
+}
+
+.bottomplayer{
+    margin-left: -8px;
+
+}
+
+
+
+.player{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    margin-bottom: 0;
+    height: auto;
+
+
+}
+
+.song-info{
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+
+
+}
+.song-details {
+    width: 20px;
+    height: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    -webkit-padding-start: 8px;
+    min-width: 180px;
+    padding-inline-start: 8px;
+    width: 30%;
+    position: relative;
+    vertical-align: middle;
+    align-items: center;
+    margin: 0;
+}
+
+
+.sharetitle {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    overflow: visible; /* or auto, scroll, hidden, depending on your layout */
+    z-index: 100;
+
+}
+
+.albumcover{
+    margin-bottom: 0px;
+    padding-right: 4px;
+}
+
+
+.albumcover img {
+    width: 45px; /* Make sure the image fills the entire container */
+    height: 45px; /* Ensure the image takes up the full height */
+    border-radius: 5px;
+
+}
+
+#phonesharetitle{
+    display: block;  
+
+}
+
+#phoneshare{
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    align-items: center;
+    /* background: transparent; */
+    border: none;
+    color: hsla(0,0%,100%,.7);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 16px;
+    justify-content: center;
+    min-width: 32px;
+    position: relative;
+    width: 16px;
+    fill: white;   
+
+}
+
+
+#phoneshare:hover{
+  
+    fill:white;   
+
+}
+
+.play-toggle, .play-button{
+    display: none;
+}
+.totop{
+    fill: hsla(0,0%,100%,.7);   
+
+}
+
+.tobottom{
+    fill: hsla(0,0%,100%,.7);   
+
+}
+
+.song-title{
+    color: white;
+}
+
+.artist{
+    color:  hsla(0, 0%, 100%, 0.75);
+}
+
+
+.lowerphonegrad{
+    position: fixed;
+    background: linear-gradient(to top, var(--sec-color) 0%, transparent);
+    height: 150px;
+    width: 120%;
+    z-index: 1000px;
+    bottom: 0px;
+    margin-left: -10px;
+
 
   }
 
+  }
 
-  
+    @media only screen and (max-width: 380px) {
+
+
+        .song-details{
+            margin-right: -15px;
+        }
+
+        .controls{
+            margin-right: 40px;
+        }
+
+        .progress-bar-container{
+            display: none;
+        }
+
+
+    }
+
+    
+
+    .slow-scroll {
+        scroll-behavior: smooth;
+        transition-duration: 5s; /* Adjust the duration as needed */
+      }
