@@ -7,6 +7,10 @@
 	<link rel="stylesheet" href="home.css">
 	<link rel="stylesheet" href="lightdark.css">
 	<link rel="stylesheet" href="player.css">
+	<link rel="stylesheet" href="projects.css">
+	<link rel="stylesheet" href="header.css">
+
+
 
 
 	<!--Font Family - Spotify Circular-->
@@ -21,18 +25,52 @@
 		@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,200;1,300&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 		:root{
+			--albumcover: url(/images/home-r-album.png);
 			--phone-bg: #272727;
 			--background-alpha: 0; /* Default alpha value, adjust as needed */
-			--background-rgb: 18, 18, 18; /* Default RGB values, adjust as needed */
+			--background-rgb: 198, 18, 18; /* Default RGB values, adjust as needed */
+			--artist: 'Jeff'
 
 
 
 		}
 
-	
+     
+
+        .albumcover img{
+            content: var(--albumcover);
+        }
+
+		
 	  </style>
+	  <script>
+		document.addEventListener('DOMContentLoaded', function() {
+  		console.log('Page has been loaded');
+ 			document.querySelector('.year').innerHTML = '2022';
+
+		});
+
+		document.addEventListener('DOMContentLoaded', function() {
+		console.log('Page has been loaded');
+		var elements = document.querySelectorAll('[id="atitle"]');
+		elements.forEach(function(element) {
+			element.innerHTML = 'Cocounut Milk';
+ 		 });
+		});
+
+		document.addEventListener('DOMContentLoaded', function() {
+		console.log('Page has been loaded');
+		var elements = document.querySelectorAll('[id="aartist"]');
+		elements.forEach(function(element) {
+			element.innerHTML = 'Rishab Kiran';
+ 		 });
+		});
+
+	</script>
 
 </head>
+
+
 <body>
 	
 	<div class="container">
@@ -80,7 +118,7 @@
 								<span>Home</span>
 							</a>
 						</li>
-						<li>
+						<!-- <li>
 							<a href="" class="search" id="searchButton">
 								<svg data-encore-id="icon" role="img" aria-hidden="true" class="search-inactive" viewBox="0 0 24 24">
 									<path d="M15.356 10.558c0 2.623-2.16 4.75-4.823 4.75-2.664 0-4.824-2.127-4.824-4.75s2.16-4.75 4.824-4.75c2.664 0 4.823 2.127 4.823 4.75z"></path>
@@ -88,7 +126,7 @@
 								</svg>
 								<span>Search</span>
 							</a>
-						</li>
+						</li> -->
 					</ul>
 			
 			</div>
@@ -115,7 +153,7 @@
 					</h4>
 				
 					<p>
-						A passionate designer and recent graduate from the University of Melbourne with a Bachelor of Design, majoring in Graphic Design and User Experience. Hailing from Melbourne, Australia, I thrive on challenges that enable me to acquire new skills and integrate them into my future works.
+						A passionate  designer and recent graduate from the University of Melbourne with a Bachelor of Design, majoring in Graphic Design and User Experience. Hailing from Melbourne, Australia, I thrive on challenges that enable me to acquire new skills and integrate them into my future works.
 						<br>
 						<br>
 						My expertise spans the Adobe Suite, motion design, and a touch of 3D, with a keen interest in expanding my proficiency. As a design enthusiast, I am excited about leveraging my skills to create impactful and visually engaging experiences. Let's connect and explore the endless possibilities of design together!
@@ -154,7 +192,7 @@
 
 					<input type="hidden" name="_captcha" value="false">
 					<input type="hidden" name="_template" value="box">
-					<input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">
+					<input type="hidden" name="_next" value="/success.html">
 
 
 
@@ -166,14 +204,14 @@
 		</div>
 		<!-- rightside -->
 		<section class="home-page">
-			<div class="backgradient" id="backgradient"></div>
-
+			
 			
 
-			
+			<span class="backgradient"></span>
+
 			
 			<div class="custom-scroll" onscroll="updateProgressBar()">
-				<div class="sticky-top-bar" id="stickyTopBar" data-color="18, 18, 18" >
+				<div class="sticky-top-bar" id="stickyTopBar">
 
 					
 
@@ -186,15 +224,14 @@
 					<path d="M36.18,6.71c0,3.7-3,6.7-6.7,6.7-2.9,0-5.38-1.85-6.3-4.43-2.17,1.48-3.78,3.35-3.94,3.53C21.94-.77,29.48,0,29.48,0c3.7,0,6.7,3,6.7,6.7Z"/>
 						</svg>
 						</div>
-						<a href="/index.html" class="phonebtn1">Home</a>
+						<a href="/index.html" class="phonebtn2" >Home</a>
 						<a href="/me.html" class="phonebtn2" >About Me</a>
 						<a href="/contact.html" class="phonebtn3">Contact</a>
 					</div>
 					
 					<!-- Sticky content -->
-					<div class="backforward"  ;
-					opacity: 0.6;>
-						<button class="back" onclick="goBack()"   data-title="Go back" id="backButton" aria-hidden="true">
+					<div class="backforward">
+						<button class="back" onclick="goBack()" data-title="Go back"  id="backButton" >
 							<svg data-encore-id="icon" role="img" aria-hidden="true" class="backarrow" viewBox="0 0 16 16">
 								<path d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"></path>
 							</svg>
@@ -251,101 +288,53 @@
 						
 				
 				</div>
-				
 
-				<div class="projects">
+
+			
+				<span class="gradient">
+					
+
+				</span>
+				<div class="headerwork">
+
+					<img style="content: var(--albumcover)"  alt="" >
+
+					<div class="albumcontainer">
+						<h1 id="atitle">Title</h1>
+						<div class="subtext">
+							<h7 id="aartist">Artist</h7>
+							<span class="year"  >2024</span>
+						</div>
+						
+					
+					</div>
+
+
+				</div >
+
+				<div class="projects" style="padding-bottom: 50px;">
+
+					<div id="lb-back">
+						<div id="lb-img"></div>
+					  </div>
+
+					<img class="zoomD"    src="./Images/banner.jpg" alt="">
+					<img class="zoomD" src="./Images/banner.jpg" alt="">
+
+					<!-- <img width="100%" src="./Images/banner.jpg" alt="">
+
 					<img width="100%" src="./Images/banner.jpg" alt="">
 
-				<h2>Browse projects</h2>
+					<img width="100%" src="./Images/banner.jpg" alt="">
+					<img width="100%" src="./Images/banner.jpg" alt="">
+
+					<img width="100%" src="./Images/banner.jpg" alt=""> -->
+
+
+
+				<!-- <h2>Browse projects</h2> -->
 					<div class="list" id="card"   >
-						<a href="/projects/croissantrepresentation.html"  class="item"  data-tags="" >
-							<img id="mgImage"  src="./Images/thumbnailph.jpeg" alt="" >
-							<div class="play">
-								<span>
-									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
-								</span>
-							</div>
-							<h3>Croissant Representation</h3>
-							<p>Rishab Kiran</p> 
-
-						</a>
-						<a href="/worktemplate.html"  class="item"  data-tags="" >
-							<img id="mgImage"  src="./Images/thumbnailph.jpeg" alt="" >
-							<div class="play">
-								<span>
-									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
-								</span>
-							</div>
-							<h3>1Project Title</h3>
-							<p>Rishab Kiran, descirption or autho</p> 
-
-						</a>
-						<a href="/worktemplate.html"  class="item"  data-tags="" >
-							<img id="mgImage"  src="./Images/thumbnailph.jpeg" alt="" >
-							<div class="play">
-								<span>
-									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
-								</span>
-							</div>
-							<h3>1Project Title</h3>
-							<p>Rishab Kiran, descirption or autho</p> 
-
-						</a>
-						<a href="/worktemplate.html"  class="item"  data-tags="" >
-							<img id="mgImage"  src="./Images/thumbnailph.jpeg" alt="" >
-							<div class="play">
-								<span>
-									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
-								</span>
-							</div>
-							<h3>1Project Title</h3>
-							<p>Rishab Kiran, descirption or autho</p> 
-
-						</a>
-						<a href="/worktemplate.html"  class="item"  data-tags="" >
-							<img id="mgImage"  src="./Images/thumbnailph.jpeg" alt="" >
-							<div class="play">
-								<span>
-									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
-								</span>
-							</div>
-							<h3>1Project Title</h3>
-							<p>Rishab Kiran, descirption or autho</p> 
-
-						</a>
-						<a href="/worktemplate.html"  class="item"  data-tags="" >
-							<img id="mgImage"  src="./Images/thumbnailph.jpeg" alt="" >
-							<div class="play">
-								<span>
-									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
-								</span>
-							</div>
-							<h3>1Project Title</h3>
-							<p>Rishab Kiran, descirption or autho</p> 
-
-						</a>
-						<a href="/worktemplate.html"  class="item"  data-tags="" >
-							<img id="mgImage"  src="./Images/thumbnailph.jpeg" alt="" >
-							<div class="play">
-								<span>
-									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
-								</span>
-							</div>
-							<h3>1Project Title</h3>
-							<p>Rishab Kiran, descirption or autho</p> 
-
-						</a>
-						<a href="/worktemplate.html"  class="item"  data-tags="" >
-							<img id="mgImage"  src="./Images/thumbnailph.jpeg" alt="" >
-							<div class="play">
-								<span>
-									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
-								</span>
-							</div>
-							<h3>1Project Title</h3>
-							<p>Rishab Kiran, descirption or autho</p> 
-
-						</a>
+						
 					</div>
 				</div>
 	   
@@ -358,11 +347,11 @@
 			</div>
 			<div class="song-details">
 				<div class="image-backer">
-				<div class="albumcover" style="background-color: var(--accent-color)"> <img src="./Images/home-r-album.png" alt=""> </div>
+				<div class="albumcover" style="background-color: none;"> <img src="" alt=""> </div>
 				</div>
 				<div class="song-info"> 
-					<div class="song-title">Browse Projects</div>
-					<div class="artist">Rishab Kiran</div>
+					<div id="atitle" class="song-title">Browse Projects</div>
+					<div class="artist" id="aartist">Rishab Kiran</div>
 				</div>
 				
 			</div>
@@ -524,6 +513,8 @@
 	<script src="playbtn.js"> </script>
 	<script src="fullscreen.js"> </script>
 	<script src="topbar.js"> </script>
+	<script src="imgzoom.js"> </script>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 
 

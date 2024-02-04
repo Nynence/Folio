@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Rishab Kiran</title>
-	<link rel="stylesheet" href="home.css">
+	<link rel="stylesheet" href="me.css">
 	<link rel="stylesheet" href="lightdark.css">
 	<link rel="stylesheet" href="player.css">
 
@@ -22,14 +22,9 @@
 
 		:root{
 			--phone-bg: #272727;
-			--background-alpha: 0; /* Default alpha value, adjust as needed */
-			--background-rgb: 18, 18, 18; /* Default RGB values, adjust as needed */
-
-
 
 		}
 
-	
 	  </style>
 
 </head>
@@ -41,7 +36,7 @@
 			<div class="navigation">
 					<ul class="navpadding">
 						<!-- page logo on side bare -->
-						<a href="" style="cursor: default;">
+						<a href="">
 							<svg  id="Layer 1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 600 90" width="400" height="100%" class="logo">
 							
 
@@ -73,7 +68,7 @@
 							
 						</li>
 						<li id="homeItem" class="paddinghome">
-							<a href="/index.html" class="home" >
+							<a href="" class="home" >
 								<svg data-encore-id="icon" role="img" aria-hidden="true" class="home-active" viewBox="0 0 24 24">
 									<path  d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"></path>
 								</svg>
@@ -126,62 +121,29 @@
 				
 
 
-
-				<form  action="https://formsubmit.co/rishabkiran.creative@gmail.com" method="POST" class="contactform">
-					
-					
-					<div class="form-group">
-						<label for="name">Name <span class="required-indicator">*</span></label>
-						<input type="text" id="name" name="FNAME" placeholder="John Doe" required>
-					</div>
-			
-					<div class="form-group">
-						<label for="email">Email <span class="required-indicator">*</span></label>
-						<input type="email" id="email" name="EMAIL" placeholder="john@example.com" required>
-					</div>
-			
-					<div class="form-group">
-						<label for="phone">Phone</label>
-						<input type="tel" id="phone" name="PHONE" placeholder="(+61) 412-345-567">
-					</div>
-			
-					<div class="form-group">
-						<label for="message">Message <span class="required-indicator">*</span></label>
-						<textarea id="message" name="MESSAGE" placeholder="Type your message here" rows="4" required></textarea>
-					</div>
-			
-					<button type="submit" name="Submit" >Submit</button>
-
-					<input type="hidden" name="_captcha" value="false">
-					<input type="hidden" name="_template" value="box">
-					<input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">
-
-
-
-
-				</form>
 				
 				
 			</div>
 		</div>
 		<!-- rightside -->
 		<section class="home-page">
-			<div class="backgradient" id="backgradient"></div>
-
+			
 			
 
 			
 			
 			<div class="custom-scroll" onscroll="updateProgressBar()">
-				<div class="sticky-top-bar" id="stickyTopBar" data-color="18, 18, 18" >
+				<div class="backgradient"></div>
+
+				<div class="sticky-top-bar" id="stickyTopBar">
 
 					
 
 					<div class="phonenav" >
-	
+
 						<div class="phonelogo">
 						<svg viewBox="-2 0 40.18 31.68" >
-	
+
 					<path d="M20.39,0c-1.27,1.35-2.27,2.92-2.94,4.61-.67,1.7-1.03,3.52-1.03,5.38v12.41c0,5.67-4.59,10.27-10.26,10.27-1.74,0-3.45-.43-4.98-1.25l-1.18-.64c1.06-.39,1.93-1.09,2.55-1.97.61-.89.96-1.96.96-3.08v-12.82C3.51,5.79,9.29,0,16.42,0c0,0,3.97,0,3.97,0Z"/>
 					<path d="M36.18,6.71c0,3.7-3,6.7-6.7,6.7-2.9,0-5.38-1.85-6.3-4.43-2.17,1.48-3.78,3.35-3.94,3.53C21.94-.77,29.48,0,29.48,0c3.7,0,6.7,3,6.7,6.7Z"/>
 						</svg>
@@ -192,14 +154,13 @@
 					</div>
 					
 					<!-- Sticky content -->
-					<div class="backforward"  ;
-					opacity: 0.6;>
-						<button class="back" onclick="goBack()"   data-title="Go back" id="backButton" aria-hidden="true">
+					<div class="backforward">
+						<button class="back" onclick="goBack()" title="Go back">
 							<svg data-encore-id="icon" role="img" aria-hidden="true" class="backarrow" viewBox="0 0 16 16">
 								<path d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"></path>
 							</svg>
 						</button>
-						<button class="forward" onclick="goForward()" data-title="Go forward" id="forwardButton">
+						<button class="forward" onclick="goForward()" title="Go forward">
 							<svg data-encore-id="icon" role="img" aria-hidden="true" class="forwardarrow" viewBox="0 0 16 16">
 								<path d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z"></path>
 							</svg>
@@ -251,102 +212,31 @@
 						
 				
 				</div>
-				
 
-				<div class="projects">
-					<img width="100%" src="./Images/banner.jpg" alt="">
+				<div class="projects" >
 
-				<h2>Browse projects</h2>
-					<div class="list" id="card"   >
-						<a href="/projects/croissantrepresentation.html"  class="item"  data-tags="" >
-							<img id="mgImage"  src="./Images/thumbnailph.jpeg" alt="" >
-							<div class="play">
-								<span>
-									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
-								</span>
-							</div>
-							<h3>Croissant Representation</h3>
-							<p>Rishab Kiran</p> 
+                    <img width="100%" src="./Images/banner.jpg" alt="">
 
-						</a>
-						<a href="/worktemplate.html"  class="item"  data-tags="" >
-							<img id="mgImage"  src="./Images/thumbnailph.jpeg" alt="" >
-							<div class="play">
-								<span>
-									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
-								</span>
-							</div>
-							<h3>1Project Title</h3>
-							<p>Rishab Kiran, descirption or autho</p> 
 
-						</a>
-						<a href="/worktemplate.html"  class="item"  data-tags="" >
-							<img id="mgImage"  src="./Images/thumbnailph.jpeg" alt="" >
-							<div class="play">
-								<span>
-									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
-								</span>
-							</div>
-							<h3>1Project Title</h3>
-							<p>Rishab Kiran, descirption or autho</p> 
 
-						</a>
-						<a href="/worktemplate.html"  class="item"  data-tags="" >
-							<img id="mgImage"  src="./Images/thumbnailph.jpeg" alt="" >
-							<div class="play">
-								<span>
-									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
-								</span>
-							</div>
-							<h3>1Project Title</h3>
-							<p>Rishab Kiran, descirption or autho</p> 
 
-						</a>
-						<a href="/worktemplate.html"  class="item"  data-tags="" >
-							<img id="mgImage"  src="./Images/thumbnailph.jpeg" alt="" >
-							<div class="play">
-								<span>
-									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
-								</span>
-							</div>
-							<h3>1Project Title</h3>
-							<p>Rishab Kiran, descirption or autho</p> 
-
-						</a>
-						<a href="/worktemplate.html"  class="item"  data-tags="" >
-							<img id="mgImage"  src="./Images/thumbnailph.jpeg" alt="" >
-							<div class="play">
-								<span>
-									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
-								</span>
-							</div>
-							<h3>1Project Title</h3>
-							<p>Rishab Kiran, descirption or autho</p> 
-
-						</a>
-						<a href="/worktemplate.html"  class="item"  data-tags="" >
-							<img id="mgImage"  src="./Images/thumbnailph.jpeg" alt="" >
-							<div class="play">
-								<span>
-									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
-								</span>
-							</div>
-							<h3>1Project Title</h3>
-							<p>Rishab Kiran, descirption or autho</p> 
-
-						</a>
-						<a href="/worktemplate.html"  class="item"  data-tags="" >
-							<img id="mgImage"  src="./Images/thumbnailph.jpeg" alt="" >
-							<div class="play">
-								<span>
-									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
-								</span>
-							</div>
-							<h3>1Project Title</h3>
-							<p>Rishab Kiran, descirption or autho</p> 
-
-						</a>
-					</div>
+                    <div class="metext">
+                      <h5> 
+                        HEY THERE!
+                      </h5>
+                      <h4>
+                        I'm Rishab
+                      </h4>
+                    
+                      <p>
+                        A passionate graphic designer and recent graduate from the University of Melbourne with a Bachelor of Design, majoring in Graphic Design and User Experience. Hailing from Melbourne, Australia, I thrive on challenges that enable me to acquire new skills and integrate them into my future works.
+                        <br>
+                        <br>
+                        My expertise spans the Adobe Suite, motion design, and a touch of 3D, with a keen interest in expanding my proficiency. As a design enthusiast, I am excited about leveraging my skills to create impactful and visually engaging experiences. Let's connect and explore the endless possibilities of design together!
+                      </p>
+            
+                    </div>
+					
 				</div>
 	   
 			</div>
@@ -361,7 +251,7 @@
 				<div class="albumcover" style="background-color: var(--accent-color)"> <img src="./Images/home-r-album.png" alt=""> </div>
 				</div>
 				<div class="song-info"> 
-					<div class="song-title">Browse Projects</div>
+					<div class="song-title">Me</div>
 					<div class="artist">Rishab Kiran</div>
 				</div>
 				
@@ -512,19 +402,17 @@
 	
 
 	<!-- javascrips -->
-    <script src="resize.js"></script>
+    <!-- <script src="resize.js"></script> -->
 	<script src="backforward.js"></script>
 	<script src="colourmode.js"></script>
 	<script src="accent.js"></script> 
 	<script src="search.js"></script> 
 	<script src="cardhover.js"></script> 
-	<script src="about.js"></script> 
+	<!-- <script src="about.js"></script>  -->
 	<script src="phonescroll.js"></script> 
 	<script src="player.js"> </script>
 	<script src="playbtn.js"> </script>
 	<script src="fullscreen.js"> </script>
-	<script src="topbar.js"> </script>
-
 
 
 

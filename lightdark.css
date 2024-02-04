@@ -25,7 +25,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ffffffaf;
+    background-color: #ffffffd5;
     transition: .4s;
     border-radius: 30px;
 }
@@ -49,12 +49,14 @@
 
 input:checked + .slider::before {
     right: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em))); /* Updated from left to right */
-    background: var(--c2-color);
+    background: none;
     box-shadow: inset 3px -2px 5px -2px #8983f7, inset 10px -4px 0 0 #a3dafb; /* Adjusted inset values */
 }
 
 
 input:checked + .slider{
-    background-color: var(--c2-color);
+    /* background-color: var(--c2-color); */
+    background-color: #252525d0;
+
 }
 

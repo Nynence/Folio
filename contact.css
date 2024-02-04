@@ -125,8 +125,6 @@ body.light-mode {
     --artist: #414141;
     --progress: #b8b8b8;
     --leftright: #585858;
-    --background-rgb: 238,238,238; /* Default RGB values, adjust as needed */
-
 
 
 
@@ -409,15 +407,13 @@ a .cls-1 {
     /* color: white; */
     padding: 22px 24px;
     transition: all  0.3s ease-in-out;
-    /* overflow-y: scroll; */
-
+    /* overflow-y: auto; */
 
 }
 
 .bottomnav:hover{
     background-color: var(--back-hover);
     transition: all  0.3s ease-in-out;
-
 }
 
 
@@ -475,8 +471,6 @@ a .cls-1 {
     margin-top: -4px;
 }
 
-
-
 /* Styling the sidebar */
 .sidebar {
     width: 400px; /* Initial width */
@@ -513,7 +507,6 @@ a .cls-1 {
     display: flex;
     flex-direction: column;
     background-color: var(--sec-color);
-    /* background-color: red; */
 }
 
 
@@ -532,7 +525,7 @@ a .cls-1 {
     overflow-y: auto;
     flex: 1; /* Fill available vertical space */
     position: relative;
-    /* background-color: var(--sec-color); */
+    background-color: var(--sec-color);
     padding-right: 0px;
     z-index: 0;
     transition: background-color 0.3s ease-in-out;
@@ -545,82 +538,45 @@ a .cls-1 {
     /* background-color: rgba(var(--back-hover)0.5); */
 
     transition: background-color 0.3s ease-in-out;
-    /* background: linear-gradient(to top, var(--sec-color) 50%, black 90%); */
 
 }
 
  /* For WebKit (Safari/Chrome) */
  .custom-scroll::-webkit-scrollbar {
      width: 10px; /* Width of the scrollbar */
-     z-index: -100;
-     overflow: overlay;
-     background-color: transparent;
-     position: sticky;
-
-
  }
  
  /* For WebKit (Safari/Chrome) - Track */
  .custom-scroll::-webkit-scrollbar-track {
      background-color: transparent; /* Transparent background */
-     z-index: -100;
-
  }
  
  /* For WebKit (Safari/Chrome) - Handle */
  .custom-scroll::-webkit-scrollbar-thumb {
      background-color: var(--scroll-color); /* Color of the scrollbar */
      border-radius: 0px; /* Rounded corners for the scrollbar */
-     z-index: -100;
-
      
  }
  
- :root {
-    --sticky-bg-color: rgba(255, 0, 0, 0.5); /* Red background with 0.5 opacity */
-}
 
 .sticky-top-bar {
-    z-index: 5000;
+    z-index: 500;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: auto;
     top: 0; 
-    position: sticky;
-    padding: 20px 25px;
-    transition: background 0.4s ease, backdrop-filter 0.5s ease;
-
-    /* Use CSS variables for RGB and alpha values */
-    background: rgba(var(--background-rgb), var(--background-alpha));
-
-    /* Other styles for the sticky bar */
-    /* box-shadow: 0 4px 60px rgba(0,0,0,.2); */
-}
-
-.sticky-top-bar::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(var(--background-rgb), var(--background-alpha));
-    filter: saturate(60%); /* Desaturate the background color by 20% */
-    z-index: -1; /* Ensure the pseudo-element is behind the content */
-}
-
-/* Additional styling for the content within .sticky-top-bar if needed */
-
-
-.sticky-top-bar.scrolled{
     background: var(--sec-color);
+    /* background: linear-gradient(to top, var(--secgrad-color1) 0%, var(--secgrad-color2) 90%); */
+    /* Other styles for the sticky bar */
+    padding: 20px 25px;
+    position: sticky;
+    /* backdrop-filter: blur(5px); 
+    transition: backdrop-filter 1s ease;  */
 
 }
 
-
-
-/* .backgradient{
+.backgradient{
     top: 0;
     width: 100%;
     height:100px;
@@ -634,36 +590,8 @@ a .cls-1 {
 
 
 }
- */
 
 
- .backgradient {
-    width: 100%;
-    height: 73px;
-    position: relative;
-    z-index: 0;
-    margin-bottom: -73px;
-    top: 0;
-}
-
-.backgradient::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(var(--background-rgb), var(--background-alpha));
-    filter: saturate(80%); /* Desaturate the background color by 20% */
-}
-
-/* Additional styling for the content within .backgradient if needed */
-
-
-.backgradient::before{
-
-    filter: saturate(60%); /* Desaturate the background color by 20% */
-}
 
 .colored-path {
     fill: var(--svg-fill-color, white);
@@ -727,56 +655,86 @@ a .cls-1 {
 }
 
 
+
 .backforward {
     display: flex;
     gap: 8px;
-
-
-
-}
-button.back.disabled,
-button.forward.disabled {
-    cursor: not-allowed;
-    opacity: 0.6;
 }
 
-button.back:not(.disabled),
-button.forward:not(.disabled) {
-    cursor: pointer;
-    opacity: 1;
+.back{
+  
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        background-color: var(--arrow-color);
+        border: none;
+        border-radius: 50%;
+        color: #fff;
+        cursor: pointer;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        height: 32px;
+        justify-content: center;
+        position: relative;
+        width: 32px;
+    
 }
 
-
-
-.back, .forward {
+.forward{
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     background-color: var(--arrow-color);
     border: none;
     border-radius: 50%;
     color: #fff;
+    cursor: pointer;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
     height: 32px;
-    width: 32px;
+    justify-content: center;
     position: relative;
-    transition: opacity 0.4s, cursor 0.4s;
+    width: 32px;
 }
 
-.backarrow, .forwardarrow {
+.backarrow{
     fill: var(--t1-color);
-    width: var(--encore-graphic-size-decorative-smaller, 16px);
-    height: var(--encore-graphic-size-decorative-smaller, 16px);
+    width: var(--encore-graphic-size-decorative-smaller,16px);
+    height: var(--encore-graphic-size-decorative-smaller,16px);
+    opacity: .6;
+}
+
+.forwardarrow{
+    fill: var(--t2-color);
+    width: var(--encore-graphic-size-decorative-smaller,16px);
+    height: var(--encore-graphic-size-decorative-smaller,16px);
+    opacity: .6;
+}
+
+/* Opacity settings for arrows */
+.backarrow, .forwardarrow {
     opacity: 0.6;
 }
 
+/* Disable pointer events and change cursor for disabled buttons */
+.back.disabled, .forward.disabled {
+    cursor: not-allowed;
+}
 
-
-.back:not(.disabled):hover::after, .forward:not(.disabled):hover::after {
+/* Increase opacity when navigating is possible */
+.back:not(.disabled) .backarrow, .forward:not(.disabled) .forwardarrow {
     opacity: 1;
 }
 
-.back::after, .forward:after {
-    content: attr(data-title);
+
+.back:not(.disabled):after, .forward:not(.disabled):after {
+    content: attr(title);
     position: absolute;
     bottom: -38px;
     left: 50%;
@@ -790,14 +748,20 @@ button.forward:not(.disabled) {
     border-radius: 4px;
     font-size: 0.8rem;
     white-space: nowrap;
+    -webkit-box-shadow: 0 7px 10px rgba(0,0,0,.3);
     box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    transition: opacity 0.4s, transform 0.4s ease;
-    transition-delay: 0.3s;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.4s, transform 0.4s ease; /* Add opacity transition */
+    transition-delay: 0.3s; /* Delay the transition by 0.2s */
     -webkit-font-smoothing: antialiased;
     z-index: 10;
-    pointer-events: none; /* Prevent pseudo-element from capturing pointer events */
 
+
+}
+
+.back:not(.disabled):hover::after, .forward:not(.disabled):hover::after {
+
+    opacity: 1; /* Fade in on hover */
 }
 
 
@@ -807,10 +771,6 @@ button.forward:not(.disabled) {
 
 .projects{
     padding: 20px 30px;
-}
-
-.projects a{
-    text-decoration: none;
 }
 
 .projects .list {
@@ -943,16 +903,10 @@ button.forward:not(.disabled) {
     transition: all 0.2s ease-in-out;
 
 
-
 }
 
-.me:focus, .me.active {
-    background-color: var(--t1-color);
-    color: var(--black);
-    transition: all 0.2s ease-in-out;
 
 
-}
 
 .contact:focus, .contact.active {
     background-color: var(--t1-color);
@@ -960,53 +914,16 @@ button.forward:not(.disabled) {
     transition: all 0.2s ease-in-out;
 
 }
-.me:not(:focus):hover, .contact:not(:focus):hover {
-        background-color: var(--buttonhov);
-        transition: all 0.2s ease-in-out;
-}
 
 
-.metext,
-.contactform {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
 
-    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; /* Adjust the duration and timing function as needed */
-}
-
-.show {
-    opacity: 1;
-    visibility: visible;
-}
 
 
 .metext{
     max-width: 400px;
     padding-right: 25px;
-    overflow-y: scroll;
-    padding-bottom: 200px;
-    height: 500px;
-   
 
 }
-
-
-
-.metext::-webkit-scrollbar {
-    width: 0px; /* Adjust the width of the scrollbar */
-}
-
-.metext::-webkit-scrollbar-thumb {
-    background-color: transparent; /* Adjust the color of the scrollbar thumb */
-    border-radius: 3px; /* Adjust the border-radius of the scrollbar thumb */
-}
-
-.metext::-webkit-scrollbar-track {
-    background-color: none; /* Adjust the color of the scrollbar track */
-}
-
-
 
 .metext h5{
     font-size: 1.1rem;
@@ -1015,8 +932,8 @@ button.forward:not(.disabled) {
     color: grey;
     letter-spacing: auto;
     -webkit-font-smoothing: antialiased;
-    margin-bottom: -28px;
-    margin-top: 36px;
+    margin-bottom: -25px;
+    margin-top: 40px;
 }
 
 .metext h4{
@@ -1027,12 +944,15 @@ button.forward:not(.disabled) {
     letter-spacing: auto;
     -webkit-font-smoothing: antialiased;
     color: var(--accent-color);
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 
+}
+.projects :not(image){
+    padding-right: 25px;
 }
 
 .metext p{
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 400;
     font-family: cbook;
     color: var(--t1-color);
@@ -1041,11 +961,11 @@ button.forward:not(.disabled) {
 }
 .contactform {
     width: 100%;
-    margin-top: 30px;
+    margin-top: -70px;
     display: flex;
     flex-direction: column;
     /* padding-right: 20px;  */
-    max-width: 225px; 
+    /* max-width: 225px;  */
     
 }
 
@@ -1066,6 +986,11 @@ button.forward:not(.disabled) {
     margin-bottom: 8px;
     display: flex;
     align-items: center;
+    color: var(--t1-color);
+}
+
+.projects img{
+    visibility: hidden;
 }
 
 .contactform .required-indicator {
@@ -1086,7 +1011,7 @@ button.forward:not(.disabled) {
 
 #message {
     resize: none; /* Prevent resizing in the x-direction */
-    height: 85px;
+    height: 90px;
     font-family: clight;
 }
 
@@ -1351,7 +1276,6 @@ button.forward:not(.disabled) {
         border-radius: 0;
         margin-top: -8px;
         margin-right: -8px;
-        
 
         
 
@@ -1399,9 +1323,10 @@ button.forward:not(.disabled) {
 
   }
 
-  .phonebtn1{
+  .phonebtn3{
     background-color: var(--accent-color);
     color: var(--black);
+    transition: all 0.1s ease-in-out;
 } 
 
 
@@ -1438,6 +1363,12 @@ button.forward:not(.disabled) {
         padding: 20px 15px;
     }
 
+    #message {
+        resize: none; /* Prevent resizing in the x-direction */
+        height: 180px;
+        font-family: clight;
+    }
+
 
 
 
@@ -1462,6 +1393,12 @@ button.forward:not(.disabled) {
 
 
 @media only screen and (max-width: 380px) {
+
+    #message {
+        resize: none; /* Prevent resizing in the x-direction */
+        height: 80px;
+        font-family: clight;
+    }
 
 
         .phonebtn1, .phonebtn2, .phonebtn3 {
