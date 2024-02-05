@@ -22,8 +22,67 @@
     font-family: CBook2; 
     src:url(./fonts/CircularSpUIv3T-Book.ttf)
 }
+.custom-cursor-container {
+    pointer-events: none;
+}
+
+.custom-cursor {
+    fill: rgba(255, 255, 255, 0.904);
+    stroke-width: 0.1px;
+    stroke: var(--t1-color);
+    backdrop-filter: ;
+    mix-blend-mode: exclusion;
+    width: 30px;
+    height: 23px;
+    
+    position: absolute;
+    pointer-events: none;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.5s ease-out 0.3s; /* Added cubic-bezier for smooth scale-up transition */
+    transform-origin: 50% 50%;
+    z-index: 100000000000;
+    transform: scale(1); /* Initial scale value */
+
+}
+
+.pointer-active {
+    fill: var(--accent-color) !important;
+    opacity: 1;
+    stroke: none;
+    width: 31px;
+    /* height: 25.3px; */
+    /* transform: scale(5); Initial scale value */
+
+
+
+
+   
+    
+}
+
+.custom-cursor svg {
+    image-rendering: optimizeSpeed; /* Older browsers */
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: -o-crisp-edges; /* Opera */
+    image-rendering: -webkit-optimize-contrast; /* Webkit (Safari/Chrome) */
+    image-rendering: pixelated; /* Chrome, Firefox, Opera, Safari */
+    image-rendering: optimize-contrast; /* CSS3 Proposed */
+    -ms-interpolation-mode: nearest-neighbor; /* IE8+ */
+  
+  }
+  
+
+
+
+
 
 :root {
+  
+
+
+    /* cursor: none; */
+
+    
+
     --bg-color: #000000; /* Background color */
     /* section */
     --sec-color: #121212;
@@ -61,6 +120,8 @@
 
 
 }
+
+
 
 h2{
     font-size: 2rem;
@@ -479,6 +540,7 @@ a .cls-1 {
 
 /* Styling the sidebar */
 .sidebar {
+    cursor: none;
     width: 400px; /* Initial width */
     position: relative;
     overflow: hidden;
@@ -506,6 +568,7 @@ a .cls-1 {
 
 
 .home-page {
+    cursor: none;
     border-radius: 8px;
     margin-left: 8px;
     flex: 1 1 auto;
@@ -828,7 +891,10 @@ button.forward:not(.disabled) {
     padding: 15px 15px 0px 15px;
     background-color: var(--c-color);
     border-radius: 6px;
-    cursor: pointer;
+    cursor: none;
+    transition: all 0.3s ease;
+
+
     transition: all ease 0.4s;
     width: calc(100% - 30px); /* Set width minus the gap to maintain consistent gaps */
     /* max-width: 500px; Set maximum width for the item */
@@ -966,6 +1032,18 @@ button.forward:not(.disabled) {
 }
 
 
+
+@keyframes fadeInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .metext,
 .contactform {
     opacity: 0;
@@ -1020,17 +1098,32 @@ button.forward:not(.disabled) {
 }
 
 .metext h4{
-    font-size: 2rem;
+    margin-top: 45px;
+    font-size: 2.5rem;
     font-weight: 400;
     font-family: cmed;
     color: var(--t1-color);
     letter-spacing: auto;
     -webkit-font-smoothing: antialiased;
     color: var(--accent-color);
-    margin-bottom: 16px;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+        opacity: 0;
+        transform: translateX(-50px);
+        animation: fadeInFromLeft 1s ease-out forwards;
+        cursor: pointer;
+    
+    }
+    
+
+
+
+.metext h4:hover{
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    transition: all 0.3s ease-in-out;
 
 }
-
 .metext p{
     font-size: 1rem;
     font-weight: 400;
@@ -1039,6 +1132,16 @@ button.forward:not(.disabled) {
     letter-spacing: auto;
     -webkit-font-smoothing: antialiased;
 }
+
+
+#p2 {
+    display: none;
+}
+
+.metext .highlight {
+    color: rgb(119, 0, 255); /* Change this to the desired highlight color */
+}
+
 .contactform {
     width: 100%;
     margin-top: 30px;
@@ -1270,6 +1373,12 @@ button.forward:not(.disabled) {
 
 }
 
+@media only screen and (max-width: 1025px) {
+    .bottomnav{
+        height: 75vh;
+    }
+
+}
 
 
 /* Small screens (phones) */

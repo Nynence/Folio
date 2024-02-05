@@ -938,7 +938,7 @@ a .cls-1 {
 }
 
 .metext h4{
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     font-weight: 400;
     font-family: cmed;
     color: var(--t1-color);
@@ -1202,6 +1202,10 @@ a .cls-1 {
 /* Small screens (phones) */
 @media only screen and (max-width: 850px) {
     /* Styles for small screens go here */
+
+    .metext{
+        width: 130%;
+    }
 
     .toggle-switch:hover::before {
       display: none;

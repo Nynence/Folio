@@ -54,7 +54,7 @@
 		console.log('Page has been loaded');
 		var elements = document.querySelectorAll('[id="atitle"]');
 		elements.forEach(function(element) {
-			element.innerHTML = 'Croissant Representation';
+			element.innerHTML = 'Croissant SSSddadsad';
  		 });
 		});
 
@@ -72,6 +72,17 @@
 
 
 <body>
+
+	<div class="custom-cursor-container">
+		<svg class="custom-cursor" id="Isolation_Mode" data-name="Isolation Mode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.02 22.96">
+		  
+			<style>
+			 
+			</style>
+		 
+		  <path  d="M29.02,11.49c0,6.33-5.14,11.47-11.47,11.47-4.98,0-9.21-3.17-10.79-7.6-3.72,2.55-6.49,5.75-6.76,6.06C4.64-1.32,17.55.01,17.55.01,23.88.01,29.02,5.15,29.02,11.49Z"/>
+		</svg>
+	  </div>
 	
 	<div class="container">
 		<div class="sidebar" id="sidebar">
@@ -110,8 +121,8 @@
 						<li class="paddinghome">
 							
 						</li>
-						<li id="homeItem" class="paddinghome">
-							<a href="/index.html" class="home" >
+						<li id="homeItem2" class="paddinghome">
+							<a href="/index.html" class="home2" >
 								<svg data-encore-id="icon" role="img" aria-hidden="true" class="home-active" viewBox="0 0 24 24">
 									<path  d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"></path>
 								</svg>
@@ -148,16 +159,26 @@
 					<h5> 
 						HEY THERE!
 					</h5>
-					<h4>
-						I'm Rishab
+					<h4 id="toggleText" onclick="toggleContent()">
+						I'm Rish.
 					</h4>
 				
-					<p>
+					<p id="p">
 						A passionate  designer and recent graduate from the University of Melbourne with a Bachelor of Design, majoring in Graphic Design and User Experience. Hailing from Melbourne, Australia, I thrive on challenges that enable me to acquire new skills and integrate them into my future works.
 						<br>
 						<br>
 						My expertise spans the Adobe Suite, motion design, and a touch of 3D, with a keen interest in expanding my proficiency. As a design enthusiast, I am excited about leveraging my skills to create impactful and visually engaging experiences. Let's connect and explore the endless possibilities of design together!
 					</p>
+
+					<p id="p2">
+						When I'm not designing, you'll find me lost playing video games like Valorant. Whilst I am an avid sport watcher - most recently getting into Formula 1 - I also make time to play cricket and tennis weekly. And if you catch me randomly wielding a lawnmower, don't be surprised; there's something oddly therapeutic about transforming my lawn.
+						<br>
+						<br>
+						If this Spotify-inspired portfolio didn't give it away,  I've got a serious love affair with music. It is my trusty companion while I am designing. Oh, and when I need to release some pent-up frustration, you'll catch me letting it all out on the drums. It's my way of adding a beat to the creative process.
+					</p>
+
+
+
 
 				</div>
 
@@ -300,7 +321,9 @@
 					<img style="content: var(--albumcover)"  alt="" >
 
 					<div class="albumcontainer">
-						<h1 id="atitle">croissantrepresentation</h1>
+						<div class="titlebox"> 
+							<div id="atitle">croissantrepresentation</div>
+						</div>
 						<div class="subtext">
 							<h7 id="aartist">Rishab Kiran</h7>
 							<span class="year"  >2021</span>
@@ -318,8 +341,8 @@
 						<div id="lb-img"></div>
 					  </div>
 
-					<img class="zoomD"    src="./Images/banner.jpg" alt="">
-					<img class="zoomD" src="./Images/banner.jpg" alt="">
+					<img class="zoomD"    src="../Images/banner.jpg" alt="">
+					<img class="zoomD" src="../Images/banner.jpg" alt="">
 
 					<!-- <img width="100%" src="./Images/banner.jpg" alt="">
 
@@ -501,19 +524,20 @@
 	
 
 	<!-- javascrips -->
-    <script src="../resize.js"></script>
-	<script src="../backforward.js"></script>
-	<script src="../colourmode.js"></script>
-	<script src="../accent.js"></script> 
-	<script src="../search.js"></script> 
-	<script src="../cardhover.js"></script> 
-	<script src="../about.js"></script> 
-	<script src="../phonescroll.js"></script> 
-	<script src="../player.js"> </script>
-	<script src="../playbtn.js"> </script>
-	<script src="../fullscreen.js"> </script>
-	<script src="../topbar.js"> </script>
-	<script src="../imgzoom.js"> </script>
+    <script src="../js/resize.js"></script>
+	<script src="../js/backforward.js"></script>
+	<script src="../js/colourmode.js"></script>
+	<script src="../js/accent.js"></script> 
+	<script src="../js/search.js"></script> 
+	<script src="../js/cardhover.js"></script> 
+	<script src="../js/about.js"></script> 
+	<script src="../js/phonescroll.js"></script> 
+	<script src="../js/player.js"> </script>
+	<script src="../js/playbtn.js"> </script>
+	<script src="../js/fullscreen.js"> </script>
+	<script src="../js/topbar.js"> </script>
+	<script src="../js/imgzoom.js"> </script>
+
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 
