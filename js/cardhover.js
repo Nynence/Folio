@@ -41,10 +41,10 @@ if (window.innerWidth > 1024) {
 
 // cursor
 
-document.addEventListener("DOMContentLoaded", function() {
-  var cursor = document.querySelector('.custom-cursor');
-  cursor.style.display = 'none'; // Hide the custom cursor initially
-});
+// document.addEventListener("DOMContentLoaded", function() {
+//   var cursor = document.querySelector('.custom-cursor');
+//   cursor.style.display = 'none'; // Hide the custom cursor initially
+// });
 
 document.addEventListener("DOMContentLoaded", function() {
   const customCursor = document.querySelector('.custom-cursor');
