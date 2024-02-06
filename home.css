@@ -88,6 +88,7 @@
 
 
 :root {
+
   
 
     cursor: none;
@@ -579,7 +580,9 @@ a .cls-1 {
     top: 0;
     right: -10px; /* Adjusted to create space from the edge */
     padding: 0 5px; /* Padding to avoid overlapping with rounded corners */
-    cursor: col-resize; /* Cursor type for resizing */
+    /* cursor: col-resize; Cursor type for resizing */
+    cursor: url('/Images/resize.svg') 10 10, auto;
+
     
     background-color: transparent;
     z-index: 1; /* Ensure the handle is above other elements */
@@ -601,7 +604,7 @@ a .cls-1 {
 
 
 .container {
-    cursor: default;
+    cursor: non;
     display: flex;
     height: 90vh; /* Adjust as needed */
     flex: 1;
@@ -900,11 +903,52 @@ button.forward:not(.disabled) {
 
 .banner{
     display: block;
+    animation: floatIn 1.5s ease-in-out;
+   
+
    
     border-radius: 6px;
+    transition: all 0.5s ease; /* Moved transition property here */
+
+
    
 
 }
+
+
+
+
+
+@keyframes floatIn {
+    0% {
+      transform: translateY(-30%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .item {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* .item:nth-child(n) {
+    animation-delay: calc(0.1s * (n - 1));
+} */
 
 .bannerphn{
     border-radius: 6px;

@@ -562,6 +562,14 @@
 	<script src="/js/topbar.js"> </script>
 	<script src="/js/meswap.js"> </script>
 
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var items = document.querySelectorAll('.item');
+			items.forEach(function(item, index) {
+				item.style.animationDelay = (index * 0.1) + 's';
+			});
+		});
+		</script>
 
 	
 
