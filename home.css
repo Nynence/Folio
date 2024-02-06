@@ -1129,7 +1129,7 @@ button.forward:not(.disabled) {
         opacity: 0;
         transform: translateX(-50px);
         animation: fadeInFromLeft 1s ease-out forwards;
-        cursor: pointer;
+        /* cursor: pointer; */
     
     }
     
