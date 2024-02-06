@@ -581,7 +581,7 @@ a .cls-1 {
     right: -10px; /* Adjusted to create space from the edge */
     padding: 0 5px; /* Padding to avoid overlapping with rounded corners */
     /* cursor: col-resize; Cursor type for resizing */
-    cursor: url('/Images/resize.svg') 10 10, auto;
+    cursor: url('./Images/resize.svg') 10 10, auto;
 
     
     background-color: transparent;
