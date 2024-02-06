@@ -61,6 +61,8 @@
     width: 31px;
     /* height: 25.3px; */
     /* transform: scale(5); Initial scale value */
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.5s ease-out 0.3s; Added cubic-bezier for smooth scale-up transition
+
 
 
 
@@ -896,6 +898,18 @@ button.forward:not(.disabled) {
 }
 
 
+.banner{
+   
+    border-radius: 6px;
+   
+
+}
+
+.bannerphn{
+    border-radius: 6px;
+
+    display: none;
+}
 
 
 /* grid for playlists */
@@ -1409,6 +1423,23 @@ button.forward:not(.disabled) {
 
 @media only screen and (max-width: 1366px) {
 
+    :root, body, .custom-scroll, .projects{
+        cursor: default;
+        
+    }
+
+  
+
+    .projects a{
+        cursor:pointer
+    }
+
+
+    .projects .list .item {
+     
+        cursor: pointer !important;
+    
+    }
 
       /* Styles for small screens go here */
 
@@ -1599,6 +1630,7 @@ button.forward:not(.disabled) {
 /* Small screens (phones) */
 @media only screen and (max-width: 1024px) {
     /* Styles for small screens go here */
+    
 
     h2{
         font-size: 2rem;
@@ -1777,6 +1809,23 @@ button.forward:not(.disabled) {
 }
 
   @media only screen and (max-width: 430px) {
+
+
+    .banner{
+        display: none;
+
+   
+        border-radius: 6px;
+       
+    
+    }
+    
+    .bannerphn{
+        border-radius: 6px;
+        display: block;
+    }
+    
+
     .projects .list {
    
         grid-template-columns: repeat(auto-fill, minmax(calc(50% - 10px), 1fr)); /* Each column is at least 50% width */
