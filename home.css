@@ -261,7 +261,7 @@ body.light-mode p {
 
 
 .home {
-    cursor: none;
+    cursor: none !important;
     color: var(--t1-color);
     transition: color 0.3s ease;  /* Adjust the duration and timing function as needed */
     transition: stroke 0.3s ease, fill 0.3s ease;  /* Add transition for both stroke and fill */
@@ -315,7 +315,7 @@ body.light-mode p {
 
 
 .search{
-    cursor: none;
+    cursor: none!important;
     -webkit-font-smoothing: antialiased;
     z-index: 600;
 
@@ -515,7 +515,7 @@ a .cls-1 {
     color: var(--t2-color);
     text-decoration: none;
     transition: color 0.3s ease-in-out;
-    cursor: none;
+    cursor: none !important;
 
 }
 .about svg{
@@ -554,7 +554,7 @@ a .cls-1 {
 
 /* Styling the sidebar */
 .sidebar {
-    cursor: none;
+    cursor: none !important;
     width: 400px; /* Initial width */
     position: relative;
     overflow: hidden;
@@ -582,7 +582,7 @@ a .cls-1 {
 
 
 .home-page {
-    cursor: none;
+    cursor: none !important;
     border-radius: 8px;
     margin-left: 8px;
     flex: 1 1 auto;
@@ -919,7 +919,7 @@ button.forward:not(.disabled) {
     padding: 15px 15px 0px 15px;
     background-color: var(--c-color);
     border-radius: 6px;
-    cursor: none;
+    cursor: none !important;
     transition: all 0.3s ease;
 
 
@@ -1014,7 +1014,7 @@ button.forward:not(.disabled) {
 .buttons{
     display: flex;
     flex-direction: right;
-    cursor: none;
+    cursor: none !important;
 }
 
 
@@ -1033,7 +1033,7 @@ button.forward:not(.disabled) {
     margin-right: 10px; /* Adjust the margin between buttons as needed */
 
 
-    cursor: none;
+    cursor: none !important;
     font-family: cbook;
     transition: all 0.2s ease-in-out;
 
@@ -1141,7 +1141,7 @@ button.forward:not(.disabled) {
         opacity: 0;
         transform: translateX(-50px);
         animation: fadeInFromLeft 1s ease-out forwards;
-        /* cursor: pointer; */
+        cursor: none !important;
     
     }
     
