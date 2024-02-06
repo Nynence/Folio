@@ -46,6 +46,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const cursorHalfWidth = 30 / 2;
   const cursorHalfHeight = 23 / 2;
 
+  
+
   document.addEventListener("mousemove", function(event) {
     const delay = 30;
     setTimeout(function() {
@@ -58,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const sidebar = document.getElementById('sidebar');
   const homePage = document.querySelector('.home-page');
   const clickableElements = document.querySelectorAll('.pointer,  .zoomD');
-  const hiddenElements = document.querySelectorAll('.backforward, .colourbtns, .resize-handle, #searchInput' );
+  const hiddenElements = document.querySelectorAll('.backforward, .colourbtns, .resize-handle, #searchInput,  .custom-scroll::-webkit-scrollbar,  .custom-scroll::-webkit-scrollbar-track, .custom-scroll::-webkit-scrollbar-thumb');
 
   let hideTimeout;
 
@@ -89,8 +91,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 
-
-
   clickableElements.forEach(element => {
     element.addEventListener('mouseenter', () => {
       // customCursor.style.display = 'none';
@@ -115,3 +115,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 document.body.style.overflow = 'hidden';
+
+

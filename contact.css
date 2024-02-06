@@ -507,6 +507,7 @@ a .cls-1 {
     display: flex;
     flex-direction: column;
     background-color: var(--sec-color);
+    height: 100vh;
 }
 
 
@@ -1196,7 +1197,159 @@ a .cls-1 {
 }
 
 
+@media only screen and (max-width: 1366px) {
+    
+    .toggle-switch:hover::before {
+        display: none;
+      }
+      
+  
+      
+  
+     
+      .backgradient{
+          display: none;
+          
+      
+      }
+  
+      .slider{
+          scale: 0.95;
+  
+      }
+  
+      .phonenav{
+          display: block;
+          display: flex;
+          gap: 0px;
+      }
+  
+      .sidebar {
+          width: 400px; /* Initial width */
+          position: relative;
+          overflow: hidden;
+          border-radius: 0 0 8px 8px;
+          flex: 0 0 auto;
+          display: none;
+  
+      }
+  
+      .custom-scroll{
+          padding-bottom: 200px;
+          
+  
+          
+          
+      }
+  
+      .custom-scroll::-webkit-scrollbar {
+          display: none; 
+     }
+  
+      :root {
+          /* background-color: var(--sec-color); */
+          /* background-color: var(--sec-color); */
+  
+          position: fixed;
+          
+  
+      }
+  
+      body {
+          display: flex;
+          background: transparent;
+          padding: 0;
+          color: var(--sec-color);
+          transition: background-color var(--transition-speed), color var(--transition-speed);    
+      }
+  
+      body.l
+      .container{
+          height: 100vh;
+  
+      }    
+      
+      .home-page {
+          margin-left: -8px;
+          border-radius: 0;
+          margin-top: -8px;
+          margin-right: -8px;
+  
+          
+  
+          
+         
+      }
+  
+      .color-picker-container {
+          display: none; /* To make sure the SVG overlay stays within the container */
+      
+          
+      
+      }
+  
+      .backforward{
+          display: none;
+      }
+  
+  
+      .projects{
+        margin-top: -200px;
+      }
+      .projects .list {
+     
+          /* grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); */
+          grid-row-gap: 15px;
+          grid-column-gap: 20px;
+  
+      }
+      
+      .projects .list .item {
+          padding: 15px 15px 0px 15px;
+  
+      
+          width: calc(100% - 30px); /* Set width minus the gap to maintain consistent gaps */
+          /* max-width: 500px; Set maximum width for the item */
+          height: calc(100% - 12%);
+      
+      }
+  
+      .phonenav{
+          display: flex;
+      }
+  
+      .phonebtn1, .phonebtn2, .phonebtn3 {
+          display: flex;
+  
+    }
+  
+    .phonebtn3{
+      background-color: var(--accent-color);
+      color: var(--black);
+      transition: all 0.1s ease-in-out;
+  } 
+  
+  
+  .sticky-top-bar {
+      z-index: 500;
+      display: flex;
+      align-items: center;
+      vertical-align: middle;
+      justify-content: space-between;
+      height: 50px;
+      top: 0; 
+      background: var(--sec-color);
+      /* background: linear-gradient(to top, var(--secgrad-color1) 0%, var(--secgrad-color2) 90%); */
+      /* Other styles for the sticky bar */
+      padding: 5px 25px;
+      box-shadow: 0 5px 16px var(--sec-color); /* horizontal offset, vertical offset, blur radius, color */
+      padding-top: 10px;
+  
+  }
+  
+  
 
+}
 /* Small screens (phones) */
 @media only screen and (max-width: 850px) {
     /* Styles for small screens go here */
@@ -1257,6 +1410,7 @@ a .cls-1 {
 
     }
 
+
     body {
         display: flex;
         background: transparent;
@@ -1294,6 +1448,9 @@ a .cls-1 {
         display: none;
     }
 
+    .projects{
+        margin-top: 0px;
+      }
 
 
     .projects .list {

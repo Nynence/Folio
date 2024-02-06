@@ -78,7 +78,6 @@
 :root {
   
 
-
     /* cursor: none; */
 
     
@@ -201,6 +200,11 @@ body.light-mode {
 }
 
 /* Update your styles for light mode using inverted colors */
+body.light-mode .sticky-top-bar::before, body.light-mode .backgradient::before{
+    filter: saturate(100%) brightness(100%);; Desaturate the background color by 20%
+
+}
+
 body.light-mode h2,
 body.light-mode h3,
 body.light-mode p {
@@ -614,6 +618,7 @@ a .cls-1 {
 
  /* For WebKit (Safari/Chrome) */
  .custom-scroll::-webkit-scrollbar {
+    cursor: pointer;
      width: 10px; /* Width of the scrollbar */
      z-index: -100;
      overflow: overlay;
@@ -625,6 +630,8 @@ a .cls-1 {
  
  /* For WebKit (Safari/Chrome) - Track */
  .custom-scroll::-webkit-scrollbar-track {
+    cursor: pointer;
+
      background-color: transparent; /* Transparent background */
      z-index: -100;
 
@@ -635,9 +642,19 @@ a .cls-1 {
      background-color: var(--scroll-color); /* Color of the scrollbar */
      border-radius: 0px; /* Rounded corners for the scrollbar */
      z-index: -100;
+     cursor: pointer;
+
 
      
  }
+
+ .custom-scroll::-webkit-scrollbar-thumb:hover{
+    background-color: var(--t1-color); /* Color of the scrollbar */
+   
+
+
+    
+}
  
  :root {
     --sticky-bg-color: rgba(255, 0, 0, 0.5); /* Red background with 0.5 opacity */
@@ -669,8 +686,9 @@ a .cls-1 {
     width: 100%;
     height: 100%;
     background: rgba(var(--background-rgb), var(--background-alpha));
-    filter: saturate(60%); /* Desaturate the background color by 20% */
     z-index: -1; /* Ensure the pseudo-element is behind the content */
+    filter: saturate(80%) brightness(40%);; Desaturate the background color by 20%
+
 }
 
 /* Additional styling for the content within .sticky-top-bar if needed */
@@ -716,16 +734,16 @@ a .cls-1 {
     left: 0;
     width: 100%;
     height: 100%;
+
     background: rgba(var(--background-rgb), var(--background-alpha));
-    filter: saturate(80%); /* Desaturate the background color by 20% */
+
 }
 
 /* Additional styling for the content within .backgradient if needed */
 
 
 .backgradient::before{
-
-    filter: saturate(60%); /* Desaturate the background color by 20% */
+    filter: saturate(80%) brightness(40%);; /* Desaturate the background color by 20% */
 }
 
 .colored-path {
@@ -1373,6 +1391,187 @@ button.forward:not(.disabled) {
 
 }
 
+@media only screen and (max-width: 1366px) {
+
+
+      /* Styles for small screens go here */
+
+      h2{
+        font-size: 2rem;
+        font-weight: 100;
+        font-family: cbold;
+        color: var(--t1-color);
+        letter-spacing: -1px;
+        -webkit-font-smoothing: antialiased;
+    
+    }
+
+    .toggle-switch:hover::before {
+      display: none;
+
+    }
+
+    .scrolling-text{
+        display: none;
+    }
+
+
+    .custom-cursor-container{
+        display: none;
+    }
+    
+
+    
+
+   
+    .backgradient{
+        display: none;
+        
+    
+    }
+
+    .slider{
+        scale: 0.95;
+
+    }
+
+    .phonenav{
+        display: block;
+        display: flex;
+        gap: 0px;
+    }
+
+    .sidebar {
+        width: 400px; /* Initial width */
+        position: relative;
+        overflow: hidden;
+        border-radius: 0 0 8px 8px;
+        flex: 0 0 auto;
+        display: none;
+
+    }
+
+    .custom-scroll{
+        padding-bottom: 200px;
+        
+
+        
+        
+    }
+
+    .custom-scroll::-webkit-scrollbar {
+        display: none; 
+   }
+
+    :root {
+        /* background-color: var(--sec-color); */
+        /* background-color: var(--sec-color); */
+
+        position: fixed;
+        
+
+    }
+
+    body {
+        display: flex;
+        background: transparent;
+        padding: 0;
+        color: var(--sec-color);
+        transition: background-color var(--transition-speed), color var(--transition-speed);    
+    }
+
+    body.l
+    .container{
+        height: 100vh;
+
+    }    
+    
+    .home-page {
+        margin-left: -8px;
+        border-radius: 0;
+        margin-top: -8px;
+        margin-right: -8px;
+        height: 100vh;
+        
+
+        
+
+        
+       
+    }
+
+    .color-picker-container {
+        display: none; /* To make sure the SVG overlay stays within the container */
+    
+        
+    
+    }
+
+    .backforward{
+        display: none;
+    }
+
+
+
+    .projects .list {
+   
+        /* grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); */
+        grid-row-gap: 15px;
+        grid-column-gap: 20px;
+
+    }
+    
+    .projects .list .item {
+        padding: 15px 15px 0px 15px;
+
+    
+        width: calc(100% - 30px); /* Set width minus the gap to maintain consistent gaps */
+        /* max-width: 500px; Set maximum width for the item */
+        height: calc(100% - 12%);
+    
+    }
+
+    .phonenav{
+        display: flex;
+    }
+
+    .phonebtn1, .phonebtn2, .phonebtn3 {
+        display: flex;
+
+  }
+
+  .phonebtn1{
+    background-color: var(--accent-color);
+    color: var(--black);
+} 
+
+
+.sticky-top-bar {
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: space-between;
+    height: 50px;
+    top: 0; 
+    background: var(--sec-color);
+    /* background: linear-gradient(to top, var(--secgrad-color1) 0%, var(--secgrad-color2) 90%); */
+    /* Other styles for the sticky bar */
+    padding: 5px 25px;
+    box-shadow: 0 5px 16px var(--sec-color); /* horizontal offset, vertical offset, blur radius, color */
+    padding-top: 10px;
+
+}
+
+.sticky-top-bar::before{
+    background: var(--sec-color);
+
+
+}
+
+}
+
+
 @media only screen and (max-width: 1025px) {
     .bottomnav{
         height: 75vh;
@@ -1382,11 +1581,31 @@ button.forward:not(.disabled) {
 
 
 /* Small screens (phones) */
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1024px) {
     /* Styles for small screens go here */
+
+    h2{
+        font-size: 2rem;
+        font-weight: 100;
+        font-family: cbold;
+        color: var(--t1-color);
+        letter-spacing: -1px;
+        -webkit-font-smoothing: antialiased;
+    
+    }
 
     .toggle-switch:hover::before {
       display: none;
+
+    }
+
+    .scrolling-text{
+        display: none;
+    }
+
+
+    .custom-cursor-container{
+        display: none;
     }
     
 
@@ -1531,6 +1750,11 @@ button.forward:not(.disabled) {
 
 }
 
+.sticky-top-bar::before{
+    background: var(--sec-color);
+
+
+}
 
 
   
