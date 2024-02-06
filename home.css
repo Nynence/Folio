@@ -86,7 +86,7 @@
 :root {
   
 
-    /* cursor: none; */
+    cursor: none;
 
     
 
@@ -597,6 +597,7 @@ a .cls-1 {
 
 
 .container {
+    cursor: default;
     display: flex;
     height: 90vh; /* Adjust as needed */
     flex: 1;
