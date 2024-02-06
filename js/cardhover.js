@@ -46,22 +46,59 @@ if (window.innerWidth > 1024) {
 //   cursor.style.display = 'none'; // Hide the custom cursor initially
 // });
 
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   const customCursor = document.querySelector('.custom-cursor');
+//   const cursorHalfWidth = 30 / 2;
+//   const cursorHalfHeight = 23 / 2;
+
+//   // let storedCursorX = localStorage.getItem('cursorX');
+//   // let storedCursorY = localStorage.getItem('cursorY');
+//   // if (storedCursorX && storedCursorY) {
+//   //   customCursor.style.transform = `translate(${storedCursorX}px, ${storedCursorY}px)`;
+//   // }
+
+  
+
+//   document.addEventListener("mousemove", function(event) {
+//     const delay = 30;
+//     setTimeout(function() {
+//       const x = event.clientX - cursorHalfWidth;
+//       const y = event.clientY - cursorHalfHeight;
+//       customCursor.style.transform = `translate(${x}px, ${y}px) ${customCursor.classList.contains('pointer-active') ? 'scale(1.5)' : 'scale(1)'}`;
+//     }, delay);
+//   });
+
+
 document.addEventListener("DOMContentLoaded", function() {
   const customCursor = document.querySelector('.custom-cursor');
   const cursorHalfWidth = 30 / 2;
   const cursorHalfHeight = 23 / 2;
 
-  
+  // Retrieve cursor position from localStorage if available
+  let storedCursorPosition = localStorage.getItem('cursorPosition');
+  if (storedCursorPosition) {
+    const [storedX, storedY] = storedCursorPosition.split(',');
+    customCursor.style.transform = `translate(${storedX}px, ${storedY}px) scale(1)`;
+    customCursor.style.opacity = '1'; // Show cursor
+  }
 
   document.addEventListener("mousemove", function(event) {
-    const delay = 30;
+    const delay = 50;
     setTimeout(function() {
       const x = event.clientX - cursorHalfWidth;
       const y = event.clientY - cursorHalfHeight;
+
       customCursor.style.transform = `translate(${x}px, ${y}px) ${customCursor.classList.contains('pointer-active') ? 'scale(1.5)' : 'scale(1)'}`;
+
+      // Store cursor position in localStorage
+      localStorage.setItem('cursorPosition', `${x},${y}`);
     }, delay);
   });
 
+  
+  
   const sidebar = document.getElementById('sidebar');
   const homePage = document.querySelector('.home-page');
   const clickableElements = document.querySelectorAll('.pointer,  .zoomD');

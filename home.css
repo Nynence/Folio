@@ -49,8 +49,10 @@
     transform-origin: 50% 50%;
     z-index: 100000000000;
     transform: scale(1); /* Initial scale value */
-
+     opacity: 0; /* Start with opacity 0 */
 }
+
+
 
 .pointer-active {
     fill: var(--accent-color) !important;
