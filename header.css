@@ -27,22 +27,28 @@
 }
 
 
+.hidden {
+    /* display: none; */
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Adjust the transition duration and timing function as needed */
+    pointer-events: none; /* Optional: Disable pointer events when hidden */
+}
+
+
 .scrolling-text #atitle {
     font-size: 1.5rem;
-    font-weight: 800;
+    font-weight: 100;
     font-family: cbold;
     color: var(--t1-color);
     /* letter-spacing: -1px; */
     opacity: 1;
+    transition: opacity 2s ease-in-out; /* Adjust the transition duration and timing function as needed */
+
 
     
     
 }
 
-.scrolling-text #atitle {
-    transition: opacity 0.5s ease; /* Adjust the transition duration and timing function as needed */
-
-}
 
 
 .headerwork #atitle {
@@ -146,12 +152,6 @@
 }
 
 
-.hidden {
-    /* display: none; */
-    opacity: 0;
-    transition: opacity 0.5s ease; /* Adjust the transition duration and timing function as needed */
-    pointer-events: none; /* Optional: Disable pointer events when hidden */
-}
 
 
 .gradient{

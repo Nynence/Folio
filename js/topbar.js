@@ -19,7 +19,7 @@ document.querySelector('.custom-scroll').addEventListener('scroll', function() {
     // If the screen width is greater than 1366 pixels, apply the scroll effect
     if (screenWidth > 1366) {
         var scrollPosition = this.scrollTop;
-        var maxScroll = 60; // Adjust the maximum scroll position for the transition
+        var maxScroll = 130; // Adjust the maximum scroll position for the transition
 
         // Calculate opacity based on scroll position
         var opacity = Math.min(scrollPosition / maxScroll, 1);
