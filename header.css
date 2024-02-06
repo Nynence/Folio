@@ -433,6 +433,10 @@
 /* home change */
 
 
+.home2{
+    cursor: none;
+}
+
 .home2 {
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;

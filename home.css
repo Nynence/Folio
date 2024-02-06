@@ -21,7 +21,15 @@
 @font-face{
     font-family: CBook2; 
     src:url(./fonts/CircularSpUIv3T-Book.ttf)
+
 }
+
+
+.custom-cursor {
+    display: none; /* Hide the custom cursor initially */
+}
+
+
 .custom-cursor-container {
     pointer-events: none;
 }
@@ -254,6 +262,7 @@ body.light-mode p {
 
 
 .home {
+    cursor: none;
     color: var(--t1-color);
     transition: color 0.3s ease;  /* Adjust the duration and timing function as needed */
     transition: stroke 0.3s ease, fill 0.3s ease;  /* Add transition for both stroke and fill */
@@ -307,6 +316,7 @@ body.light-mode p {
 
 
 .search{
+    cursor: none;
     -webkit-font-smoothing: antialiased;
     z-index: 600;
 
@@ -506,6 +516,7 @@ a .cls-1 {
     color: var(--t2-color);
     text-decoration: none;
     transition: color 0.3s ease-in-out;
+    cursor: none;
 
 }
 .about svg{
@@ -1004,6 +1015,7 @@ button.forward:not(.disabled) {
 .buttons{
     display: flex;
     flex-direction: right;
+    cursor: none;
 }
 
 
@@ -1022,7 +1034,7 @@ button.forward:not(.disabled) {
     margin-right: 10px; /* Adjust the margin between buttons as needed */
 
 
-    cursor: pointer;
+    cursor: none;
     font-family: cbook;
     transition: all 0.2s ease-in-out;
 
@@ -1078,6 +1090,7 @@ button.forward:not(.disabled) {
 
 
 .metext{
+
     max-width: 400px;
     padding-right: 25px;
     overflow-y: scroll;
