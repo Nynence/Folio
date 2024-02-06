@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   document.addEventListener("mousemove", function(event) {
-    const delay = 50;
+    const delay = 30;
     setTimeout(function() {
       const x = event.clientX - cursorHalfWidth;
       const y = event.clientY - cursorHalfHeight;
