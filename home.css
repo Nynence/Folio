@@ -27,8 +27,9 @@
 
 .custom-cursor {
     display: none; /* Hide the custom cursor initially */
-}
 
+
+}
 .custom-cursor-container {
     pointer-events: none;
 }
