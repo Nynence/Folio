@@ -899,6 +899,7 @@ button.forward:not(.disabled) {
 
 
 .banner{
+    display: block;
    
     border-radius: 6px;
    
@@ -908,7 +909,7 @@ button.forward:not(.disabled) {
 .bannerphn{
     border-radius: 6px;
 
-    display: none;
+    display: none !important;
 }
 
 
