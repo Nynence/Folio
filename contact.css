@@ -1048,6 +1048,7 @@ a .cls-1 {
 }
 
 .contactform button {
+    font-weight: 100;
     font-family: cbold;
     margin: auto;
     width: 250px;
