@@ -786,84 +786,7 @@ a .cls-1 {
     width: 100%; /* Ensure the grid fills the width of its container */
 }
 
-.projects .list .item {
-    padding: 15px 15px 0px 15px;
-    background-color: var(--c-color);
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all ease 0.4s;
-    width: calc(100% - 30px); /* Set width minus the gap to maintain consistent gaps */
-    /* max-width: 500px; Set maximum width for the item */
-    height: calc(100% - 12%);
 
-}
-
-
-
-.projects .list .item:hover{
-    background-color: var(--c2-color);
-
-}
-
-.projects .list .item img{
-    width: 100%;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    -webkit-box-shadow: 0 8px 24px rgba(0,0,0,.5);
-    box-shadow: 0 8px 24px rgba(0,0,0,.5);
-}
-
-
-.projects .list .item .play {
-    position: relative;
-}
-
-
-.projects .list .item svg{
-    position: absolute;
-    right: 10px;
-    top: -70px;
-    padding: 12px;
-    fill: var(--svg-fill-color);
-    background-color: var(--accent-color);
-    border-radius: 100%;
-    opacity: 0;
-    transition: all ease 0.4s;
-    
-    -webkit-box-shadow: 0 8px 8px rgba(0,0,0,.3);
-    box-shadow: 0 8px 8px rgba(0,0,0,.3);
-}
-
-
-.projects .list .item:hover .play svg{
-    opacity: 1;
-    transform: translateY(-11px);
-
-}
-
-.projects .list .item .play svg:hover{
-    transition: transform 0.4s ease-in-out; /* Transition for transform */
-    filter: brightness(1.03);
-    scale: 1.04;
-}
-.projects .list .item .play svg:hover:not(:focus){
-    transition: none; /* Remove the transition for filter */
-    filter: brightness(1.02);
-}
-
-.projects .list .item h3{
-    position: relative;
-    top: -20px;
-}
-
-.projects .list .item p{
-    position: relative;
-    top: -28px;
-    font-size: 0.88rem;
-    font-weight: 500;
-    font-family: cbook2;
-    color: var(--t3-color);
-}
 
 
 /* Other styles */
@@ -1199,12 +1122,49 @@ a .cls-1 {
 
 }
 
+@media only screen and (min-width: 600px) and (max-width: 1180px) {
+
+    
+    /* .projects{
+        display: block;
+        width: 100%;
+        width: 100vw;
+
+    } */
+
+    .metext p{
+        width: 100%;
+        width: 60vw;
+
+    }
+
+    .metext h4{
+        width: 100vw;
+    }
+
+    /* .metext{
+        display: block;
+        width: 100%;
+    }
+ */
+
+
+
+  
+}
+
 @media only screen and (max-width: 1366px) {
     /* Styles for small screens go here */
 
-    .metext{
+    /* .metext{
         width: 130%;
-    }
+
+
+
+    } */
+
+   
+
 
     .toggle-switch:hover::before {
       display: none;
@@ -1301,23 +1261,9 @@ a .cls-1 {
     .projects{
         margin-top: -140px;
     }
-    .projects .list {
    
-        /* grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); */
-        grid-row-gap: 15px;
-        grid-column-gap: 20px;
-
-    }
     
-    .projects .list .item {
-        padding: 15px 15px 0px 15px;
-
-    
-        width: calc(100% - 30px); /* Set width minus the gap to maintain consistent gaps */
-        /* max-width: 500px; Set maximum width for the item */
-        height: calc(100% - 12%);
-    
-    }
+ 
 
     .phonenav{
         display: flex;
@@ -1517,17 +1463,11 @@ a .cls-1 {
 
 }
 
-
-
-  
 }
 
+
   @media only screen and (max-width: 430px) {
-    .projects .list {
-   
-        grid-template-columns: repeat(auto-fill, minmax(calc(50% - 10px), 1fr)); /* Each column is at least 50% width */
-     
-    }
+  
     
     .projects{
         padding: 20px 15px;
@@ -1577,11 +1517,7 @@ a .cls-1 {
     }
 
   @media only screen and (max-width: 320px) {
-    .projects .list {
-   
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-     
-    }
+  
     
     .projects{
         padding: 20px 10px;
