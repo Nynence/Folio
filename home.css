@@ -942,7 +942,7 @@ button.forward:not(.disabled) {
 
 .banner{
     content: attr();
-    display: block;
+    display: block !important;
     animation: floatIn 1.5s ease-in-out;
    
 
@@ -1969,7 +1969,7 @@ button.forward:not(.disabled) {
 
 
     .banner{
-        display: block;
+        display: none  !important;
 
    
         border-radius: 6px;
