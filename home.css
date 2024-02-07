@@ -580,6 +580,7 @@ a .cls-1 {
     border-radius: 0 0 8px 8px;
     flex: 0 0 auto;
     animation: slideIn 1.2s ease-in-out;
+    animation-delay: 5s;
   
     transition: all 0.5s ease; /* Moved transition property here */
  
