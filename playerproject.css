@@ -610,8 +610,12 @@
 }
 
 
-
-@media only screen and (max-width: 1366px) {
+@media only screen
+and (min-device-width: 768px) /* Minimum width for iPads */
+and (max-device-width: 1024px) /* Maximum width for iPads */
+and (-webkit-min-device-pixel-ratio: 1.5) /* Ensuring it's a high-resolution display */
+{
+/* @media only screen and (max-width: 1366px) { */
 
     .phoneprogress-container {
         margin-bottom: -69px;
@@ -974,7 +978,25 @@
 
   }
 
-  @media only screen and (max-width: 1366px) {
+
+  @media  only screen and (max-height: 800px) {
+    .music-player {
+     
+        height: 12vh; /* Adjust as needed */
+    }
+    
+}
+
+
+
+
+
+@media only screen
+and (min-device-width: 768px) /* Minimum width for iPads */
+and (max-device-width: 1024px) /* Maximum width for iPads */
+and (-webkit-min-device-pixel-ratio: 1.5) /* Ensuring it's a high-resolution display */
+{
+  /* @media only screen and (max-width: 1366px) { */
 
 
     .phoneprogress-container {

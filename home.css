@@ -88,7 +88,7 @@
 
 
 :root {
-
+    
   
 
     cursor: none;
@@ -501,6 +501,15 @@ a .cls-1 {
 }
 
 
+/* .bottomnav:hover .buttons{
+    z-index: 2000000;
+    transition: all 2s ease;
+    box-shadow: 0px 50px 0px black; /* Add your desired shadow values here */
+
+
+
+
+
 .home-active{
     color: inherit;
 }
@@ -580,8 +589,8 @@ a .cls-1 {
     top: 0;
     right: -10px; /* Adjusted to create space from the edge */
     padding: 0 5px; /* Padding to avoid overlapping with rounded corners */
-    /* cursor: col-resize; Cursor type for resizing */
-    cursor: url('./Images/resize.svg') 10 10, auto;
+    /* cursor: col-resize;  */
+    cursor: url('Images/resize.png') 5 10, auto;
 
     
     background-color: transparent;
@@ -1075,6 +1084,8 @@ button.forward:not(.disabled) {
 
 
 .buttons{
+    padding-bottom: 15px;
+    z-index: 50000;
     display: flex;
     flex-direction: right;
     cursor: none !important;
@@ -1137,10 +1148,12 @@ button.forward:not(.disabled) {
 }
 
 .metext,
+
 .contactform {
     opacity: 0;
     visibility: hidden;
     position: absolute;
+
 
     transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; /* Adjust the duration and timing function as needed */
 }
@@ -1151,24 +1164,55 @@ button.forward:not(.disabled) {
 }
 
 
-.metext{
+
+
+.metext {
+    /* position:absolute; */
+
 
     max-width: 400px;
     padding-right: 25px;
     overflow-y: scroll;
-    padding-bottom: 200px;
-    height: 500px;
+    padding-bottom: 900px;
+    height: 220px;
+   
+
+}
+
+.contactform {
+    /* position:absolute; */
+
+
+    padding-right: 220px;
+    overflow-y: scroll;
+    padding-bottom: 900px;
+    height: 220px;
+    padding-left: 3px;
    
 
 }
 
 
-
-.metext::-webkit-scrollbar {
+ .contactform::-webkit-scrollbar  {
     width: 0px; /* Adjust the width of the scrollbar */
 }
 
-.metext::-webkit-scrollbar-thumb {
+ .contactform::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Adjust the color of the scrollbar thumb */
+    border-radius: 3px; /* Adjust the border-radius of the scrollbar thumb */
+}
+
+.contactform::-webkit-scrollbar-track {
+    background-color: none; /* Adjust the color of the scrollbar track */
+}
+
+
+
+.metext::-webkit-scrollbar   {
+    width: 0px; /* Adjust the width of the scrollbar */
+}
+
+.metext::-webkit-scrollbar-thumb,  {
     background-color: transparent; /* Adjust the color of the scrollbar thumb */
     border-radius: 3px; /* Adjust the border-radius of the scrollbar thumb */
 }
@@ -1466,7 +1510,31 @@ button.forward:not(.disabled) {
 
 }
 
-@media only screen and (max-width: 1366px) {
+
+/* 
+@media only screen
+  and (min-width: 1024px)
+  and (max-height: 1366px)
+  and (-webkit-min-device-pixel-ratio: 1.5)
+  and (device-aspect-ratio: 1024/1366x) { */
+
+
+@media  only screen and (max-height: 800px) {
+    .container {
+     
+        height: 88vh; /* Adjust as needed */
+    }
+    
+}
+
+
+    @media only screen
+  and (min-device-width: 768px) /* Minimum width for iPads */
+  and (max-device-width: 1024px) /* Maximum width for iPads */
+  and (-webkit-min-device-pixel-ratio: 1.5) /* Ensuring it's a high-resolution display */
+{
+
+/* @media only screen and (max-width: 1366px) { */
 
     :root, body, .custom-scroll, .projects{
         cursor: default;
