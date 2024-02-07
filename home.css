@@ -88,6 +88,9 @@
 
 
 :root {
+
+    --resize: url('./Images/resize.png');
+
     
   
 
@@ -171,7 +174,11 @@ body {
 }
 
 /* Define styles for light mode using the opposite colors */
+
 body.light-mode {
+    --resize: url('./Images/resizeb.png');
+
+
     --banner: url(./Images/bannerw.png);
     --bannerphn: url(./Images/bannerphnw.png);
 
@@ -613,7 +620,7 @@ a .cls-1 {
     right: -10px; /* Adjusted to create space from the edge */
     padding: 0 5px; /* Padding to avoid overlapping with rounded corners */
     /* cursor: col-resize;  */
-    cursor: url('Images/resize.png') 5 10, auto;
+    cursor: var(--resize) 5 10, auto; /* Use the variable here */
 
     
     background-color: transparent;
