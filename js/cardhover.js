@@ -31,29 +31,29 @@ function handleMouseOver() {
   mouseHover = true;
 }
 
-// if (window.innerWidth > 1024) {
-//   // Add event listeners only for screens wider than 1024 pixels
-//   card.addEventListener('mousemove', handleMouseMove);
-//   card.addEventListener('mouseout', handleMouseOut);
-//   card.addEventListener('mouseover', handleMouseOver);
-// }
-
-// Function to check if the device is not an iPad, including iPad Pro
-function isNotLikelyiPad() {
-  return (
-    window.innerWidth < 768 || // Maximum width for iPads
-    window.innerWidth > 1024 || // Minimum width for iPads
-    window.innerHeight < 1024 || // Maximum height for iPads
-    window.devicePixelRatio < 1.5 // Ensuring it's not a high-resolution display
-  );
-}
-
-if (isNotLikelyiPad()) {
-  // Add event listeners only if the device is not likely an iPad (including iPad Pro)
+if (window.innerWidth > 1024) {
+  // Add event listeners only for screens wider than 1024 pixels
   card.addEventListener('mousemove', handleMouseMove);
   card.addEventListener('mouseout', handleMouseOut);
   card.addEventListener('mouseover', handleMouseOver);
 }
+
+// Function to check if the device is not an iPad, including iPad Pro
+// function isNotLikelyiPad() {
+//   return (
+//     window.innerWidth < 768 || // Maximum width for iPads
+//     window.innerWidth > 1024 || // Minimum width for iPads
+//     window.innerHeight < 1024 || // Maximum height for iPads
+//     window.devicePixelRatio < 1.5 // Ensuring it's not a high-resolution display
+//   );
+// }
+
+// if (isNotLikelyiPad()) {
+//   // Add event listeners only if the device is not likely an iPad (including iPad Pro)
+//   card.addEventListener('mousemove', handleMouseMove);
+//   card.addEventListener('mouseout', handleMouseOut);
+//   card.addEventListener('mouseover', handleMouseOver);
+// }
 
 
 

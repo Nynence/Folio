@@ -643,7 +643,7 @@ a .cls-1 {
 
 
 .container {
-    cursor: non;
+    cursor: none;
     display: flex;
     height: 90vh; /* Adjust as needed */
     flex: 1;
@@ -1568,13 +1568,24 @@ button.forward:not(.disabled) {
 }
 
 
-    @media only screen
-  and (min-device-width: 768px) /* Minimum width for iPads */
-  and (max-device-width: 1024px) /* Maximum width for iPads */
-  and (-webkit-min-device-pixel-ratio: 1.5) /* Ensuring it's a high-resolution display */
-{
+/* @media only screen
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) 
+and (-webkit-min-device-pixel-ratio: 1.5) */
 
-/* @media only screen and (max-width: 1366px) { */
+
+/* @media only screen
+  and (min-width: 1024px)
+  and (max-height: 1366px)
+  and (-webkit-min-device-pixel-ratio: 1.5)
+  and (device-aspect-ratio: 1024/1366x) { */ 
+
+
+@media only screen and (max-width: 1366px) {
+
+    :root{
+        position: fixed;
+    }
 
     :root, body, .custom-scroll, .projects{
         cursor: default;
@@ -1680,7 +1691,7 @@ button.forward:not(.disabled) {
         transition: background-color var(--transition-speed), color var(--transition-speed);    
     }
 
-    body.l
+    
     .container{
         height: 100vh;
 
