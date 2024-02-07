@@ -31,7 +31,7 @@ function handleMouseOver() {
   mouseHover = true;
 }
 
-if (window.innerWidth > 1024) {
+if (window.innerWidth > 1180) {
   // Add event listeners only for screens wider than 1024 pixels
   card.addEventListener('mousemove', handleMouseMove);
   card.addEventListener('mouseout', handleMouseOut);

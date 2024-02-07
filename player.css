@@ -640,12 +640,14 @@
   and (-webkit-min-device-pixel-ratio: 1.5)
   and (device-aspect-ratio: 1024/1366) { */
 
-    @media only screen
-    and (min-device-width: 768px) /* Minimum width for iPads */
-    and (max-device-width: 1024px) /* Maximum width for iPads */
-    and (-webkit-min-device-pixel-ratio: 1.5) /* Ensuring it's a high-resolution display */
+    /* @media only screen
+    and (min-device-width: 768px) 
+    and (max-device-width: 1024px) 
+    and (-webkit-min-device-pixel-ratio: 1.5) 
   {
-  
+    */
+
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1180px) {
 
 
   /* @media only screen and (max-width: 1366px) { */
