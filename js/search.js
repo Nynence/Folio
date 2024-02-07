@@ -17,12 +17,16 @@ document.addEventListener('DOMContentLoaded', function () {
             setTimeout(function () {
                 bannerImage.style.opacity = '1';
                 browseProjectsText.style.opacity = '1';
+                bannerImage.style.marginTop = ' 00px'; // Use = for assignment
+
             }, 50); // Delay the opacity transition for a smooth effect
         } else {
             bannerImage.style.opacity = '0';
             browseProjectsText.style.opacity = '0';
             setTimeout(function () {
                 bannerImage.style.display = 'none';
+                bannerImage.style.marginTop = '-300px'; // Use = for assignment
+
                 browseProjectsText.style.display = 'none';
             }, 300); // Adjust the duration to match the CSS transition duration
         }

@@ -28,4 +28,10 @@ window.onload = function () {
     // Initially show 'metext' and hide 'contactform'
     document.querySelector('.metext').classList.add('show');
     document.querySelector('.contactform').classList.remove('show');
+
+    document.styleSheets[0].deleteRule(0);
+
+    
 };
+
+
