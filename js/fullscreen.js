@@ -72,7 +72,7 @@ const shareDialog = document.querySelector('#shareDialog');
 shareButton.addEventListener('click', event => {
     if (navigator.share) {
         navigator.share({
-            title: 'WebShare API Demo',
+            title: 'Rishab Kiran Portfolio',
             url: currentUrl
         }).then(() => {
             console.log('Thanks for sharing!');
