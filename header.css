@@ -536,3 +536,8 @@
 
 
 }
+
+
+#content {
+    visibility: hidden;
+}
