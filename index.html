@@ -9,6 +9,8 @@
 	<link rel="stylesheet" href="home.css">
 	<link rel="stylesheet" href="lightdark.css">
 	<link rel="stylesheet" href="player.css">
+	<link rel="stylesheet" href="typewriter.css">
+
 
 
 	<!--Font Family - Spotify Circular-->
@@ -27,7 +29,19 @@
 			--phone-bg: #272727;
 			--background-alpha: 0; /* Default alpha value, adjust as needed */
 			--background-rgb: 18, 18, 18; /* Default RGB values, adjust as needed */
+			--banner: url(./Images/banner.png);
+			--bannerphn: url(./Images/bannerphn.png);
+
+
 		}
+
+		.bannerbox img{
+            content: var(--banner);
+        }
+
+		.bannerboxphn img{
+            content: var(--bannerphn);
+        }
 
 			.sticky-top-bar::before, .backgradient::before {
     content: '';
@@ -140,7 +154,7 @@
 						I'm Rish.
 					</h4>
 				
-					<p id="p">
+					<p id="p"  class="typewriter">
 						A passionate  designer and recent graduate from the University of Melbourne with a Bachelor of Design, majoring in Graphic Design and User Experience. Hailing from Melbourne, Australia, I thrive on challenges that enable me to acquire new skills and integrate them into my future works.
 						<br>
 						<br>
@@ -287,8 +301,14 @@
 				
 
 				<div class="projects">
-					<img width="100%" class="banner" src="./Images/banner.png" alt="">
+					<div class="bannerbox"> 
+					
+					<img width="100%" class="banner" src="" alt="">
+					</div>
+					<div class="bannerboxphn"> 
+
 					<img width="100%" class="bannerphn" src="./Images/bannerphn.png" alt="">
+					</div>
 
 
 				<h2>Browse projects</h2>

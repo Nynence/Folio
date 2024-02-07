@@ -172,6 +172,10 @@ body {
 
 /* Define styles for light mode using the opposite colors */
 body.light-mode {
+    --banner: url(./Images/bannerw.png);
+    --bannerphn: url(./Images/bannerphnw.png);
+
+
     --bg-color: #ffffff; /* Background color */
     --t1-color: #000000; /* Text color */
     --t2-color: rgb(85, 85, 85);
@@ -575,10 +579,28 @@ a .cls-1 {
     overflow: hidden;
     border-radius: 0 0 8px 8px;
     flex: 0 0 auto;
+    animation: slideIn 1.2s ease-in-out;
+  
+    transition: all 0.5s ease; /* Moved transition property here */
+ 
 }
+
+@keyframes slideIn {
+    0% {
+      transform: translateX(-30%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+
 
 .sidebar ul li{
     list-style: none
+    
 }
 
 /* Styling the resize handle */
@@ -911,6 +933,7 @@ button.forward:not(.disabled) {
 
 
 .banner{
+    content: attr();
     display: block;
     animation: floatIn 1.5s ease-in-out;
    
@@ -961,6 +984,14 @@ button.forward:not(.disabled) {
 
 .bannerphn{
     border-radius: 6px;
+    animation: floatIn 1.5s ease-in-out;
+   
+
+   
+    border-radius: 6px;
+    transition: all 0.5s ease; /* Moved transition property here */
+
+
 
     display: none !important;
 }
@@ -1246,8 +1277,9 @@ button.forward:not(.disabled) {
     margin-bottom: 5px;
     transition: all 0.3s ease-in-out;
         opacity: 0;
-        transform: translateX(-50px);
+        /* transform: translateX(-50px); */
         animation: fadeInFromLeft 1s ease-out forwards;
+
         cursor: none !important;
     
     }
@@ -1917,6 +1949,10 @@ button.forward:not(.disabled) {
 
 }
 
+.container{
+    height: 100%;
+}
+
 
   
 }
@@ -1925,7 +1961,7 @@ button.forward:not(.disabled) {
 
 
     .banner{
-        display: none;
+        display: block;
 
    
         border-radius: 6px;
@@ -1933,9 +1969,17 @@ button.forward:not(.disabled) {
     
     }
     
+    .bannerbox{
+        display: none;
+        padding-bottom: 20px;
+
+    }
+
+
     .bannerphn{
         border-radius: 6px;
-        display: block;
+        display: block !important;
+        
     }
     
 
@@ -1968,6 +2012,8 @@ button.forward:not(.disabled) {
     padding-top: 10px;
 
 }
+
+
 
 }
 

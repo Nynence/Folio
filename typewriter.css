@@ -1,0 +1,21 @@
+.typewriter {
+    opacity: 0; /* Initial opacity set to 0 */
+    animation: slideIn2 1.2s ease-in-out forwards; /* Set forwards to maintain final state */
+    animation-delay: 1.1s; /* Add a delay of 1 second */
+}
+
+@keyframes slideIn2 {
+    0% {
+        /* transform: translateX(-30%); */
+    }
+    100% {
+        /* transform: translateX(0); */
+        opacity: 1; /* Set opacity to 1 at the end of animation */
+    }
+}
+
+
+.metext h4{
+    animation-delay: 0.8s;
+
+}
