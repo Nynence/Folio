@@ -389,7 +389,7 @@
     width: 100%;
     height: auto;
   /* ease | ease-in | ease-out | linear */
-    transition: all ease-in-out 0.4s;
+    /* transition: all ease-in-out 0.4s; */
     /* cursor: zoom-in; */
     margin: 0;
     font-size: 0px;
@@ -401,9 +401,6 @@
   
     width: 100%;
     height: auto;
-  /* ease | ease-in | ease-out | linear */
-    transition: all ease-in-out 0.4s;
-    /* cursor: zoom-in; */
 
   }
 
@@ -440,13 +437,15 @@
     width: 100%;
     height: auto;
     cursor: zoom-out; 
+
     */
 
     /* MAX WIDTH 1200px IMAGE */
-    width: 90%;
+    width: 80%;
     /* max-width: 1200px; */
     height: auto;
     margin: 0 auto;
+    margin-top: -100px;
     /* cursor: zoom-out; */
   }
 

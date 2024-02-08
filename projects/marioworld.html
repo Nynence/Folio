@@ -4,13 +4,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Rishab Kiran</title>
-	<link rel="icon" type="image/x-icon" href="/Images/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
 
-	<link rel="stylesheet" href="home.css">
-	<link rel="stylesheet" href="lightdark.css">
-	<link rel="stylesheet" href="player.css">
-	<link rel="stylesheet" href="typewriter.css">
-	<link rel="stylesheet" href="preloader.css">
+	<link rel="stylesheet" href="../home.css">
+	<link rel="stylesheet" href="../lightdark.css">
+	<link rel="stylesheet" href="../playerproject.css">
+	<link rel="stylesheet" href="../projects.css">
+	<link rel="stylesheet" href="../header.css">
+
 
 
 
@@ -20,51 +21,63 @@
 	<link href="https://encore.scdn.co/fonts/CircularSpTitle-Bold-2fbf72b606d7f0b0f771ea4956a8b4d6.woff2" rel="preload" type="font/woff2">
 	<link href="https://encore.scdn.co/fonts/CircularSpTitle-Black-3f9afb402080d53345ca1850226ca724.woff2" rel="preload" type="font/woff2">
 	<link href="https://open.spotifycdn.com/cdn/fonts/spoticon_regular_2.d728648c.woff2" rel="preload" type="font/woff2">
-	<link rel="stylesheet" media="all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait)" href="ipad-portrait.css" />
-<link rel="stylesheet" media="all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape)" href="ipad-landscape.css" />
-
 	<!-- favicon -->
 	<link rel="shortcut icon" href="" type="image/x-icon">
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,200;1,300&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 		:root{
+			--albumcover: url(../Images/Thumbnails/marioworld.webp);
 			--phone-bg: #272727;
 			--background-alpha: 0; /* Default alpha value, adjust as needed */
-			--background-rgb: 18, 18, 18; /* Default RGB values, adjust as needed */
-			--banner: url(./Images/banner.png);
-			--bannerphn: url(./Images/bannerphn.png);
+			--background-rgb: 235, 105, 37; /* Default RGB values, adjust as needed */
+			--artist: 'Jeff'
+
 
 
 		}
 
-		.bannerbox img{
-            content: var(--banner);
+     
+
+        .albumcover img{
+            content: var(--albumcover);
         }
-
-		.bannerboxphn img{
-            content: var(--bannerphn);
-        }
-
-			.sticky-top-bar::before, .backgradient::before {
-    content: '';
-    position: absolute;
-
-    filter: saturate(100%) brightness(100%);; 
-
-}
 
 		
-
-	
 	  </style>
+	  <script>
+		document.addEventListener('DOMContentLoaded', function() {
+  		console.log('Page has been loaded');
+ 			document.querySelector('.year').innerHTML = 'August 2021';
+
+		});
+
+		document.addEventListener('DOMContentLoaded', function() {
+		console.log('Page has been loaded');
+		var elements = document.querySelectorAll('[id="atitle"]');
+		elements.forEach(function(element) {
+			element.innerHTML = 'Mario World';
+ 		 });
+		});
+
+		document.addEventListener('DOMContentLoaded', function() {
+		console.log('Page has been loaded');
+		var elements = document.querySelectorAll('[id="aartist"]');
+		elements.forEach(function(element) {
+			element.innerHTML = 'Rishab Kiran';
+ 		 });
+		});
+
+	</script>
 
 </head>
+
+
 <body>
+
 	<div id="content">
 
-	
-	
+
 	<div class="custom-cursor-container">
 		<svg class="custom-cursor" id="Isolation_Mode" data-name="Isolation Mode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.02 22.96">
 		  
@@ -75,15 +88,11 @@
 		  <path  d="M29.02,11.49c0,6.33-5.14,11.47-11.47,11.47-4.98,0-9.21-3.17-10.79-7.6-3.72,2.55-6.49,5.75-6.76,6.06C4.64-1.32,17.55.01,17.55.01,23.88.01,29.02,5.15,29.02,11.49Z"/>
 		</svg>
 	  </div>
-
-
 	
 	<div class="container">
-	
 		<div class="sidebar" id="sidebar">
 			<!-- top navigation -->
 			<div class="navigation">
-				
 					<ul class="navpadding">
 						<!-- page logo on side bare -->
 						<a href="" style="cursor: none;">
@@ -117,15 +126,15 @@
 						<li class="paddinghome">
 							
 						</li>
-						<li id="homeItem" class="paddinghome">
-							<a href="/index.html" class="home" >
+						<li id="homeItem2" class="paddinghome">
+							<a href="/index.html" class="home2" >
 								<svg data-encore-id="icon" role="img" aria-hidden="true" class="home-active" viewBox="0 0 24 24">
 									<path  d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"></path>
 								</svg>
 								<span>Home</span>
 							</a>
 						</li>
-						<li>
+						<!-- <li>
 							<a href="" class="search" id="searchButton">
 								<svg data-encore-id="icon" role="img" aria-hidden="true" class="search-inactive" viewBox="0 0 24 24">
 									<path d="M15.356 10.558c0 2.623-2.16 4.75-4.823 4.75-2.664 0-4.824-2.127-4.824-4.75s2.16-4.75 4.824-4.75c2.664 0 4.823 2.127 4.823 4.75z"></path>
@@ -133,7 +142,7 @@
 								</svg>
 								<span>Search</span>
 							</a>
-						</li>
+						</li> -->
 					</ul>
 			
 			</div>
@@ -151,15 +160,15 @@
 					<button class="contact" onclick="toggleButtons(this)">Contact</button>
 				</div>
 
-				<div class="metext" >
+				<div class="metext">
 					<h5> 
 						HEY THERE!
 					</h5>
-					<h4 class="pointer" id="toggleText" onclick="toggleContent()">
+					<h4  class="pointer" id="toggleText" onclick="toggleContent()">
 						I'm Rish.
 					</h4>
 				
-					<p id="p"  class="typewriter">
+					<p id="p">
 						A passionate  designer and recent graduate from the University of Melbourne with a Bachelor of Design, majoring in Graphic Design and User Experience. Hailing from Melbourne, Australia, I thrive on challenges that enable me to acquire new skills and integrate them into my future works.
 						<br>
 						<br>
@@ -172,6 +181,9 @@
 						<br>
 						If this Spotify-inspired portfolio didn't give it away,  I've got a serious love affair with music. It is my trusty companion while I am designing. Oh, and when I need to release some pent-up frustration, you'll catch me letting it all out on the drums. It's my way of adding a beat to the creative process.
 					</p>
+
+
+
 
 				</div>
 
@@ -218,14 +230,16 @@
 		</div>
 		<!-- rightside -->
 		<section class="home-page">
-			<div class="backgradient" id="backgradient"></div>
-
+			
 			
 
-			
+			<span class="backgradient"></span>
+
 			
 			<div class="custom-scroll" onscroll="updateProgressBar()">
-				<div class="sticky-top-bar" id="stickyTopBar" data-color="18, 18, 18" >
+				<div class="sticky-top-bar" id="stickyTopBar">
+
+
 
 					
 
@@ -238,15 +252,14 @@
 					<path d="M36.18,6.71c0,3.7-3,6.7-6.7,6.7-2.9,0-5.38-1.85-6.3-4.43-2.17,1.48-3.78,3.35-3.94,3.53C21.94-.77,29.48,0,29.48,0c3.7,0,6.7,3,6.7,6.7Z"/>
 						</svg>
 						</div>
-						<a href="/index.html" class="phonebtn1">Home</a>
+						<a href="/index.html" class="phonebtn2" >Home</a>
 						<a href="/me.html" class="phonebtn2" >About Me</a>
 						<a href="/contact.html" class="phonebtn3">Contact</a>
 					</div>
 					
 					<!-- Sticky content -->
-					<div class="backforward"  ;
-					opacity: 0.6;>
-						<button class="back" onclick="goBack()"   data-title="Go back" id="backButton" aria-hidden="true">
+					<div class="backforward">
+						<button class="back" onclick="goBack()" data-title="Go back"  id="backButton" >
 							<svg data-encore-id="icon" role="img" aria-hidden="true" class="backarrow" viewBox="0 0 16 16">
 								<path d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"></path>
 							</svg>
@@ -257,6 +270,14 @@
 							</svg>
 						</button>
 					</div>
+
+					<div class="scrolling-text hidden">
+						<!-- Your scrolling text content here -->
+						<div id="atitle">croissantrepresentation</div>
+					</div>
+
+					
+
 					<div class="search-box" id="searchBox">
 						<div class="search-icon">
 							<svg data-encore-id="icon" role="img" aria-hidden="true" class="search-icon-svg" viewBox="0 0 24 24">
@@ -303,44 +324,112 @@
 						
 				
 				</div>
+
+
+			
+				<span class="gradient">
+					
+
+				</span>
+
+				
+				<div class="headerwork">
+
+					<img style="content: var(--albumcover)"  alt="" >
+
+					<div class="albumcontainer">
+						<div class="titlebox"> 
+							<div id="atitle">croissantrepresentation</div>
+						</div>
+						<div class="subtext">
+							<h7 id="aartist">Rishab Kiran</h7>
+							<span class="year"  >2021</span>
+						</div>
+						
+					
+					</div>
+
+
+				</div >
+
+				<div class="projects" style="padding-bottom: 50px;">
+
+				
+					<div id="lb-back">
+						<div id="lb-img"></div>
+					  </div>
+
+					<div class="intro">
+						<div class="overview">
+							<h8>Overview</h8>
+							<p>This project explored the concept of flatness and projection which correlates to the spatial relation between 2-Dimensional and 3-Dimensional space. It explores axonometric projection and applies this to an assigned Mario world elevation. These elevations were flat in nature and lack perceivable depth. Being able to physically enter something and observe around objects adds to the immersion of a piece of work. Hence trying to project this as an axonometric drawing meant interpreting the hidden space behind the frontal perspective and ensuring measurements of objects were consistent in relation to the elevation. Creating this projection cohesively was a challenge as compositional considerations had to be made in relation to hierarchy, balance and negative space.</p>
+						</div>
+						<div class="tools">
+							<h8>Tools</h8>
+							<p >Adobe Illustrator</p>
+							<img width="100px" src="../Images/marioworld/runningmario.gif" alt="">
+						</div>
+
+
+					</div>
+
+					<img class="zoomD"    src="../Images/marioworld/elevation.webp" alt="">
+
+					<div class="info">
+						<div class="infotext">
+							<h8>Elevation Extraction</h8>
+							<p>The elevations that I was given  of the Mario world contained a lot of bright and warm tones due to the desert environment. This was quite a jarring elevation and I didn’t want this to be translated in the axonometric, as I felt it would overwhelm or distract the viewer. Hence, choosing which elements to extract was a well considered aspect, with the goal of achieving a pleasing experience to the viewer and reduce the apparent harshness from the elevations.
+								<br><br>
+
+								I specifically sought out objects that would contrast as well as neutralise the warm blocks in the composition. The chosen six elements were: a pipe, an arrow, a terracotta block, a brick block, an ice block, and a water element. I felt that the ice and water elements provided a good contrast to the pipe, arrow and terracotta blocks, as well gave me inspiration to explore how these elements would interact with each other. The brick block acted as a neutral element that would provide a bit of greenery which also complimented the warm and cool objects.
+								<br><br>
+								I aimed to really intertwine the six objects together and to create a more captivating composition. Additionally experimenting with scale, depth, rotation as well as cutting and joining was a great way to take advantage of the quirks of axonometric projection.</p>
+						</div>
+
+					</div>
+
+					<div class="split">
+						<img class="zoomD" src="../Images/marioworld/colours.webp" alt="">
+						<img class="zoomD" src="../Images/marioworld/blocks.webp" alt="">
+
+
+					</div>
+
+
+					<div class="info">
+						<div class="infotext">
+							<h8>Elevation Extraction</h8>
+							<p>The elevations that I was given  of the Mario world contained a lot of bright and warm tones due to the desert environment. This was quite a jarring elevation and I didn’t want this to be translated in the axonometric, as I felt it would overwhelm or distract the viewer. Hence, choosing which elements to extract was a well considered aspect, with the goal of achieving a pleasing experience to the viewer and reduce the apparent harshness from the elevations.
+								<br><br>
+
+								I specifically sought out objects that would contrast as well as neutralise the warm blocks in the composition. The chosen six elements were: a pipe, an arrow, a terracotta block, a brick block, an ice block, and a water element. I felt that the ice and water elements provided a good contrast to the pipe, arrow and terracotta blocks, as well gave me inspiration to explore how these elements would interact with each other. The brick block acted as a neutral element that would provide a bit of greenery which also complimented the warm and cool objects.
+								<br><br>
+								I aimed to really intertwine the six objects together and to create a more captivating composition. Additionally experimenting with scale, depth, rotation as well as cutting and joining was a great way to take advantage of the quirks of axonometric projection.</p>
+						</div>
+
+					</div>
+					
+					<img class="zoomD" src="../Images/marioworld/drawing.webp" alt="">
+					
+
 				
 
-				<div class="projects">
-					<div class="bannerbox"> 
+
 					
-					<img width="100%" class="banner" src="" alt="">
-					</div>
-					<div class="bannerboxphn"> 
 
-					<img width="100%" class="bannerphn" src="./Images/bannerphn.png" alt="">
-					</div>
+					<!-- <img width="100%" src="./Images/banner.jpg" alt="">
+
+					<img width="100%" src="./Images/banner.jpg" alt="">
+
+					<img width="100%" src="./Images/banner.jpg" alt="">
+					<img width="100%" src="./Images/banner.jpg" alt="">
+
+					<img width="100%" src="./Images/banner.jpg" alt=""> -->
 
 
-				<h2>Browse projects</h2>
+
+				<!-- <h2>Browse projects</h2> -->
 					<div class="list" id="card"   >
-						<a href="/projects/marioworld.html"  class="item"  data-tags="2021, mario, world, axonometric, Illustrator" >
-							<img id="mgImage"  src="./Images/Thumbnails/marioworld.webp" alt="" >
-							<div class="play">
-								<span>
-									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
-								</span>
-							</div>
-							<h3>Mario World</h3>
-							<p>Rishab Kiran</p> 
-
-						</a>
-						
-						<a href="/projects/croissantrepresentation.html"  class="item"  data-tags="" >
-							<img id="mgImage"  src="./Images/thumbnailph.jpeg" alt="" >
-							<div class="play">
-								<span>
-									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
-								</span>
-							</div>
-							<h3>Croissant Representation</h3>
-							<p>Rishab Kiran</p> 
-
-						</a>
 						
 					</div>
 				</div>
@@ -354,11 +443,11 @@
 			</div>
 			<div class="song-details">
 				<div class="image-backer">
-				<div class="albumcover" style="background-color: var(--accent-color)"> <img src="./Images/home-r-album.png" alt=""> </div>
+				<div class="albumcover" style="background-color: none;"> <img src="" alt=""> </div>
 				</div>
 				<div class="song-info"> 
-					<div class="song-title">Browse Projects</div>
-					<div class="artist">Rishab Kiran</div>
+					<div id="atitle" class="song-title">Browse Projects</div>
+					<div class="artist" id="aartist">Rishab Kiran</div>
 				</div>
 				
 			</div>
@@ -500,43 +589,60 @@
 		</span>
 		</section>
 
-
-
 		
 
 		
 	</div>
-</div>
+
+	</div>
 
 	
 
 	<!-- javascrips -->
-    <script src="/js/resize.js"></script>
-	<script src="/js/backforward.js"></script>
-	<script src="/js/colourmode.js"></script>
-	<script src="/js/accent.js"></script> 
-	<script src="/js/search.js"></script> 
-	<script src="/js/cardhover.js"></script> 
-	<script src="/js/about.js"></script> 
-	<script src="/js/phonescroll.js"></script> 
-	<script src="/js/player.js"> </script>
-	<script src="/js/playbtn.js"> </script>
-	<script src="/js/fullscreen.js"> </script>
-	<script src="/js/topbar.js"> </script>
-	<script src="/js/meswap.js"> </script>
-	<script src="/js/preloader.js"> </script>
-
-
 	<script>
-		document.addEventListener("DOMContentLoaded", function() {
-			var items = document.querySelectorAll('.item');
-			items.forEach(function(item, index) {
-				item.style.animationDelay = (index * 0.1) + 's';
-			});
-		});
-		</script>
+const intro = document.querySelector('.intro');
+const zoomDs = document.querySelectorAll('.zoomD, .info');
+const customScrollContainer = document.querySelector('.custom-scroll');
 
-	
+const fadeInOptions = {
+  threshold: [0, 0.5, 0.1]
+};
+
+const fadeInObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > 0) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
+  });
+}, fadeInOptions);
+
+fadeInObserver.observe(intro);
+zoomDs.forEach(zoomD => {
+  fadeInObserver.observe(zoomD);
+});
+
+	</script>
+    <script src="../js/resize.js"></script>
+	<script src="../js/backforward.js"></script>
+	<script src="../js/colourmode.js"></script>
+	<script src="../js/accent.js"></script> 
+	<script src="../js/search.js"></script> 
+	<script src="../js/cardhover.js"></script> 
+	<script src="../js/about.js"></script> 
+	<script src="../js/phonescroll.js"></script> 
+	<script src="../js/player.js"> </script>
+	<script src="../js/playbtn.js"> </script>
+	<script src="../js/fullscreen.js"> </script>
+	<script src="../js/topbar.js"> </script>
+	<script src="../js/imgzoom.js"> </script>
+	<script src="../js/meswap.js"> </script>
+	<script src="../js/preloader.js"> </script>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 
 

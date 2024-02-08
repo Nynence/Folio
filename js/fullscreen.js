@@ -65,27 +65,46 @@ sliderContainer.addEventListener('mouseup', () => {
 const currentUrl = window.location.href;
 
 
-const shareButton = document.querySelector('.sharetitle');
-const shareDialog = document.querySelector('#shareDialog');
-// const closeButton = document.querySelector('.close-button');
+// const shareButtons = document.querySelectorAll('.sharetitle');
+// const shareDialog = document.querySelector('#shareDialog');
+// // const closeButton = document.querySelector('.close-button');
 
-shareButton.addEventListener('click', event => {
-    if (navigator.share) {
-        navigator.share({
-            title: 'Rishab Kiran Portfolio',
-            url: currentUrl
-        }).then(() => {
-            console.log('Thanks for sharing!');
-        })
-        .catch(console.error);
-    } else {
-        shareDialog.classList.add('is-open');
-    }
+// shareButtons.addEventListener('click', event => {
+//     if (navigator.share) {
+//         navigator.share({
+//             title: 'Rishab Kiran Portfolio',
+//             url: currentUrl
+//         }).then(() => {
+//             console.log('Thanks for sharing!');
+//         })
+//         .catch(console.error);
+//     } else {
+//         shareDialog.classList.add('is-open');
+//     }
+// });
+
+// closeButton.addEventListener('click', event => {
+//     shareDialog.classList.remove('is-open');
+// });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const currentUrl = window.location.href;
+    const shareButtons = document.querySelectorAll('.sharetitle');
+
+    shareButtons.forEach(button => {
+        button.addEventListener('click', event => {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Rishab Kiran Portfolio',
+                    url: currentUrl
+                }).then(() => {
+                    console.log('Thanks for sharing!');
+                }).catch(console.error);
+            } else {
+                // Handle browsers that do not support the Web Share API
+            }
+        });
+    });
 });
-
-closeButton.addEventListener('click', event => {
-    shareDialog.classList.remove('is-open');
-});
-
-
 

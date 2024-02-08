@@ -14,6 +14,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     resizeHandle.addEventListener('mousedown', function (e) {
         isResizing = true;
         initialX = e.clientX;
+        sidebar.style.transition = 'none';
+
     });
 
     document.addEventListener('mousemove', function (e) {
