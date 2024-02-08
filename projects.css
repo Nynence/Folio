@@ -115,7 +115,7 @@ h8{
   .split{
     display: flex;
     width: 100%;
-    max-width: 50%;
+    max-width:50%;
 
   }
 
@@ -150,12 +150,11 @@ h8{
 
     }
 
-    .overview p{
+    .overview p, .infotext p{
         font-size: 1rem;
        
         text-align: left;
     
     }
 
-    
 }

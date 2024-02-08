@@ -37,11 +37,37 @@
 
 		}
 
-     
+		#mariofinal {
+    width: 50%;
+    animation: moveUpDown 7s ease-in-out infinite; /* Adjust duration and timing function as needed */
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0); /* Start and end position */
+    }
+    50% {
+        transform: translateY(-50px); /* Middle position - adjust as needed */
+    }
+}
 
         .albumcover img{
             content: var(--albumcover);
         }
+
+		@media  only screen and (max-width: 615px) {
+
+		#mariosplit{
+        flex-direction: column-reverse;
+    }
+    
+    #mariofinal{
+        width: 100%;
+
+    }	
+
+	
+}
 
 		
 	  </style>
@@ -398,18 +424,32 @@
 
 					<div class="info">
 						<div class="infotext">
-							<h8>Elevation Extraction</h8>
-							<p>The elevations that I was given  of the Mario world contained a lot of bright and warm tones due to the desert environment. This was quite a jarring elevation and I didn’t want this to be translated in the axonometric, as I felt it would overwhelm or distract the viewer. Hence, choosing which elements to extract was a well considered aspect, with the goal of achieving a pleasing experience to the viewer and reduce the apparent harshness from the elevations.
+							<h8>Axonometric Drawing</h8>
+							<p>My projected space aimed to create a centralised composition that maintained contrast and balance. I was trying to achieve a dynamic and flowing framework to guide the viewer throughout the piece. This was approached by having a central tower to dominate the hierarchy of the composition, then coupled with falling water elements that naturally lead the viewer down, towards the bottom.
 								<br><br>
-
-								I specifically sought out objects that would contrast as well as neutralise the warm blocks in the composition. The chosen six elements were: a pipe, an arrow, a terracotta block, a brick block, an ice block, and a water element. I felt that the ice and water elements provided a good contrast to the pipe, arrow and terracotta blocks, as well gave me inspiration to explore how these elements would interact with each other. The brick block acted as a neutral element that would provide a bit of greenery which also complimented the warm and cool objects.
-								<br><br>
-								I aimed to really intertwine the six objects together and to create a more captivating composition. Additionally experimenting with scale, depth, rotation as well as cutting and joining was a great way to take advantage of the quirks of axonometric projection.</p>
+								Additionally, I wanted to have some ambiguity to the composition by taking advantage of the natural hidden space in axonometric projection. Objects towards the back of the composition were obscured by using the central tower and elongating it. This allowed for me to adjust how the objects receded back  and enabled the composition at the back to be visualised and interpreted by the viewer.</p>
 						</div>
 
 					</div>
 					
 					<img class="zoomD" src="../Images/marioworld/drawing.webp" alt="">
+
+					
+
+
+					<div class="split" id="mariosplit" style="background-color: rgb(0, 0, 0); max-width: 100%; padding-top: 100px;"> 
+
+						<img class="zoomD" id="mariofinal" style="" src="../Images/marioworld/final.webp" alt="">
+
+
+					<div class="info" style="">
+						<div class="infotext" >
+							<h8>Colours & Shading</h8>
+							<p style="column-count: 1;"> The final axonometric projection translated the manual drawing to a vector format using Adobe Illustrator. This phase involved refining the positioning of objects and adding colour. I stayed as true as possible to the colour palette of the elevations. Where it differed was the shading and outline process. I opted for a more realistic representation and hence chose to exclude the strong black outlines of the elevations. By using gradients I was able to achieve a seamless transition of edges whilst being able to represent the light source. Gradients was also vital tool to convey texture of objects, such as the pipe and ice block which had a shiny/reflective aspect to them. Furthermore the representation of water was highly explored by incorporating transparent gradients which allowed the viewer to see how objects interacted with the water. This was especially evident with the down-scaled towers rising slightly above the water and a few ice-blocks that had water intersect halfway through them to convey buoyancy. Ultimately, the compositional choices and the colour process, created this cohesive and circular representation of the Mario world.</p>
+						</div>
+
+					</div>
+				</div>
 					
 
 				
