@@ -38,9 +38,13 @@
 		}
 
 		#mariofinal {
+
     width: 50%;
     animation: moveUpDown 7s ease-in-out infinite; /* Adjust duration and timing function as needed */
 }
+
+
+
 
 @keyframes moveUpDown {
     0%, 100% {
@@ -55,16 +59,21 @@
             content: var(--albumcover);
         }
 
-		@media  only screen and (max-width: 615px) {
+		@media  only screen and (max-width: 850px) {
 
 		#mariosplit{
         flex-direction: column-reverse;
+
     }
     
     #mariofinal{
         width: 100%;
 
+
     }	
+
+
+
 
 	
 }
@@ -378,7 +387,7 @@
 
 				</div >
 
-				<div class="projects" style="padding-bottom: 50px;">
+				<div class="projects" style="padding-bottom: 50px; background-color: ;">
 
 				
 					<div id="lb-back">
@@ -434,41 +443,36 @@
 					
 					<img class="zoomD" src="../Images/marioworld/drawing.webp" alt="">
 
+
+					
+					  
+
 					
 
 
-					<div class="split" id="mariosplit" style="background-color: rgb(0, 0, 0); max-width: 100%; padding-top: 100px;"> 
+					<div class="split" id="mariosplit" style="background-color: rgb(0, 0, 0); max-width: 100%; "> 
 
+
+
+						<!-- <div class='sector'> -->
+						  
 						<img class="zoomD" id="mariofinal" style="" src="../Images/marioworld/final.webp" alt="">
 
 
+
+							<!-- </div> -->
 					<div class="info" style="">
 						<div class="infotext" >
-							<h8>Colours & Shading</h8>
+							<h8 class="lasttitle">Colours & Shading</h8>
 							<p style="column-count: 1;"> The final axonometric projection translated the manual drawing to a vector format using Adobe Illustrator. This phase involved refining the positioning of objects and adding colour. I stayed as true as possible to the colour palette of the elevations. Where it differed was the shading and outline process. I opted for a more realistic representation and hence chose to exclude the strong black outlines of the elevations. By using gradients I was able to achieve a seamless transition of edges whilst being able to represent the light source. Gradients was also vital tool to convey texture of objects, such as the pipe and ice block which had a shiny/reflective aspect to them. Furthermore the representation of water was highly explored by incorporating transparent gradients which allowed the viewer to see how objects interacted with the water. This was especially evident with the down-scaled towers rising slightly above the water and a few ice-blocks that had water intersect halfway through them to convey buoyancy. Ultimately, the compositional choices and the colour process, created this cohesive and circular representation of the Mario world.</p>
 						</div>
 
 					</div>
+
+
+
 				</div>
-					
 
-				
-
-
-					
-
-					<!-- <img width="100%" src="./Images/banner.jpg" alt="">
-
-					<img width="100%" src="./Images/banner.jpg" alt="">
-
-					<img width="100%" src="./Images/banner.jpg" alt="">
-					<img width="100%" src="./Images/banner.jpg" alt="">
-
-					<img width="100%" src="./Images/banner.jpg" alt=""> -->
-
-
-
-				<!-- <h2>Browse projects</h2> -->
 					<div class="list" id="card"   >
 						
 					</div>
@@ -676,9 +680,11 @@ zoomDs.forEach(zoomD => {
 	<script src="../js/playbtn.js"> </script>
 	<script src="../js/fullscreen.js"> </script>
 	<script src="../js/topbar.js"> </script>
-	<script src="../js/imgzoom.js"> </script>
+	<!-- <script src="../js/imgzoom.js"> </script> -->
 	<script src="../js/meswap.js"> </script>
 	<script src="../js/preloader.js"> </script>
+	<script src="../js/projects.js"> </script>
+
 
 
 

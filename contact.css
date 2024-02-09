@@ -1030,6 +1030,25 @@ a .cls-1 {
 }
 
 
+.contactform{
+    animation: floatUp 1.2s ease-in-out;
+  
+    transition: all 0.5s ease; /* Moved transition property here */
+ 
+}
+
+@keyframes floatUp {
+    0% {
+      transform: translateY(30%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+
 
 
 
