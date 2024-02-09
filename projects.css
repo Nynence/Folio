@@ -43,12 +43,13 @@ h8{
 
 .overview p{
     font-size: 1rem;
-    font-weight: ;
+    font-weight: 0;
     font-family: cbook;
     color: white !important;
     letter-spacing: 0px;
     -webkit-font-smoothing: antialiased;
     text-align: justify;
+    -webkit-font-smoothing: none; For WebKit browsers like Chrome and Safari
 
 }
 
@@ -85,7 +86,7 @@ h8{
     gap: 50px;
     /* background: linear-gradient(to top, black 40%, transparent); */
     background-color: black;
-    padding: 80px;
+    padding: 80px 80px 20px 80px;
     opacity: 0;
     transform: translateY(20%);
  }
@@ -134,11 +135,7 @@ h8{
     }
 @media  only screen and (max-width: 850px) {
 
-    .split{
-        flex-direction: column; /* Change flex-direction to column */
-        max-width: 100%;
-   
-    }
+  
    
     
     .intro, .info {

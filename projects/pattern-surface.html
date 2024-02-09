@@ -37,12 +37,19 @@
 
 		}
 
-		#mariofinal {
+		#imgtrack {
+			flex: 1;
+
 
     width: 50%;
-    animation: moveUpDown 7s ease-in-out infinite; /* Adjust duration and timing function as needed */
+    /* animation: moveUpDown 7s ease-in-out infinite;  */
 }
 
+
+.iteration{
+	padding-left: 80px;
+	padding-right: 80px;
+}
 
 
 
@@ -62,16 +69,28 @@
 		@media  only screen and (max-width: 850px) {
 
 		#mariosplit{
-        flex-direction: column-reverse;
+        flex-direction: column;
 
     }
     
-    #mariofinal{
+
+
+    #imgtrack{
         width: 100%;
 
 
     }	
 
+	.iteration{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.split{
+
+    max-width:100%;
+
+  }
 
 
 
@@ -393,8 +412,8 @@
 					<div id="lb-back">
 						<div id="lb-img"></div>
 					  </div>
-					  <div style="width: 100%;border-radius:6px;overflow: hidden;background-color: var(--projectbacker);" >
-					<div class="intro">
+					  <div style="width: 100%;border-radius:6px;overflow: hidden;background-color: white; " >
+					<div class="intro" style="filter: invert();">
 						<div class="overview">
 							<h8>Overview</h8>
 							<p>This project aimed to study a sample 2-dimensional pattern and extend it into a representational 3-dimensional surface. The resulting surface aimed to unbind the boundaries of the pattern in order interpret a natural extension of the material. A painting sample and a piece of Tasmanian terrain were provided with the goal of representing the directionality and depth from both materials. This module exposed me to the potentials of 3D modelling with Rhino, and demonstrated the importance of iteration and refinement. Additionally, digital fabrication process was explored heavily by the construction of developable surfaces and consideration of the practicality and feasibility of material usage.
@@ -418,18 +437,18 @@
 					<img class="zoomD" id="card" style="margin-top: -40px;"  src="../Images/pattern/patternintro.webp" alt="">
 
 
-					<div class="info">
+					<div class="info" style="filter: invert();  text-align: center;">
 						<div class="infotext">
 							<h8>Fabric & Terrain
 							</h8>
-							<p>
+							<p >
 								The provided painting sample from Raphael’s, The Alba Madonna (1510), was quite cluttered in terms of the folds and had contrasting regions of highlights and texture. The samples hierarchy was dominated by the blue drapery but it had juxtaposing elements of the subject’s skin towards the outer edges.
 								<br>The Tasmanian terrain was mostly flat with minor dips at the edges and a slight rise in the centre. It lacked significant elements and was largely planar. Hence more focus was given to panel distribution and grid alteration. This lead to the exploration of using depth to convey texture.</p>
 						</div>
 
 					</div>
 
-					<div class="split" width: 100%;>
+					<div class="split" id="mariosplit" width: 100%;>
 						<img class="zoomD" src="../Images/pattern/pattern.webp" alt="">
 
 						<img class="zoomD" src="../Images/pattern/terrain.webp" alt="">
@@ -439,45 +458,69 @@
 
 					<img class="zoomD" id="card"   src="../Images/pattern/studies.webp" alt="">
 
-					<div class="info">
+					<div class="info" style="filter: invert(); text-align: center">
 						<div class="infotext">
-							<h8>Axonometric Drawing</h8>
-							<p>My projected space aimed to create a centralised composition that maintained contrast and balance. I was trying to achieve a dynamic and flowing framework to guide the viewer throughout the piece. This was approached by having a central tower to dominate the hierarchy of the composition, then coupled with falling water elements that naturally lead the viewer down, towards the bottom.
-								<br><br>
-								Additionally, I wanted to have some ambiguity to the composition by taking advantage of the natural hidden space in axonometric projection. Objects towards the back of the composition were obscured by using the central tower and elongating it. This allowed for me to adjust how the objects receded back  and enabled the composition at the back to be visualised and interpreted by the viewer.</p>
+							<h8>Final Iterations</h8>
+							<p style="column-count: 1" class="iteration" >The final iterations are the result of several trials of the grid, panel and hybrid studies.  For the grid study I was trying to create high and low points as well as a flow in the right direction that correlated with the sample drapery. The panel study explored how panels flowed from one geometry to another and if their geometries could accentuate the darker regions. This study was essentially a breakdown of the three regions: the drapery, the receded material and the skin. 
+								
+								The final hybrid study refined a combination of the most effective grid and panel studies and utilised the best curve attractors to fabricate the contrasting regions. Lastly the artefact involved manipulating the hybrid into a reinterpreted shape for the painting sample to conform to. The artefact was changed significantly from the hybrid with dramatic  directional shifts and changes to panel depth and rotation.
+
+							</p>
 						</div>
 
 					</div>
-					
-					<img class="zoomD" src="../Images/marioworld/drawing.webp" alt="">
+
+					<img class="zoomD" src="../Images/pattern/iterations.webp" alt="">			
 
 
-					
-					  
 
-					
+					<div class="info" style="filter: invert();text-align: center">
+						<div class="infotext">
+							<h8>Fabrication</h8>
+							<p  style="column-count: 1" class="iteration">The fabrication process was interesting to see how the panels deconstructed to a flat planar surface and if they were developable. During the unrolling of the hybrid, it was important to use the least amount of sheets possible. This is a good practice to have and is beneficial, especially in building design, where cost and material are important aspects to consider.
+							</p>
+						</div>
+
+					</div>
+					<img class="zoomD"  style="scale: 0.9;" src="../Images/pattern/fabrication.webp" alt="">
 
 
-					<div class="split" id="mariosplit" style="background-color: var(--projectbacker); max-width: 100%; "> 
+					<div class="split" id="mariosplit" style="background-color: rgb(255, 255, 255); max-width: 100%; "> 
 
 
 
 						<!-- <div class='sector'> -->
 						  
-						<img class="zoomD" id="mariofinal" style="" src="../Images/marioworld/final.webp" alt="">
 
 
 
 							<!-- </div> -->
-					<div class="info" style="background-color: transparent;" >
+					<div class="info" style="background-color: transparent; filter: invert();" >
 						<div class="infotext" >
-							<h8 class="lasttitle">Colours & Shading</h8>
-							<p style="column-count: 1;"> The final axonometric projection translated the manual drawing to a vector format using Adobe Illustrator. This phase involved refining the positioning of objects and adding colour. I stayed as true as possible to the colour palette of the elevations. Where it differed was the shading and outline process. I opted for a more realistic representation and hence chose to exclude the strong black outlines of the elevations. By using gradients I was able to achieve a seamless transition of edges whilst being able to represent the light source. Gradients was also vital tool to convey texture of objects, such as the pipe and ice block which had a shiny/reflective aspect to them. Furthermore the representation of water was highly explored by incorporating transparent gradients which allowed the viewer to see how objects interacted with the water. This was especially evident with the down-scaled towers rising slightly above the water and a few ice-blocks that had water intersect halfway through them to convey buoyancy. Ultimately, the compositional choices and the colour process, created this cohesive and circular representation of the Mario world.</p>
+							<h8 class="lasttitle">Composite
+							</h8>
+							<p style="column-count: 1;"> The painting drapery was expanded upon in the composite by utilising the artefact to extend the outer edges of the regions where the drapery was cropped. The painting was modified to conform to these interpreted extents.
+
+								The composite appears to accentuate the foreground elements that approach the viewer. The composite is unique in the sense that it re-imagines the painting by developing new sections. The combination of the painting with the artefact, emphasises an orderly movement and explicitly outlines the contrasts between regions. These qualities are hard to identify when presented with the pattern and artefact individually.</p>
 						</div>
 
 					</div>
 
+					<img class="zoomD" id="imgtrack" style="padding-top: 20px;" src="../Images/pattern/composite.webp" alt="">
 
+				</div>
+				<div class="split"  id="mariosplit" width: 100%, style="max-width: 100%; text-align: center; margin-top: 80px" >
+					<div style="display: flex; gap: 40px; flex-direction: column;">
+						<h8 style="filter: invert();" > Hybrid Render
+
+						</h8>
+					<img class="zoomD" src="../Images/pattern/hybrid.webp" alt="">
+					</div>
+					<div  style="display: flex; gap: 40px; flex-direction: column;"">
+						<h8 style="filter: invert();">Artefact Render
+						</h8>
+					<img class="zoomD" src="../Images/pattern/artefact.webp" alt="">
+					</div>
 
 				</div>
 
@@ -690,7 +733,7 @@ zoomDs.forEach(zoomD => {
 	<script src="../js/playbtn.js"> </script>
 	<script src="../js/fullscreen.js"> </script>
 	<script src="../js/topbar.js"> </script>
-	<!-- <script src="../js/imgzoom.js"> </script> -->
+	<script src="../js/imgzoom.js"> </script>
 	<script src="../js/meswap.js"> </script>
 	<script src="../js/preloader.js"> </script>
 	<script src="../js/projects.js"> </script>

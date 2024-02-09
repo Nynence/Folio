@@ -25,6 +25,7 @@ function handleMouseMove(e) {
 function handleMouseOut() {
   mouseHover = false;
   card.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
+
 }
 
 function handleMouseOver() {
@@ -37,6 +38,9 @@ if (window.innerWidth > 1180) {
   card.addEventListener('mouseout', handleMouseOut);
   card.addEventListener('mouseover', handleMouseOver);
 }
+
+
+
 
 // Function to check if the device is not an iPad, including iPad Pro
 // function isNotLikelyiPad() {
