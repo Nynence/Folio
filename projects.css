@@ -97,6 +97,22 @@ h8{
     transition: opacity 0.7s ease-in-out, transform 0.8s ease-in-out;
 
   }
+
+  .backer{
+    animation: fadeIns 1.8s ease-in-out forwards;
+
+    
+  }
+  @keyframes fadeIns {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+  
+  
   
      
   .infotext p{
