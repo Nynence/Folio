@@ -51,10 +51,40 @@
     position: absolute;
 
     filter: saturate(100%) brightness(100%);; 
+}
+
+
+.bannerbox {
+    position: relative;
+    overflow: hidden;
+	border-radius: 6px;
 
 }
 
-		
+.banner {
+    display: block;
+}
+
+.highlight {
+    position: absolute;
+	top: 50%; /* Position from the middle vertically */
+    left: 50%; /* Position from the middle horizontally */
+    width: 300px; /* Adjust the size of the highlight */
+    height: 300px; /* Adjust the size of the highlight */
+    margin-top: -150px; /* Half of the height */
+    margin-left: -150px; 
+    pointer-events: none;
+	mix-blend-mode: overlay; /* Blend mode for overlay effect */
+	background-color: white;
+	filter: blur(40px);
+
+	
+    border-radius: 100%; /* Make it circular */
+    /* box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.5); Circular blur overlay */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-out; /* Smooth transition */
+}
+
 
 	
 	  </style>
@@ -309,6 +339,8 @@
 					<div class="bannerbox"> 
 					
 					<img width="100%" class="banner" src="" alt="">
+					<div class="highlight"></div>
+
 					</div>
 					<div class="bannerboxphn"> 
 
@@ -327,20 +359,18 @@
 							</div>
 							<h3>Mario World</h3>
 							<p>Rishab Kiran</p> 
-
 						</a>
-						
-						<a href="/projects/croissantrepresentation.html"  class="item"  data-tags="" >
-							<img id="mgImage"  src="./Images/thumbnailph.jpeg" alt="" >
+						<a href="/projects/pattern-surface.html"  class="item"  data-tags="2021, pattern, surface, fabrication" >
+							<img id="mgImage" src="./Images/Thumbnails/pattern.webp" alt="" >
 							<div class="play">
 								<span>
 									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
 								</span>
 							</div>
-							<h3>Croissant Representation</h3>
+							<h3>Pattern vs. Surface</h3>
 							<p>Rishab Kiran</p> 
-
 						</a>
+						
 						
 					</div>
 				</div>

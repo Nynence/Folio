@@ -27,11 +27,11 @@
 		@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,200;1,300&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 		:root{
-			--albumcover: url(../Images/Thumbnails/marioworld.webp);
+			--albumcover: url(../Images/Thumbnails/pattern.webp);
 			--phone-bg: #272727;
 			--background-alpha: 0; /* Default alpha value, adjust as needed */
-			--background-rgb: 235, 105, 37; /* Default RGB values, adjust as needed */
-			--artist: 'Jeff'
+			--background-rgb: 25, 56, 168; /* Default RGB values, adjust as needed */
+			--projectbacker: black;
 
 
 
@@ -83,7 +83,7 @@
 	  <script>
 		document.addEventListener('DOMContentLoaded', function() {
   		console.log('Page has been loaded');
- 			document.querySelector('.year').innerHTML = 'August 2021';
+ 			document.querySelector('.year').innerHTML = 'September 2021';
 
 		});
 
@@ -91,7 +91,7 @@
 		console.log('Page has been loaded');
 		var elements = document.querySelectorAll('[id="atitle"]');
 		elements.forEach(function(element) {
-			element.innerHTML = 'Mario World';
+			element.innerHTML = 'Pattern vs. Surface';
  		 });
 		});
 
@@ -393,39 +393,45 @@
 					<div id="lb-back">
 						<div id="lb-img"></div>
 					  </div>
-
+					  <div style="width: 100%;border-radius:6px;overflow: hidden;background-color: var(--projectbacker);" >
 					<div class="intro">
 						<div class="overview">
 							<h8>Overview</h8>
-							<p>This project explored the concept of flatness and projection which correlates to the spatial relation between 2-Dimensional and 3-Dimensional space. It explores axonometric projection and applies this to an assigned Mario world elevation. These elevations were flat in nature and lack perceivable depth. Being able to physically enter something and observe around objects adds to the immersion of a piece of work. Hence trying to project this as an axonometric drawing meant interpreting the hidden space behind the frontal perspective and ensuring measurements of objects were consistent in relation to the elevation. Creating this projection cohesively was a challenge as compositional considerations had to be made in relation to hierarchy, balance and negative space.</p>
+							<p>This project aimed to study a sample 2-dimensional pattern and extend it into a representational 3-dimensional surface. The resulting surface aimed to unbind the boundaries of the pattern in order interpret a natural extension of the material. A painting sample and a piece of Tasmanian terrain were provided with the goal of representing the directionality and depth from both materials. This module exposed me to the potentials of 3D modelling with Rhino, and demonstrated the importance of iteration and refinement. Additionally, digital fabrication process was explored heavily by the construction of developable surfaces and consideration of the practicality and feasibility of material usage.
+
+							</p>
 						</div>
 						<div class="tools">
 							<h8>Tools</h8>
-							<p >Adobe Illustrator</p>
-							<img width="100px" src="../Images/marioworld/runningmario.gif" alt="">
+							<p >
+								Adobe Illustrator
+								<br>
+								Adobe Photoshop
+								<br>
+								Rhino 3D
+							</p>
 						</div>
 
 
 					</div>
 
-					<img class="zoomD"    src="../Images/marioworld/elevation.webp" alt="">
+					<img class="zoomD" id="card" style="margin-top: -40px;"  src="../Images/pattern/patternintro.webp" alt="">
 
 					<div class="info">
 						<div class="infotext">
-							<h8>Elevation Extraction</h8>
-							<p>The elevations that I was given  of the Mario world contained a lot of bright and warm tones due to the desert environment. This was quite a jarring elevation and I didn’t want this to be translated in the axonometric, as I felt it would overwhelm or distract the viewer. Hence, choosing which elements to extract was a well considered aspect, with the goal of achieving a pleasing experience to the viewer and reduce the apparent harshness from the elevations.
-								<br><br>
-
-								I specifically sought out objects that would contrast as well as neutralise the warm blocks in the composition. The chosen six elements were: a pipe, an arrow, a terracotta block, a brick block, an ice block, and a water element. I felt that the ice and water elements provided a good contrast to the pipe, arrow and terracotta blocks, as well gave me inspiration to explore how these elements would interact with each other. The brick block acted as a neutral element that would provide a bit of greenery which also complimented the warm and cool objects.
-								<br><br>
-								I aimed to really intertwine the six objects together and to create a more captivating composition. Additionally experimenting with scale, depth, rotation as well as cutting and joining was a great way to take advantage of the quirks of axonometric projection.</p>
+							<h8>Fabric & Terrain
+							</h8>
+							<p>
+								The provided painting sample from Raphael’s, The Alba Madonna (1510), was quite cluttered in terms of the folds and had contrasting regions of highlights and texture. The samples hierarchy was dominated by the blue drapery but it had juxtaposing elements of the subject’s skin towards the outer edges.
+								<br>The Tasmanian terrain was mostly flat with minor dips at the edges and a slight rise in the centre. It lacked significant elements and was largely planar. Hence more focus was given to panel distribution and grid alteration. This lead to the exploration of using depth to convey texture.</p>
 						</div>
 
 					</div>
 
-					<div class="split">
-						<img class="zoomD" src="../Images/marioworld/colours.webp" alt="">
-						<img class="zoomD" src="../Images/marioworld/blocks.webp" alt="">
+					<div class="split" width: 100%;>
+						<img class="zoomD" src="../Images/pattern/pattern.webp" alt="">
+
+						<img class="zoomD" src="../Images/pattern/terrain.webp" alt="">
 
 
 					</div>
@@ -450,7 +456,7 @@
 					
 
 
-					<div class="split" id="mariosplit" style="background-color: rgb(0, 0, 0); max-width: 100%; "> 
+					<div class="split" id="mariosplit" style="background-color: var(--projectbacker); max-width: 100%; "> 
 
 
 
@@ -476,6 +482,8 @@
 					<div class="list" id="card"   >
 						
 					</div>
+
+				</div>
 				</div>
 	   
 			</div>

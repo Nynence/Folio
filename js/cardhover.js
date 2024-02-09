@@ -177,3 +177,21 @@ document.addEventListener("DOMContentLoaded", function() {
 document.body.style.overflow = 'hidden';
 
 
+// image hover{
+
+
+const bannerbox = document.querySelector('.bannerbox');
+const highlight = document.querySelector('.highlight');
+
+bannerbox.addEventListener('mousemove', function(e) {
+    const rect = this.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    highlight.style.left = `${x}px`;
+    highlight.style.top = `${y}px`;
+    highlight.style.opacity = 0.4; // Show the highlight
+});
+
+bannerbox.addEventListener('mouseleave', function() {
+    highlight.style.opacity = 0; // Hide the highlight
+});
