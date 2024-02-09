@@ -21,17 +21,4 @@ function toggleButtons(clickedButton) {
     }
 }
 
-window.onload = function () {
-    var meButton = document.querySelector('.me');
-    meButton.classList.add('active');
-
-    // Initially show 'metext' and hide 'contactform'
-    document.querySelector('.metext').classList.add('show');
-    document.querySelector('.contactform').classList.remove('show');
-
-    document.styleSheets[0].deleteRule(0);
-
-    
-};
-
 
