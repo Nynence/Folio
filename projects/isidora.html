@@ -446,16 +446,7 @@
 						
 					<!-- </div>-->
 					</div> 
-					<img class="zoomD"  style="scale: 0.9;" src="../Images/pattern/fabrication.webp" alt="">
-					<img class="zoomD"  style="scale: 0.9;" src="../Images/pattern/fabrication.webp" alt="">
-					<img class="zoomD"  style="scale: 0.9;" src="../Images/pattern/fabrication.webp" alt="">
-					<img class="zoomD"  style="scale: 0.9;" src="../Images/pattern/fabrication.webp" alt="">
-					<img class="zoomD"  style="scale: 0.9;" src="../Images/pattern/fabrication.webp" alt="">
-					<img class="zoomD"  style="scale: 0.9;" src="../Images/pattern/fabrication.webp" alt="">
-					<img class="zoomD"  style="scale: 0.9;" src="../Images/pattern/fabrication.webp" alt="">
-					<img class="zoomD"  style="scale: 0.9;" src="../Images/pattern/fabrication.webp" alt="">
-					<img class="zoomD"  style="scale: 0.9;" src="../Images/pattern/fabrication.webp" alt="">
-
+				
 
 					
 					<!-- Animated element -->
@@ -663,7 +654,25 @@
 
 	<!-- javascrips -->
 	
-
+<script>
+	var sc=0;
+	window.addEventListener('scroll', function() {
+		if(sc == 0){
+			sc=1;
+			lottie.loadAnimation({
+				container: document.querySelector('#lottie'),
+				renderer: 'svg',
+				loop: true,
+				autoplay: true,
+				path: 'https://assets10.lottiefiles.com/packages/lf20_wzcckjq4.json'
+			});
+		}
+	});
+	window.onload = function() {
+		window.scrollTo(window.scrollX, window.scrollY - 1);
+		window.scrollTo(window.scrollX, window.scrollY + 1);
+	};
+	</script>
 	<script type="text/javascript" src="https://unpkg.com/lottie-interactive@latest/dist/lottie-interactive.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
