@@ -144,7 +144,7 @@
     --progress: hsla(0,0%,100%,.3);
     --leftright: hsla(0,0%,100%,.7);
     --lighttext: white;
-    --lighttext2: color: var(--t3-color);
+    --lighttext2: var(--t3-color);
     ;
 
 
@@ -1073,6 +1073,7 @@ button.forward:not(.disabled) {
 
 .projects .list .item:hover p {
     color: var(--lighttext2);    
+    text-decoration: none;
 
     
 
