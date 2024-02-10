@@ -353,8 +353,10 @@
 
 				<h2>Browse projects</h2>
 					<div class="list" id="card"   >
-						<a href="/projects/marioworld.html"  class="item"  data-tags="2021, mario, world, axonometric, Illustrator" >
-							<img id="mgImage"  src="./Images/Thumbnails/marioworld.webp" alt="" >
+						<a href="/projects/marioworld.html"  class="item"  data-tags="August 2021, mario, world, axonometric, Illustrator" >
+							<div class="imgbox">
+								<img id="mgImage"  src="./Images/Thumbnails/marioworld.webp" alt="" >
+							</div>
 							<div class="play">
 								<span>
 									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
@@ -363,24 +365,29 @@
 							<h3>Mario World</h3>
 							<p>Rishab Kiran</p> 
 						</a>
-						<a href="/projects/pattern-surface.html"  class="item"  data-tags="2021, pattern, surface, fabrication" >
+						<a href="/projects/pattern-surface.html"  class="item"  data-tags="September 2021, pattern, surface, fabrication, 3d, render" >
+							<div class="imgbox">
 							<img id="mgImage" src="./Images/Thumbnails/pattern.webp" alt="" >
+								</div>
 							<div class="play">
 								<span>
 									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
 								</span>
 							</div>
-							<h3>Pattern vs. Surface</h3>
+							<h3>Raphael 2.0</h3>
 							<p>Rishab Kiran</p> 
 						</a>
-						<a href="/projects/pattern-surface.html"  class="item"  data-tags="2021, pattern, surface, fabrication" >
-							<img id="mgImage" src="./Images/Thumbnails/pattern.webp" alt="" >
+						<a href="/projects/isidora.html"  class="item"  data-tags="October 2021, frame, field, 3d" >
+							<div class="imgbox">
+								<img id="mgImage" src="./Images/Thumbnails/isidora.webp" alt="" >
+							</div>
+
 							<div class="play">
 								<span>
 									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
 								</span>
 							</div>
-							<h3>Pattern vs. Surface</h3>
+							<h3>City of Isidora</h3>
 							<p>Rishab Kiran</p> 
 						</a>
 						
@@ -578,6 +585,29 @@
 				item.style.animationDelay = (index * 0.1) + 's';
 			});
 		});
+		
+// Select the container element
+const container = document.getElementById('card');
+
+// Select all items inside the container
+const items = Array.from(container.getElementsByClassName('item'));
+
+// Sort the items based on the date in data-tags attribute
+items.sort((a, b) => {
+    const dateA = new Date(a.getAttribute('data-tags').split(',')[0]);
+    const dateB = new Date(b.getAttribute('data-tags').split(',')[0]);
+    return dateB - dateA;
+});
+
+// Remove all items from the container
+while (container.firstChild) {
+    container.removeChild(container.firstChild);
+}
+
+// Append the sorted items back to the container
+items.forEach(item => {
+    container.appendChild(item);
+});
 
 		
 		</script>

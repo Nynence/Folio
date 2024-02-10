@@ -143,6 +143,10 @@
     --artist: #b3b3b3;
     --progress: hsla(0,0%,100%,.3);
     --leftright: hsla(0,0%,100%,.7);
+    --lighttext: white;
+    --lighttext2: color: var(--t3-color);
+    ;
+
 
 
 
@@ -189,6 +193,8 @@ body {
 /* Define styles for light mode using the opposite colors */
 
 body.light-mode {
+    --lighttext2: rgb(199, 199, 199);
+
     --resize: url('./Images/resizeb.png');
 
 
@@ -199,18 +205,18 @@ body.light-mode {
     --bg-color: #ffffff; /* Background color */
     --t1-color: #000000; /* Text color */
     --t2-color: rgb(85, 85, 85);
-    --t3-color: #050505;
+    --t3-color: #252525;
     --accent-pickerbg: #ffffffad;
 
 
     --sec-color: #eeeeee;
     --secgrad-color1: rgba(238, 238, 238, 0);
     --secgrad-color2: rgba(238, 238, 238, 1);
-
+    --lighttext: white;
 
     --scroll-color: rgb(219, 219, 219);
     --c-color: white;
-    --c2-color: #e7e7e7;
+    --c2-color: black;
     --arrow-color: rgba(211, 211, 211, 0.7);
     transition: background-color var(--transition-speed), color var(--transition-speed);
     --searchbox: white;
@@ -1055,19 +1061,46 @@ button.forward:not(.disabled) {
 }
 
 
-
 .projects .list .item:hover{
     background-color: var(--c2-color);
 
 }
 
+.projects .list .item:hover h3{
+    color: var(--lighttext);    
+
+}
+
+.projects .list .item:hover p {
+    color: var(--lighttext2);    
+
+    
+
+}
+
 .projects .list .item img{
     width: 100%;
+    padding-bottom: 0px;
+    transition: transform 0.3s ease; /* Added transition property for smooth scaling */
+
+  
+}
+
+.imgbox{
+    overflow: hidden;
+    height: auto;
+    width: auto;
+    aspect-ratio: 1;
     border-radius: 6px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     -webkit-box-shadow: 0 8px 24px rgba(0,0,0,.5);
     box-shadow: 0 8px 24px rgba(0,0,0,.5);
 }
+
+.projects .list .item:hover img{
+    transform: scale(1.1); /* Changed scale to transform and adjusted value */
+ 
+ }
 
 
 .projects .list .item .play {
@@ -1078,7 +1111,7 @@ button.forward:not(.disabled) {
 .projects .list .item svg{
     position: absolute;
     right: 10px;
-    top: -70px;
+    top: -85px;
     padding: 12px;
     fill: var(--svg-fill-color);
     background-color: var(--accent-color);
@@ -1096,6 +1129,11 @@ button.forward:not(.disabled) {
     transform: translateY(-11px);
 
 }
+
+
+
+
+
 
 .projects .list .item .play svg:hover{
     transition: transform 0.4s ease-in-out; /* Transition for transform */
