@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="../playerproject.css">
 	<link rel="stylesheet" href="../projects.css">
 	<link rel="stylesheet" href="../header.css">
+ 
 
 
 
@@ -32,8 +33,6 @@
 			--background-alpha: 0; /* Default alpha value, adjust as needed */
 			--background-rgb: 25, 56, 168; /* Default RGB values, adjust as needed */
 			--projectbacker: black;
-
-
 
 		}
 
@@ -73,6 +72,11 @@
         flex-direction: column;
 
     }
+
+	#splita{
+		flex-direction: column;
+		gap: 60px;
+	}
     
 
 
@@ -136,7 +140,6 @@
 <body>
 	<div id="loading-screen">
         <!-- You can customize your loading screen content here -->
-        <p>Loading...</p>
     </div>
 	<div id="content">
 
@@ -494,7 +497,7 @@
 					<img class="zoomD"  style="scale: 0.9;" src="../Images/pattern/fabrication.webp" alt="">
 
 
-					<div class="split" id="mariosplit" style="background-color: rgb(255, 255, 255); max-width: 100%; "> 
+					<div class="split" id="mariosplit" style="background-color: rgb(0, 0, 0); max-width: 100%; "> 
 
 
 
@@ -504,7 +507,7 @@
 
 
 							<!-- </div> -->
-					<div class="info" style="background-color: transparent; filter: invert();" >
+					<div class="info" style="background-color: transparent; ;" >
 						<div class="infotext" >
 							<h8 class="lasttitle">Composite
 							</h8>
@@ -518,15 +521,15 @@
 					<img class="zoomD" id="imgtrack" style="padding-top: 20px;" src="../Images/pattern/composite.webp" alt="">
 
 				</div>
-				<div class="split"  id="mariosplit" width: 100%, style="max-width: 100%; text-align: center; margin-top: 80px" >
+				<div class="split"  id="splita" width: 100%, style="max-width: 100%; text-align: center; padding-top: 80px; background-color: rgb(0, 0, 0);" >
 					<div style="display: flex; gap: 40px; flex-direction: column;">
-						<h8 style="filter: invert();" > Hybrid Render
+						<h8 style=";" > Hybrid Render
 
 						</h8>
 					<img class="zoomD" src="../Images/pattern/hybrid.webp" alt="">
 					</div>
 					<div  style="display: flex; gap: 40px; flex-direction: column;"">
-						<h8 style="filter: invert();">Artefact Render
+						<h8 style=";">Artefact Render
 						</h8>
 					<img class="zoomD" src="../Images/pattern/artefact.webp" alt="">
 					</div>
@@ -734,7 +737,7 @@ zoomDs.forEach(zoomD => {
 	<script src="../js/backforward.js"></script>
 	<script src="../js/colourmode.js"></script>
 	<script src="../js/accent.js"></script> 
-	<script src="../js/search.js"></script> 
+	<!-- <script src="../js/search.js"></script>  -->
 	<script src="../js/cardhover.js"></script> 
 	<script src="../js/about.js"></script> 
 	<script src="../js/phonescroll.js"></script> 
@@ -745,7 +748,6 @@ zoomDs.forEach(zoomD => {
 	<script src="../js/imgzoom.js"> </script>
 	<script src="../js/meswap.js"> </script>
 	<script src="../js/preloader.js"> </script>
-	<script src="../js/projects.js"> </script>
 
 
 

@@ -4,6 +4,9 @@
     animation-delay: 1.1s; /* Add a delay of 1 second */
 }
 
+
+
+
 @keyframes slideIn2 {
     0% {
         /* transform: translateX(-30%); */

@@ -185,7 +185,7 @@ document.body.style.overflow = 'hidden';
 
 
 const bannerbox = document.querySelector('.bannerbox');
-const highlight = document.querySelector('.highlight');
+const highlight = document.querySelector('.highlighting');
 
 bannerbox.addEventListener('mousemove', function(e) {
     const rect = this.getBoundingClientRect();

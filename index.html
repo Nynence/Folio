@@ -65,7 +65,7 @@
     display: block;
 }
 
-.highlight {
+.highlighting {
     position: absolute;
 	top: 50%; /* Position from the middle vertically */
     left: 50%; /* Position from the middle horizontally */
@@ -93,7 +93,6 @@
 <body>
 	<div id="loading-screen">
         <!-- You can customize your loading screen content here -->
-        <p>Loading...</p>
     </div>
 	<div id="content">
 
@@ -343,7 +342,7 @@
 					<div class="bannerbox"> 
 					
 					<img width="100%" class="banner" src="" alt="">
-					<div class="highlight"></div>
+					<div class="highlighting"></div>
 
 					</div>
 					<div class="bannerboxphn"> 
@@ -362,6 +361,16 @@
 								</span>
 							</div>
 							<h3>Mario World</h3>
+							<p>Rishab Kiran</p> 
+						</a>
+						<a href="/projects/pattern-surface.html"  class="item"  data-tags="2021, pattern, surface, fabrication" >
+							<img id="mgImage" src="./Images/Thumbnails/pattern.webp" alt="" >
+							<div class="play">
+								<span>
+									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+								</span>
+							</div>
+							<h3>Pattern vs. Surface</h3>
 							<p>Rishab Kiran</p> 
 						</a>
 						<a href="/projects/pattern-surface.html"  class="item"  data-tags="2021, pattern, surface, fabrication" >
@@ -561,6 +570,7 @@
 	<script src="/js/preloader.js"> </script>
 
 
+
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
 			var items = document.querySelectorAll('.item');
@@ -568,6 +578,8 @@
 				item.style.animationDelay = (index * 0.1) + 's';
 			});
 		});
+
+		
 		</script>
 
 	
