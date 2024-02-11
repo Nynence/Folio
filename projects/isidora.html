@@ -442,10 +442,327 @@
 					</div>
 				 	<div class="lottie-container" style="margin-top: -80px; z-index: -100;" >
 					<!-- <div class="lottie-box">  -->
-						<lottie-player id="lottie" src="../Images/isidora/isonew.json" style="width:auto"></lottie-player>
+						<lottie-player class="fade"  id="lottie" src="../Images/isidora/isonew.json" style="width:auto"></lottie-player>
 						
 					<!-- </div>-->
 					</div> 
+
+					<style>
+	.cardview {
+  position: relative;
+  display: flex;
+}
+
+.left {
+  width: 40%;
+  position: relative;
+  left: 0;
+  background-color: rgb(221, 221, 221); /* Adjust background color to match your layout */
+  border-radius: 10px;
+  padding: 40px 60px 60px 60px;
+  margin-left: 30px;
+  color: black;
+}
+
+.right {
+  width: 60%;
+  position: relative;
+  right: 0;
+  top: 0;
+  background-color: none
+  ; /* Adjust background color to match your layout */
+  /* padding: 60px; */
+  z-index: 1;
+  border-radius: 10px;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  color: white !important;
+  
+
+}
+
+.rightinner{
+	display: flex;
+
+	width: auto;
+	height: auto;
+	background-color: rgb(0, 0, 0);
+	padding: 60px;
+	border-radius: 0px 10px 10px 0px ;
+	flex-direction: column;
+
+
+
+
+}
+
+.perspectives{
+	background-color: rgb(221, 221, 221); /* Adjust background color to match your layout */
+	margin-left: 80px;
+	margin-right: 80px;
+	padding: 20px 40px 30px 40px;
+	border-radius: 0 0 6px 6px;
+	width: auto;
+
+}
+
+
+.finaltext{
+	flex: 1;
+	background-color: rgb(221, 221, 221); /* Adjust background color to match your layout */
+	border-radius: 10px 10px 10px 10px ;
+	padding: 60px;
+	margin-right: 20px;
+
+
+
+}
+.finaliso{
+	display: flex;
+}
+
+.cardview h1, .perspectives h1, .finaltext h1 {
+  
+	font-size: 2rem;
+    font-family: cmed;
+    letter-spacing: -1px;
+    -webkit-font-smoothing: antialiased;
+
+
+}
+.cardview p, .perspectives p, .finaltext p {
+    /* font-size: 16px;
+    line-height: 1.5; */
+
+	font-size: 1rem;
+    font-weight: 0;
+    font-family: cbook;
+    letter-spacing: 0px;
+    -webkit-font-smoothing: antialiased;
+    text-align: justify;
+    -webkit-font-smoothing: none; 
+}
+
+.rightinner img{
+	margin-left: auto; /* Push the image to the right */
+
+	align-self: flex-end;
+	;
+	width: 40%;
+}
+
+
+.isoimg{
+	display: flex;
+	align-items: center;
+}
+
+.isoimg img{
+	margin-left: -50px;
+	width: 65%;
+	left: 0;
+	position: absolute;
+
+}
+
+.finaliso{
+	margin-bottom: 100px;
+}
+
+
+@media  only screen and (max-width: 850px) {
+
+	.isoimg img{
+	margin-left: 0px;
+	width: 100%;
+	position: relative;
+
+}
+
+
+	.finaliso{
+		flex-direction: column;
+	}
+
+	.finaltext{
+		margin: 20px;
+		padding: 30px;
+	}
+
+	.perspectives{
+	background-color: rgb(221, 221, 221); /* Adjust background color to match your layout */
+	margin-left: 25px;
+	margin-right: 25px;
+	padding: 10px 20px 30px 20px;
+	border-radius: 0 0 6px 6px;
+	width: auto;
+
+}
+
+	.rightinner img{
+	margin-left: auto; /* Push the image to the right */
+
+	align-self: flex-end;
+	;
+	width: 40%;
+	height: auto6
+}
+
+	.cardview {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.cardview h1, .perspectives h1, .finaltext h1 {
+    text-align: left;
+
+
+
+}
+.cardview p, .perspectives p, .finaltext p {
+
+  text-align: left;
+}
+
+
+
+.left {
+  width: auto;
+  position: relative;
+  background-color: rgb(221, 221, 221); /* Adjust background color to match your layout */
+  border-radius: 0px 0px 10px 10px ;
+  padding: 30px 30px 30px 30px;
+left: 0;
+  color: black;
+  margin-left: 0px;
+  margin-right: 0;
+  flex: 1;
+
+
+}
+
+.right {
+	flex: 1;
+
+  width: 100%;
+  position: relative;
+  background-color: none
+  ; /* Adjust background color to match your layout */
+  /* padding: 60px; */
+  z-index: 0;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  color: white !important;
+  
+
+}
+
+.rightinner{
+
+	display: flex;
+
+	width: auto;
+	height: auto;
+	background-color: rgb(0, 0, 0);
+	padding: 30px;
+	border-radius: 10px 10px 0px 0px ;
+	flex-direction: column;
+
+
+
+
+}
+
+
+}
+
+						
+					</style>
+
+					<div class="cardview fade" style="margin-bottom: 60px;">
+						<div class="left">
+							<h1>Isidora</h1>
+							<p>The city I was allocated, Isidora, was quite brief and therefore had several ways to interpret it. The story is centered around a young male protagonist who travels in search of his desired city, Isidora. The ending twist of him arriving at old age suggested to me that the message was about losing sight of reality when you desire something for too long, and how you formulate a memory of an experience before you’ve even experienced it. This key theme of attempting to live through the memory rather than the here and now, was what I was focused on representing through the manipulation of the Old Quad.
+								<br><br>
+								The imagery of the Isidora is utopic and I have interpreted it as this “perfect” place for the youth. It is something that is clearly desired by the protagonist and I aimed to project that same desire onto the viewer through the later components. A stand out feature of this city is the "spiral" elements that define the city, and its the first thing that comes to mind for our protagonist when he imagines Isidora.
+								<br><br>
+
+								Hence, this conversation of reality and desire, and how these play into our memories will be conveyed in the perspective pieces and the isometric view</p>
+						</div>
+
+
+
+						<div class="right">
+							
+							<div class="rightinner">
+								<img src="../Images/isidora/quote.webp" alt="">
+							<p>“When a man rides a long time through wild region she feels the desire for a city. Finally he comes to Isidora, a city where the buildings have spiral staircases encrusted with spiral seashells, where perfect telescopes and violins are made, where the foreigner hesitating between two women always encounters a third, where cockfights degenerate into bloody brawls among the bettors. He was thinking of all these things when he desired a city. Isidora, therefore, is the city of his dreams: with one difference. The dreamed-of city contained him as a young man;he arrives at Isidora in his old age. In the square there is the wall where the old men sit and watch the young go by; he is seated in a row with them. Desires are already memories”</p>
+						</div>
+						</div>
+					</div>
+
+
+					<div style="padding: 0px 20px 0px 20px;">
+						
+						<img class="zoomD" style="border-radius: 6px;"  width="100%" src="../Images/isidora/desire.webp" alt="">
+					</div>
+					<div class="perspectives fade" style="color: black; margin-bottom: 100px;">
+						<h1>Perspective 1</h1>
+						<p>
+							<b><i>“The dreamed of city contained him as a young man...”</i></b>
+							<br><br>
+
+							This perspective features an interpretation of the city of Isidora. The vanishing point has been positioned higher in relation to the camera to produce an idealised atmosphere. This long distance view coupled with a structurally dense construction it tends to impose on the viewer and in-turn make it seem unattainable. Additionally the wide angle allows me to convey the utopic trope of perfect symmetry, as well as emphasis a depth of field due to elements reducing in scale as they recede towards the vanishing point. This piece represents the youthful romance and perfect environment through relations between figures as well as the inclusion of earthly vanities, like the telescope and the violin.
+						</p>
+
+					</div>
+
+
+					<div style="padding: 0px 20px 0px 20px;">
+						<img class="zoomD"  style="border-radius: 6px;" width="100%" src="../Images/isidora/reality.webp" alt="">
+					</div>
+
+					<div class="perspectives fade" style="color: black; margin-bottom: 100px;">
+						<h1>Perspective 2</h1>
+						<p>
+							<b><i>“Desires are already memories.”</i></b>
+							<br><br>
+
+							Centred at a spiral column, this perspective that depicts the contrast between the journey of desire, and the end point of reality. In this composition the man approaches reality before the desired city. However, we see the protagonist riding eagerly to experience the city through his manufactured outlook. This is emphasised by the moving atmosphere that is falling apart, signifying is crumbling days of youth. This intoxication and wild excitement of the riding protagonist is represented through the red wash of delirium.
+‍
+						</p>
+
+					</div>
+
+					<div class="finaliso">
+						<div class="isoimg" width="50%" style="align-items: center; flex: 1;">
+						<img style="flex: 1;" id="card" width="100%"
+						  src="../Images/isidora/iso.webp" alt="">
+						</div>
+						
+						<div style="flex: 1">
+						<div class="finaltext" style="color: black;">
+						<h1>Isometric Field
+						</h1>
+						<p>
+							This world takes on a symmetrically balanced approach in terms of composition in order to convey the utopic qualities associated with the city of Isidora. The isometric showcases the city divided into three main sections, evidently notated by the large central rings signifying time and temporal threshold. The three sections are, the journey, in the foreground, the reality in the mid ground, and the memory/desire in the background.
+							<br><br>
+							The journey of the wild region he travels through is emphasised by the heavy poché applied to the decaying blocks. This decay of time and transfer is also shown by the annotations which converge downwards. The eagerness to find his desire is encapsulated in the gazed arrow that points towards the city whilst turning a blind eye to his fate in the right. This reinforces that sentiment of losing sight of reality in favour of experiencing a memory of his dreams.
+							<br><br>
+
+							The isometric is seen in a south-west view which intentionally shows the progression of the story. However, it also aims to make the city seem unattainable by it being located behind everything. This positioning coupled with the dense notations and misguided spirals, make it difficult to enter the city. Hence, it is forcing a perspective of observation on the viewer much like the man is when he is imagining  the city; from a distance.
+						</p>
+						</div>
+						</div>
+
+
+					</div>
+
+					
 				
 
 					
@@ -678,8 +995,10 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js" integrity="sha512-w58XJ/0dVbEfZVJoJyBUOTMGBWmIW4jEYJSA0898d2L0Ghpum0FvwK7qTuHhkTctApzrchv3Neli+28ajI4+fg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script>
+
+
 const intro = document.querySelector('.intro');
-const zoomDs = document.querySelectorAll('.zoomD, .info, .backer, .lottie-container');
+const zoomDs = document.querySelectorAll('.zoomD, .info, .fade,  .backer .lottie-container, .cardview');
 const customScrollContainer = document.querySelector('.custom-scroll');
 
 const fadeInOptions = {
@@ -700,6 +1019,7 @@ fadeInObserver.observe(intro);
 zoomDs.forEach(zoomD => {
   fadeInObserver.observe(zoomD);
 });
+
 
 LottieInteractivity.create({
 						  player: '#lottie',

@@ -4,13 +4,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Rishab Kiran</title>
-	<link rel="icon" type="image/x-icon" href="/Images/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
 
-	<link rel="stylesheet" href="home.css">
-	<link rel="stylesheet" href="lightdark.css">
-	<link rel="stylesheet" href="player.css">
-	<link rel="stylesheet" href="typewriter.css">
-	<link rel="stylesheet" href="preloader.css">
+	<link rel="stylesheet" href="../home.css">
+	<link rel="stylesheet" href="../lightdark.css">
+	<link rel="stylesheet" href="../playerproject.css">
+	<link rel="stylesheet" href="../projects.css">
+	<link rel="stylesheet" href="../header.css">
+ 
+
 
 
 
@@ -20,84 +22,123 @@
 	<link href="https://encore.scdn.co/fonts/CircularSpTitle-Bold-2fbf72b606d7f0b0f771ea4956a8b4d6.woff2" rel="preload" type="font/woff2">
 	<link href="https://encore.scdn.co/fonts/CircularSpTitle-Black-3f9afb402080d53345ca1850226ca724.woff2" rel="preload" type="font/woff2">
 	<link href="https://open.spotifycdn.com/cdn/fonts/spoticon_regular_2.d728648c.woff2" rel="preload" type="font/woff2">
-	<link rel="stylesheet" media="all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait)" href="ipad-portrait.css" />
-<link rel="stylesheet" media="all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape)" href="ipad-landscape.css" />
-
 	<!-- favicon -->
 	<link rel="shortcut icon" href="" type="image/x-icon">
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,200;1,300&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 		:root{
+			--albumcover: url(../Images/Thumbnails/vsi.webp);
 			--phone-bg: #272727;
 			--background-alpha: 0; /* Default alpha value, adjust as needed */
-			--background-rgb: 18, 18, 18; /* Default RGB values, adjust as needed */
-			--banner: url(./Images/banner.png);
-			--bannerphn: url(./Images/bannerphn.png);
-
+			--background-rgb: 80, 40, 173; /* Default RGB values, adjust as needed */
+			--projectbacker: black;
 
 		}
 
-		.bannerbox img{
-            content: var(--banner);
+		#imgtrack {
+			flex: 1;
+
+
+    width: 50%;
+    /* animation: moveUpDown 7s ease-in-out infinite;  */
+}
+
+
+.iteration{
+	padding-left: 80px;
+	padding-right: 80px;
+}
+
+
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0); /* Start and end position */
+    }
+    50% {
+        transform: translateY(-50px); /* Middle position - adjust as needed */
+    }
+}
+
+        .albumcover img{
+            content: var(--albumcover);
         }
 
-		.bannerboxphn img{
-            content: var(--bannerphn);
-        }
+		@media  only screen and (max-width: 850px) {
 
-			.sticky-top-bar::before, .backgradient::before {
-    content: '';
-    position: absolute;
+		#mariosplit{
+        flex-direction: column;
 
-    filter: saturate(100%) brightness(100%);; 
+    }
+
+	#splita{
+		flex-direction: column;
+		gap: 60px;
+	}
+    
+
+
+    #imgtrack{
+        width: 100%;
+
+
+    }	
+
+	.iteration{
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
+.split{
 
-.bannerbox {
-    position: relative;
-    overflow: hidden;
-	border-radius: 6px;
+    max-width:100%;
+
+  }
+
+
 
 }
 
-.banner {
-    display: block;
-}
-
-.highlighting {
-    position: absolute;
-	top: 50%; /* Position from the middle vertically */
-    left: 50%; /* Position from the middle horizontally */
-    width: 350px; /* Adjust the size of the highlight */
-    height: 350px; /* Adjust the size of the highlight */
-    margin-top: -175px; /* Half of the height */
-    margin-left: -175px; 
-    pointer-events: none;
-	mix-blend-mode: overlay; /* Blend mode for overlay effect */
-	background-color: white;
-	filter: blur(40px);
-
-	
-    border-radius: 100%; /* Make it circular */
-    /* box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.5); Circular blur overlay */
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.5s ease-out; /* Smooth transition */
-}
-
-
-	
+		
 	  </style>
+	  <script>
+		document.addEventListener('DOMContentLoaded', function() {
+  		console.log('Page has been loaded');
+ 			document.querySelector('.year').innerHTML = 'October 2023';
+
+		});
+
+		document.addEventListener('DOMContentLoaded', function() {
+		console.log('Page has been loaded');
+		var elements = document.querySelectorAll('[id="atitle"]');
+		elements.forEach(function(element) {
+			element.innerHTML = 'Very Short Introductions';
+ 		 });
+		});
+
+		document.addEventListener('DOMContentLoaded', function() {
+		console.log('Page has been loaded');
+		var elements = document.querySelectorAll('[id="aartist"]');
+		elements.forEach(function(element) {
+			element.innerHTML = 'Rishab Kiran';
+ 		 });
+		});
+
+		
+
+	</script>
 
 </head>
+
+
 <body>
 	<div id="loading-screen">
         <!-- You can customize your loading screen content here -->
     </div>
 	<div id="content">
 
-	
-	
+
 	<div class="custom-cursor-container">
 		<svg class="custom-cursor" id="Isolation_Mode" data-name="Isolation Mode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.02 22.96">
 		  
@@ -108,15 +149,11 @@
 		  <path  d="M29.02,11.49c0,6.33-5.14,11.47-11.47,11.47-4.98,0-9.21-3.17-10.79-7.6-3.72,2.55-6.49,5.75-6.76,6.06C4.64-1.32,17.55.01,17.55.01,23.88.01,29.02,5.15,29.02,11.49Z"/>
 		</svg>
 	  </div>
-
-
 	
 	<div class="container">
-	
 		<div class="sidebar" id="sidebar">
 			<!-- top navigation -->
 			<div class="navigation">
-				
 					<ul class="navpadding">
 						<!-- page logo on side bare -->
 						<a href="" style="cursor: none;">
@@ -150,15 +187,15 @@
 						<li class="paddinghome">
 							
 						</li>
-						<li id="homeItem" class="paddinghome">
-							<a href="/index.html" class="home" >
+						<li id="homeItem2" class="paddinghome">
+							<a href="/index.html" class="home2" >
 								<svg data-encore-id="icon" role="img" aria-hidden="true" class="home-active" viewBox="0 0 24 24">
 									<path  d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"></path>
 								</svg>
 								<span>Home</span>
 							</a>
 						</li>
-						<li>
+						<!-- <li>
 							<a href="" class="search" id="searchButton">
 								<svg data-encore-id="icon" role="img" aria-hidden="true" class="search-inactive" viewBox="0 0 24 24">
 									<path d="M15.356 10.558c0 2.623-2.16 4.75-4.823 4.75-2.664 0-4.824-2.127-4.824-4.75s2.16-4.75 4.824-4.75c2.664 0 4.823 2.127 4.823 4.75z"></path>
@@ -166,7 +203,7 @@
 								</svg>
 								<span>Search</span>
 							</a>
-						</li>
+						</li> -->
 					</ul>
 			
 			</div>
@@ -184,15 +221,15 @@
 					<button class="contact" onclick="toggleButtons(this)">Contact</button>
 				</div>
 
-				<div class="metext" >
+				<div class="metext">
 					<h5> 
 						HEY THERE!
 					</h5>
-					<h4 class="pointer" id="toggleText" onclick="toggleContent()">
+					<h4  class="pointer" id="toggleText" onclick="toggleContent()">
 						I'm Rish.
 					</h4>
 				
-					<p id="p"  class="typewriter">
+					<p id="p">
 						A passionate  designer and recent graduate from the University of Melbourne with a Bachelor of Design, majoring in Graphic Design and User Experience. Hailing from Melbourne, Australia, I thrive on challenges that enable me to acquire new skills and integrate them into my future works.
 						<br>
 						<br>
@@ -205,6 +242,9 @@
 						<br>
 						If this Spotify-inspired portfolio didn't give it away,  I've got a serious love affair with music. It is my trusty companion while I am designing. Oh, and when I need to release some pent-up frustration, you'll catch me letting it all out on the drums. It's my way of adding a beat to the creative process.
 					</p>
+
+
+
 
 				</div>
 
@@ -249,16 +289,22 @@
 				
 			</div>
 		</div>
+
+		<div id="lb-back">
+			<div id="lb-img"></div>
+		  </div>
 		<!-- rightside -->
 		<section class="home-page">
-			<div class="backgradient" id="backgradient"></div>
-
+			
 			
 
-			
+			<span class="backgradient"></span>
+
 			
 			<div class="custom-scroll" onscroll="updateProgressBar()">
-				<div class="sticky-top-bar" id="stickyTopBar" data-color="18, 18, 18" >
+				<div class="sticky-top-bar" id="stickyTopBar">
+
+
 
 					
 
@@ -271,15 +317,14 @@
 					<path d="M36.18,6.71c0,3.7-3,6.7-6.7,6.7-2.9,0-5.38-1.85-6.3-4.43-2.17,1.48-3.78,3.35-3.94,3.53C21.94-.77,29.48,0,29.48,0c3.7,0,6.7,3,6.7,6.7Z"/>
 						</svg>
 						</div>
-						<a href="/index.html" class="phonebtn1">Home</a>
+						<a href="/index.html" class="phonebtn2" >Home</a>
 						<a href="/me.html" class="phonebtn2" >About Me</a>
 						<a href="/contact.html" class="phonebtn3">Contact</a>
 					</div>
 					
 					<!-- Sticky content -->
-					<div class="backforward"  ;
-					opacity: 0.6;>
-						<button class="back" onclick="goBack()"   data-title="Go back" id="backButton" aria-hidden="true">
+					<div class="backforward">
+						<button class="back" onclick="goBack()" data-title="Go back"  id="backButton" >
 							<svg data-encore-id="icon" role="img" aria-hidden="true" class="backarrow" viewBox="0 0 16 16">
 								<path d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"></path>
 							</svg>
@@ -290,6 +335,14 @@
 							</svg>
 						</button>
 					</div>
+
+					<div class="scrolling-text hidden">
+						<!-- Your scrolling text content here -->
+						<div id="atitle">croissantrepresentation</div>
+					</div>
+
+					
+
 					<div class="search-box" id="searchBox">
 						<div class="search-icon">
 							<svg data-encore-id="icon" role="img" aria-hidden="true" class="search-icon-svg" viewBox="0 0 24 24">
@@ -336,76 +389,165 @@
 						
 				
 				</div>
+
+
+			
+				<span class="gradient">
+					
+
+				</span>
+
+				
+				<div class="headerwork">
+
+					<img style="content: var(--albumcover)"  alt="" >
+
+					<div class="albumcontainer">
+						<div class="titlebox"> 
+							<div id="atitle">croissantrepresentation</div>
+						</div>
+						<div class="subtext">
+							<h7 id="aartist">Rishab Kiran</h7>
+							<span class="year"  >2021</span>
+						</div>
+						
+					
+					</div>
+
+
+				</div >
+
+				<div class="projects" style="padding-bottom: 50px; background-color: ;">
+
+				
+				
+					<div class="backer" style="width: 100%;border-radius:6px;overflow: hidden;background-color: white; " >
+					<div class="intro" style=";  z-index: 100">
+						<div class="overview">
+							<h8>Overview</h8>
+							<p>This project embarked on a comprehensive redesign of the book covers for the Oxford Series "Very Short Introductions." Beginning with thorough research into the series' target audience, content, and visual identity, I delved into exploring various design concepts, typography, and imagery to encapsulate the essence of each subject. Employing a meticulous process, I iteratively refined my designs, incorporating feedback and ensuring coherence across the entire series. From initial sketches to final renders, my approach integrated both aesthetic appeal and functional clarity, aiming to enhance the series' shelf presence and reader engagement in the realm of publication print media.
+							</p>
+						</div>
+						<div class="tools">
+							<h8>Tools</h8>
+							<p >
+								Adobe Illustrator
+								<br>
+								Adobe Photoshop
+								<br>
+								Adobe InDesign
+								<br>
+								Cinema 4D
+
+							</p>
+						</div>
+
+
+					</div>
+					<img class="zoomD" src="../Images/vsi/1.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/12.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/13.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/14.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/15.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/16.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/17.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/18.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/19.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/110.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/111.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/112.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/113.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/114.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/115.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/116.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/117.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/118.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/119.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/120.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/121.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/122.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/123.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/124.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/125.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/126.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/127.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/128.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/129.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/130.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/131.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/132.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/133.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/134.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/135.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/136.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/137.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/138.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/139.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/140.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/141.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/Book Final Edits.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/Book Final Edits2.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/Book Final Edits3.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/Book Final Edits4.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/Book Final Edits5.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/Book Final Edits6.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/Book Final Edits7.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/Book Final Edits8.webp" alt="">
+					<img class="zoomD" src="../Images/vsi/Book Final Edits9.webp" alt="">
+
+
+
+
+					<img class="zoomD"  src="../Images/vsi/142.webp" alt="">
+
+
+										
+												
+						
+
+					
+
+					
 				
 
-				<div class="projects">
-					<div class="bannerbox"> 
 					
-					<img width="100%" class="banner" src="" alt="">
-					<div class="highlighting"></div>
+					<!-- Animated element -->
+					<div id="animated-element"></div>
+					
+<script>
+    // Access embedded JSON data
+    const jsonData = JSON.parse(document.getElementById('json-data').textContent);
 
-					</div>
-					<div class="bannerboxphn"> 
+    // Process your JSON data and insert it into the HTML
+    const contentDiv = document.createElement('div');
+    contentDiv.textContent = jsonData.content;
+    document.body.appendChild(contentDiv);
 
-					<img width="100%" class="bannerphn" src="./Images/bannerphn.png" alt="">
-					</div>
+    // Listen for scroll events to control animation
+    window.addEventListener('scroll', handleScroll);
 
+    function handleScroll() {
+        // Calculate scroll progress
+        const scrollProgress = window.scrollY / (document.body.scrollHeight - window.innerHeight);
 
-				<h2>Browse projects</h2>
+        // Update animation based on scroll progress
+        const animatedElement = document.getElementById('animated-element');
+        if (scrollProgress > 0.5) {
+            // If scroll progress is over 50%, show the animated element
+            animatedElement.style.opacity = 1;
+        } else {
+            // Otherwise, hide the animated element
+            animatedElement.style.opacity = 0;
+        }
+    }
+</script>
+					
+
 					<div class="list" id="card"   >
-						<a href="/projects/vsi.html"  class="item"  data-tags="October 2023, book, print" >
-							<div class="imgbox">
-								<img id="mgImage" src="./Images/Thumbnails/vsi.webp" alt="" >
-							</div>
-
-							<div class="play">
-								<span>
-									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
-								</span>
-							</div>
-							<h3>Very Short Introductions</h3>
-							<p>Rishab Kiran</p> 
-						</a>
-						<a href="/projects/marioworld.html"  class="item"  data-tags="August 2021, mario, world, axonometric, Illustrator" >
-							<div class="imgbox">
-								<img id="mgImage"  src="./Images/Thumbnails/marioworld.webp" alt="" >
-							</div>
-							<div class="play">
-								<span>
-									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
-								</span>
-							</div>
-							<h3>Mario World</h3>
-							<p>Rishab Kiran</p> 
-						</a>
-						<a href="/projects/pattern-surface.html"  class="item"  data-tags="September 2021, pattern, surface, fabrication, 3d, render" >
-							<div class="imgbox">
-							<img id="mgImage" src="./Images/Thumbnails/pattern.webp" alt="" >
-								</div>
-							<div class="play">
-								<span>
-									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
-								</span>
-							</div>
-							<h3>Raphael 2.0</h3>
-							<p>Rishab Kiran</p> 
-						</a>
-						<a href="/projects/isidora.html"  class="item"  data-tags="October 2021, frame, field, 3d" >
-							<div class="imgbox">
-								<img id="mgImage" src="./Images/Thumbnails/isidora.webp" alt="" >
-							</div>
-
-							<div class="play">
-								<span>
-									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
-								</span>
-							</div>
-							<h3>City of Isidora</h3>
-							<p>Rishab Kiran</p> 
-						</a>
-						
 						
 					</div>
+
+				</div>
 				</div>
 	   
 			</div>
@@ -417,11 +559,11 @@
 			</div>
 			<div class="song-details">
 				<div class="image-backer">
-				<div class="albumcover" style="background-color: var(--accent-color)"> <img src="./Images/home-r-album.png" alt=""> </div>
+				<div class="albumcover" style="background-color: none;"> <img src="" alt=""> </div>
 				</div>
 				<div class="song-info"> 
-					<div class="song-title">Browse Projects</div>
-					<div class="artist">Rishab Kiran</div>
+					<div id="atitle" class="song-title">Browse Projects</div>
+					<div class="artist" id="aartist">Rishab Kiran</div>
 				</div>
 				
 			</div>
@@ -563,69 +705,101 @@
 		</span>
 		</section>
 
-
-
 		
 
 		
 	</div>
-</div>
+
+	</div>
 
 	
 
 	<!-- javascrips -->
-    <script src="/js/resize.js"></script>
-	<script src="/js/backforward.js"></script>
-	<script src="/js/colourmode.js"></script>
-	<script src="/js/accent.js"></script> 
-	<script src="/js/search.js"></script> 
-	<script src="/js/cardhover.js"></script> 
-	<script src="/js/about.js"></script> 
-	<script src="/js/phonescroll.js"></script> 
-	<script src="/js/player.js"> </script>
-	<script src="/js/playbtn.js"> </script>
-	<script src="/js/fullscreen.js"> </script>
-	<script src="/js/topbar.js"> </script>
-	<script src="/js/meswap.js"> </script>
-	<script src="/js/preloader.js"> </script>
-
-
-
-	<script>
-		document.addEventListener("DOMContentLoaded", function() {
-			var items = document.querySelectorAll('.item');
-			items.forEach(function(item, index) {
-				item.style.animationDelay = (index * 0.1) + 's';
-			});
-		});
-		
-// Select the container element
-const container = document.getElementById('card');
-
-// Select all items inside the container
-const items = Array.from(container.getElementsByClassName('item'));
-
-// Sort the items based on the date in data-tags attribute
-items.sort((a, b) => {
-    const dateA = new Date(a.getAttribute('data-tags').split(',')[0]);
-    const dateB = new Date(b.getAttribute('data-tags').split(',')[0]);
-    return dateB - dateA;
-});
-
-// Remove all items from the container
-while (container.firstChild) {
-    container.removeChild(container.firstChild);
-}
-
-// Append the sorted items back to the container
-items.forEach(item => {
-    container.appendChild(item);
-});
-
-		
-		</script>
-
 	
+<script>
+	var sc=0;
+	window.addEventListener('scroll', function() {
+		if(sc == 0){
+			sc=1;
+			lottie.loadAnimation({
+				container: document.querySelector('#lottie'),
+				renderer: 'svg',
+				loop: true,
+				autoplay: true,
+				path: 'https://assets10.lottiefiles.com/packages/lf20_wzcckjq4.json'
+			});
+		}
+	});
+	window.onload = function() {
+		window.scrollTo(window.scrollX, window.scrollY - 1);
+		window.scrollTo(window.scrollX, window.scrollY + 1);
+	};
+	</script>
+	<script type="text/javascript" src="https://unpkg.com/lottie-interactive@latest/dist/lottie-interactive.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js" integrity="sha512-w58XJ/0dVbEfZVJoJyBUOTMGBWmIW4jEYJSA0898d2L0Ghpum0FvwK7qTuHhkTctApzrchv3Neli+28ajI4+fg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script>
+
+
+const intro = document.querySelector('.intro');
+const zoomDs = document.querySelectorAll('.zoomD, .info, .fade,  .backer .lottie-container, .cardview');
+const customScrollContainer = document.querySelector('.custom-scroll');
+
+const fadeInOptions = {
+  threshold: [0, 0.5, 0.1]
+};
+
+const fadeInObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > 0) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
+  });
+}, fadeInOptions);
+
+fadeInObserver.observe(intro);
+zoomDs.forEach(zoomD => {
+  fadeInObserver.observe(zoomD);
+});
+
+
+LottieInteractivity.create({
+						  player: '#lottie',
+						  mode: 'scroll',
+						  actions: [
+							{
+							  visibility: [0,1],
+							  type: 'seek',
+							  frames: [0, 250],
+							},
+						  ]
+						});
+
+						
+	</script>
+    <script src="../js/resize.js"></script>
+	<script src="../js/backforward.js"></script>
+	<script src="../js/colourmode.js"></script>
+	<script src="../js/accent.js"></script> 
+	<!-- <script src="../js/search.js"></script>  -->
+	<script src="../js/cardhover.js"></script> 
+	<script src="../js/about.js"></script> 
+	<script src="../js/phonescroll.js"></script> 
+	<script src="../js/player.js"> </script>
+	<script src="../js/playbtn.js"> </script>
+	<script src="../js/fullscreen.js"> </script>
+	<script src="../js/topbar.js"> </script>
+	<script src="../js/imgzoom.js"> </script>
+	<script src="../js/meswap.js"> </script>
+	<script src="../js/preloader.js"> </script>
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 
 
