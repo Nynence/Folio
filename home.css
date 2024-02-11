@@ -605,14 +605,14 @@ a .cls-1 {
     overflow: hidden;
     border-radius: 0 0 8px 8px;
     flex: 0 0 auto;
-    animation: slideIn 1.2s ease-in-out;
-    /* animation-delay: 0s; */
+    animation: slideInto 1.2s ease-in-out;
+    animation-delay: 0s;
   
     transition: all 0.5s ease; /* Moved transition property here */
  
 }
 
-@keyframes slideIn {
+@keyframes slideInto {
     0% {
       transform: translateX(-30%);
       opacity: 0;
