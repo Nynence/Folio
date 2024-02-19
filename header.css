@@ -334,6 +334,9 @@
     }
     
     .headerwork #aartist {
+        /* letter-spacing: 21px; */
+
+
         font-weight: 100;
         font-family: cbold;
       
@@ -349,7 +352,7 @@
         font-weight: 800;
         font-family: cbold;
         color: var(--t1-color);
-        letter-spacing: -1px;
+        letter-spacing: 0px;
         -webkit-font-smoothing: antialiased;
         margin-bottom: 0;
     }
@@ -405,6 +408,7 @@
   }
 
   #lb-back {
+    cursor: zoom-out;
     position: fixed;
     top: 0;
     left: 0;
