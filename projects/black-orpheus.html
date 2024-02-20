@@ -11,6 +11,8 @@
 	<link rel="stylesheet" href="../playerproject.css">
 	<link rel="stylesheet" href="../projects.css">
 	<link rel="stylesheet" href="../header.css">
+	<link rel="stylesheet" href="../imgslide.css">
+
  
 
 
@@ -498,23 +500,138 @@
     width: 100%;
     height: auto;
   }
-					
+				
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
+    /* grid-gap: 10px; gap between grid items */
+}
+
+.grid-item {
+    width: 100%; /* Ensure each item takes up full width of its container */
+}
+
 					</style>
 
 					
-								<img class="zoomD" src="../Images/man/cover.webp" alt="">
+				<img class="zoomD" src= "../Images/bo/bo.webp" alt="">
+				<img class="zoomD" src= "../Images/bo/bo2.webp" alt="">
+				<img class="zoomD" src= "../Images/bo/bo3.webp" alt="">
 
-
-
-								
-
-								
-				<img class="zoomD" src="../Images/man/man39.webp" alt="">
+				<div class="grid-container">
+					<div class="grid-item">
+						<img class="zoomD" src="../Images/bo/bo4.webp" alt="">
+					</div>
+					<div class="grid-item">
+						<img class="zoomD" src="../Images/bo/bo5.webp" alt="">
+					</div>
+					<div class="grid-item">
+						<img class="zoomD" src="../Images/bo/bo6.webp" alt="">
+					</div>
+					<div class="grid-item">
+						<img class="zoomD" src="../Images/bo/bo7.webp" alt="">
+					</div>
+				</div>
 				
+				<img class="zoomD" src= "../Images/bo/bo8.webp" alt="">
+
 				
+	
+
+				
+				<div class="imgslider fade slider1">
+					<div class="imglist">
+						<div class="imgitem">
+							<img src= "../Images/bo/bo9.webp" alt="">
+						</div>
+						<div class="imgitem">
+							<img src="../Images/bo/bo10.webp" alt="">
+						</div>
+						<div class="imgitem">
+							<img src="../Images/bo/bo11.webp" alt="">
+						</div>
+						<div class="imgitem">
+							<img src="../Images/bo/bo12.webp" alt="">
+						</div>
+						<div class="imgitem">
+							<img src="../Images/bo/bo13.webp" alt="">
+						</div>
+						<div class="imgitem">
+							<img src="../Images/bo/bo14.webp" alt="">
+						</div>
+						<div class="imgitem">
+							<img src="../Images/bo/bo15.webp" alt="">
+						</div>
+						<div class="imgitem">
+							<img src="../Images/bo/bo16.webp" alt="">
+						</div>
+						<div class="imgitem">
+							<img src="../Images/bo/bo17.webp" alt="">
+						</div>
+						<div class="imgitem">
+							<img src="../Images/bo/bo18.webp" alt="">
+						</div>
+						<div class="imgitem">
+							<img src="../Images/bo/bo19.webp" alt="">
+						</div>
+						<div class="imgitem">
+							<img src="../Images/bo/bo20.webp" alt="">
+						</div>
+					</div>
+					<div class="buttons">
+						<button class="prev"><</button>
+						<button class="next">></button>
+					</div>
+					<ul class="dots">
+						<li class="active"></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
 
 
-				
+
+					</ul>
+				</div>
+
+				<img class="zoomD" src="../Images/bo/bo21.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo22.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo23.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo24.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo25.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo26.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo27.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo28.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo29.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo30.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo31.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo32.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo33.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo34.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo35.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo36.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo37.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo38.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo39.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo40.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo41.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo42.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo43.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo44.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo45.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo46.webp" alt="">
+				<img class="zoomD" src="../Images/bo/bo47.webp" alt="">
+
+
+
+			
 									
 
 
@@ -796,6 +913,10 @@ LottieInteractivity.create({
 						  ]
 						});
 
+
+						// JavaScript code to dynamically adjust height based on width
+// JavaScript code to dynamically adjust height based on width of the parent container
+
 						
 	</script>
     <script src="../js/resize.js"></script>
@@ -813,6 +934,8 @@ LottieInteractivity.create({
 	<script src="../js/imgzoom.js"> </script>
 	<script src="../js/meswap.js"> </script>
 	<script src="../js/preloader.js"> </script>
+	<script src="../js/slideapp.js"> </script>
+
 
 
 
