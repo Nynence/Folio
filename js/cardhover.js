@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const sidebar = document.getElementById('sidebar');
   const homePage = document.querySelector('.home-page');
   const clickableElements = document.querySelectorAll('.pointer,  .zoomD');
-  const hiddenElements = document.querySelectorAll('.backforward, .colourbtns, .resize-handle, #searchInput,  .custom-scroll::-webkit-scrollbar,  .custom-scroll::-webkit-scrollbar-track, .custom-scroll::-webkit-scrollbar-thumb');
+  const hiddenElements = document.querySelectorAll('.figma, .backforward, .colourbtns, .resize-handle, #searchInput,  .custom-scroll::-webkit-scrollbar,  .custom-scroll::-webkit-scrollbar-track, .custom-scroll::-webkit-scrollbar-thumb');
 
   let hideTimeout;
 
