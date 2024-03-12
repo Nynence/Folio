@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const loadingScreen = document.getElementById("loading-screen");
 
     // Pause animations initially
-    document.styleSheets[0].insertRule("* { animation-play-state: paused !important; }");
+    // document.styleSheets[0].insertRule("* { animation-play-state: paused !important; }");
 
     // Show content
     content.style.visibility = "visible";
@@ -54,4 +54,14 @@ window.onload = function () {
 // new
 
 
-
+document.addEventListener("DOMContentLoaded", function() {
+    var content = document.getElementById('lcontent');
+    var spinner = document.getElementById('loading-spinner');
+  
+    // Show content and hide spinner when the page is fully loaded
+    window.addEventListener('load', function() {
+      content.style.display = 'block';
+      spinner.style.display = 'none';
+    });
+  });
+  
