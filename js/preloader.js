@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const loadingScreen = document.getElementById("loading-screen");
 
     // Pause animations initially
-    // document.styleSheets[0].insertRule("* { animation-play-state: paused !important; }");
+    document.styleSheets[0].insertRule("*:not(.spinner) { animation-play-state: paused !important; }");
 
     // Show content
     content.style.visibility = "visible";
