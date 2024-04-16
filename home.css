@@ -1617,6 +1617,8 @@ button.forward:not(.disabled) {
 
 
 @media  only screen and (max-height: 800px) {
+
+
     .container {
      
         height: 88vh; /* Adjust as needed */
@@ -1648,10 +1650,12 @@ and (-webkit-min-device-pixel-ratio: 1.5) { */
  
 
     :root, body, .custom-scroll, .projects{
+        
         cursor: default;
         
     }
 
+    
   
 
     .projects a{
@@ -1844,6 +1848,9 @@ and (-webkit-min-device-pixel-ratio: 1.5) { */
 
 
 @media only screen and (max-width: 1025px) {
+
+    
+
     .bottomnav{
         height: 75vh;
     }

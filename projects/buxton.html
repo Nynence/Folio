@@ -484,10 +484,10 @@
 						}
 					</style>
 				
-				<img width="100%" class="fade" src="../Images/bux/bux.webp" alt="">
-				<img width="100%"  src="../Images/bux/buxlong1.jpg" alt="">
-				<img width="100%"  src="../Images/bux/buxlong.jpg" alt="">
-				<img width="100%"   src="../Images/bux/buxlong4.jpg" alt="">
+				<img width="100%" class="fade" src="../Images/bux/bux.webp" alt=""  loading="lazy">
+				<img width="100%"  src="../Images/bux/buxlong1.jpg" alt=""  loading="lazy">
+				<img width="100%"  src="../Images/bux/buxlong.jpg" alt="" loading="lazy">
+				<img width="100%"   src="../Images/bux/buxlong4.jpg" alt="" loading="lazy">
 
 
 				
@@ -711,29 +711,7 @@
 
 	<!-- javascrips -->
 	
-<script>
-	var sc=0;
-	window.addEventListener('scroll', function() {
-		if(sc == 0){
-			sc=1;
-			lottie.loadAnimation({
-				container: document.querySelector('#lottie'),
-				renderer: 'svg',
-				loop: true,
-				autoplay: true,
-				path: 'https://assets10.lottiefiles.com/packages/lf20_wzcckjq4.json'
-			});
-		}
-	});
-	window.onload = function() {
-		window.scrollTo(window.scrollX, window.scrollY - 1);
-		window.scrollTo(window.scrollX, window.scrollY + 1);
-	};
-	</script>
-	<script type="text/javascript" src="https://unpkg.com/lottie-interactive@latest/dist/lottie-interactive.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js" integrity="sha512-w58XJ/0dVbEfZVJoJyBUOTMGBWmIW4jEYJSA0898d2L0Ghpum0FvwK7qTuHhkTctApzrchv3Neli+28ajI4+fg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 	<script>
 
 
@@ -760,18 +738,6 @@ zoomDs.forEach(zoomD => {
   fadeInObserver.observe(zoomD);
 });
 
-
-LottieInteractivity.create({
-						  player: '#lottie',
-						  mode: 'scroll',
-						  actions: [
-							{
-							  visibility: [0,1],
-							  type: 'seek',
-							  frames: [0, 250],
-							},
-						  ]
-						});
 
 						
 	</script>

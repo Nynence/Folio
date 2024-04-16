@@ -453,12 +453,12 @@
 
 
 					</div>
-					<img class="zoomD" src="../Images/ss/brief.webp" alt="">
-					<img class="zoomD" src="../Images/ss/branding.webp" alt="">
-					<img class="zoomD" src="../Images/ss/branding2.webp" alt="">
-					<img class="zoomD" src="../Images/ss/branding3.webp" alt="">
-					<img class="zoomD" style="" src="../Images/ss/ortho.webp" alt="">
-					<img class="zoomD" src="../Images/ss/46850573W_Kiran_Project 3.webp" alt="">
+					<img class="zoomD" src="../Images/ss/brief.webp" alt="" loading="lazy">
+					<img class="zoomD" src="../Images/ss/branding.webp" alt="" loading="lazy">
+					<img class="zoomD" src="../Images/ss/branding2.webp" alt="" loading="lazy">
+					<img class="zoomD" src="../Images/ss/branding3.webp" alt="" loading="lazy">
+					<img class="zoomD" style="" src="../Images/ss/ortho.webp" alt="" loading="lazy">
+					<img class="zoomD" src="../Images/ss/46850573W_Kiran_Project 3.webp" alt="" loading="lazy">
 
 
 
@@ -683,29 +683,7 @@
 
 	<!-- javascrips -->
 	
-<script>
-	var sc=0;
-	window.addEventListener('scroll', function() {
-		if(sc == 0){
-			sc=1;
-			lottie.loadAnimation({
-				container: document.querySelector('#lottie'),
-				renderer: 'svg',
-				loop: true,
-				autoplay: true,
-				path: 'https://assets10.lottiefiles.com/packages/lf20_wzcckjq4.json'
-			});
-		}
-	});
-	window.onload = function() {
-		window.scrollTo(window.scrollX, window.scrollY - 1);
-		window.scrollTo(window.scrollX, window.scrollY + 1);
-	};
-	</script>
-	<script type="text/javascript" src="https://unpkg.com/lottie-interactive@latest/dist/lottie-interactive.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js" integrity="sha512-w58XJ/0dVbEfZVJoJyBUOTMGBWmIW4jEYJSA0898d2L0Ghpum0FvwK7qTuHhkTctApzrchv3Neli+28ajI4+fg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 	<script>
 
 
@@ -733,17 +711,6 @@ zoomDs.forEach(zoomD => {
 });
 
 
-LottieInteractivity.create({
-						  player: '#lottie',
-						  mode: 'scroll',
-						  actions: [
-							{
-							  visibility: [0,1],
-							  type: 'seek',
-							  frames: [0, 250],
-							},
-						  ]
-						});
 
 						
 	</script>
@@ -767,7 +734,6 @@ LottieInteractivity.create({
 
 
 
-	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 
 

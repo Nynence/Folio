@@ -66,7 +66,7 @@
 }
 
         .albumcover img{
-            content: var(--albumcover);
+            /* content: var(--albumcover); */
         }
 
 		@media  only screen and (max-width: 850px) {
@@ -137,10 +137,10 @@
 
 
 <body>
-	<div id="loading-spinner">
+	<!-- <div id="loading-spinner">
 	<div class="spinner"></div>
 	</div>
-	<div id="lcontent" style="display:none;">
+	<div id="lcontent" style="display:none;"> -->
 
 
 	<div class="custom-cursor-container">
@@ -442,7 +442,9 @@
 				</style>
 				<div class="headerwork">
 
-					<img style="content: var(--albumcover)"  alt="" >
+					<!-- <img style="content: var(--albumcover)"  alt="" > -->
+					<img src="../Images/Thumbnails/bartr.webp" alt="" >
+
 
 					<div class="albumcontainer">
 						<div class="titlebox"> 
@@ -612,7 +614,7 @@
 
 				
 
-				<img class="zoomD"  id="carder" src= "../Images/bartr/rich2.webp" alt="">
+				<img class="zoomD"  id="carder" src= "../Images/bartr/rich2.webp" alt="" loading="lazy">
 		
 				<div style="background-color: white;">
 				<div class="info" style="background-color: transparent; color: black!important;">
@@ -626,8 +628,8 @@
 				</div>
 
 
-				<img class="zoomD" src= "../Images/bartr/1.webp" alt="">
-				<img class="zoomD" src= "../Images/bartr/ideaall.webp" alt="">
+				<img class="zoomD" src= "../Images/bartr/1.webp" alt="" loading="lazy">
+				<img class="zoomD" src= "../Images/bartr/ideaall.webp" alt="" loading="lazy">
 				</div>
 
 				<div class="info" style="background-color: transparent; color: black!important;">
@@ -642,7 +644,7 @@
 
 				</div>
 				
-				<img class="zoomD" src= "../Images/bartr/mathstrade.webp" alt="">
+				<img class="zoomD" src= "../Images/bartr/mathstrade.webp" alt="" loading="lazy">
 
 
 
@@ -715,7 +717,7 @@
 
 				<div class="finaliso">
 					<div class="isoimg" width="50%" style="align-items: center; flex: 1;">
-						<img class="zoomD" id="card" style="width: 100%!important; height: auto!important;" src= "../Images/bartr/flow.webp" alt="">
+						<img class="zoomD" id="card" style="width: 100%!important; height: auto!important;" src= "../Images/bartr/flow.webp" alt="" loading="lazy">
 					</div>
 
 					<div style="flex: 1">
@@ -779,7 +781,7 @@
 
 
 			</style>
-			<div class="figmapro" >
+			<div class="figmapro"   >
 			<iframe class="figma" style="border: 0px solid rgba(0, 0, 0, 0.1); margin-top: -10px;" width="100%" height="950px" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F7KbFeY2xwPZm5nic9w0gWN%2FUX-Capstone%3Ftype%3Ddesign%26node-id%3D346-995%26t%3D1oHHJsmN6nvBvRNS-1%26scaling%3Dscale-down%26page-id%3D64%253A2%26starting-point-node-id%3D346%253A995%26mode%3Ddesign&hide-ui=1" allowfullscreen></iframe>
 
 			<div class="figtext" style="align-items: center;">
@@ -791,7 +793,7 @@
 				</div>
 
 			</div> 
-			<img class="zoomD screenimg"  src= "../Images/bartr/Screens.webp" alt="">
+			<img class="zoomD screenimg"  src= "../Images/bartr/Screens.webp" alt="" loading="lazy">
 
 			</div>
 			</div>
@@ -815,7 +817,7 @@
 			</div> 
 
 				<video class="fade" width="100%"  controls autoplay  muted loop>
-					<source src="../Images/bartr/videosmall.mp4" type="video/mp4">
+					<source src="../Images/bartr/videosmall.mp4" type="video/mp4" >
 				</video>
 
 
@@ -844,7 +846,7 @@
 
 					<div class="newboth" >
 
-						<img class="zoomD"  width="100%"  src= "../Images/bartr/newboth.webp" alt="">
+						<img class="zoomD"  width="100%"  src= "../Images/bartr/newboth.webp" alt="" loading="lazy">
 					</div>
 
 
@@ -862,7 +864,7 @@
 				
 
 				
-				<img class="zoomD" style="padding-bottom: 40px; "  src= "../Images/bartr/gami.webp" alt="">
+				<img class="zoomD" style="padding-bottom: 40px; "  src= "../Images/bartr/gami.webp" alt="" loading="lazy">
 				<style >
 
 					.nexttext{
@@ -1018,7 +1020,8 @@
 			</div>
 			<div class="song-details">
 				<div class="image-backer">
-				<div class="albumcover" style="background-color: none;"> <img src="" alt=""> </div>
+				<div class="albumcover" style="background-color: none;"> <img src="../Images/Thumbnails/bartr.webp" alt=""> </div>
+
 				</div>
 				<div class="song-info" > 
 					<div id="atitle" class="song-title">Browse Projects</div>
@@ -1180,7 +1183,7 @@
 
 	<!-- javascrips -->
 	
-<script>
+<!-- <script>
 	var sc=0;
 	window.addEventListener('scroll', function() {
 		if(sc == 0){
@@ -1202,7 +1205,7 @@
 	<script type="text/javascript" src="https://unpkg.com/lottie-interactive@latest/dist/lottie-interactive.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js" integrity="sha512-w58XJ/0dVbEfZVJoJyBUOTMGBWmIW4jEYJSA0898d2L0Ghpum0FvwK7qTuHhkTctApzrchv3Neli+28ajI4+fg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js" integrity="sha512-w58XJ/0dVbEfZVJoJyBUOTMGBWmIW4jEYJSA0898d2L0Ghpum0FvwK7qTuHhkTctApzrchv3Neli+28ajI4+fg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 	<script>
 
 
@@ -1230,22 +1233,6 @@ zoomDs.forEach(zoomD => {
 });
 
 
-LottieInteractivity.create({
-						  player: '#lottie',
-						  mode: 'scroll',
-						  actions: [
-							{
-							  visibility: [0,1],
-							  type: 'seek',
-							  frames: [0, 250],
-							},
-						  ]
-						});
-
-
-						// JavaScript code to dynamically adjust height based on width
-// JavaScript code to dynamically adjust height based on width of the parent container
-
 						
 	</script>
     <script src="../js/resize.js"></script>
@@ -1263,8 +1250,6 @@ LottieInteractivity.create({
 	<script src="../js/meswap.js"> </script>
 	<script src="../js/preloader.js"> </script>
 
-	
-
 	<script src="../js/imgzoom.js"> </script>
 	
 	<!-- <script src="../js/search.js"></script>  -->
@@ -1280,7 +1265,7 @@ LottieInteractivity.create({
 
 
 
-	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
 
 
 
