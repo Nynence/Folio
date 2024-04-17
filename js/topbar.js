@@ -17,7 +17,7 @@ document.querySelector('.custom-scroll').addEventListener('scroll', function() {
     var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
     // If the screen width is greater than 1366 pixels, apply the scroll effect
-    if (screenWidth > 1366) {
+    if (screenWidth > 1180) {
         var scrollPosition = this.scrollTop;
         var maxScroll = 130; // Adjust the maximum scroll position for the transition
 

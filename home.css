@@ -768,7 +768,7 @@ a .cls-1 {
     height: 100%;
     background: rgba(var(--background-rgb), var(--background-alpha));
     z-index: -1; /* Ensure the pseudo-element is behind the content */
-    filter: saturate(80%) brightness(40%);; Desaturate the background color by 20%
+    filter: saturate(80%) brightness(40%); /*Desaturate the background color by 20%*/
 
 }
 
