@@ -2,90 +2,91 @@
 
 // autoplay.js
 
-document.addEventListener('DOMContentLoaded', function () {
-    const playToggle = document.getElementById('play-toggle');
+// document.addEventListener('DOMContentLoaded', function () {
+//     const playToggle = document.getElementById('play-toggle');
 
-    // Initial check and update
-    checkAndTogglePlayButton();
+//     // Initial check and update
+//     checkAndTogglePlayButton();
 
-    playToggle.addEventListener('change', function () {
-        if (playToggle.checked) {
-            // Start autoplay when the play toggle is checked
-            startAutoPlay();
-        } else {
-            // Stop autoplay when the play toggle is unchecked
-            stopAutoPlay();
-        }
-    });
+//     playToggle.addEventListener('change', function () {
+//         if (playToggle.checked) {
+//             // Start autoplay when the play toggle is checked
+//             startAutoPlay();
+//         } else {
+//             // Stop autoplay when the play toggle is unchecked
+//             stopAutoPlay();
+//         }
+//     });
 
-    // Observe changes in the custom-scroll container size
-    const customScroll = document.querySelector('.custom-scroll');
-    const resizeObserver = new ResizeObserver(checkAndTogglePlayButton);
-    resizeObserver.observe(customScroll);
+//     // Observe changes in the custom-scroll container size
+//     const customScroll = document.querySelector('.custom-scroll');
+//     const resizeObserver = new ResizeObserver(checkAndTogglePlayButton);
+//     resizeObserver.observe(customScroll);
 
-    // Observe changes in the custom-scroll container
-    const observer = new MutationObserver(checkAndTogglePlayButton);
-    observer.observe(customScroll, { attributes: true, childList: true, subtree: true });
-});
+//     // Observe changes in the custom-scroll container
+//     const observer = new MutationObserver(checkAndTogglePlayButton);
+//     observer.observe(customScroll, { attributes: true, childList: true, subtree: true });
+// });
 
-// ... (rest of the code remains unchanged)
+// ... (rest of the code remains unchanged) the above code is the old play button player which did not work on safari. 
 
-let autoPlayInterval;
-let intervalValue = 50; // Default interval value
+// let autoPlayInterval;
+// let intervalValue = 50; // Default interval value
 
-function startAutoPlay() {
-    autoPlayInterval = setInterval(function () {
-        const customScroll = document.querySelector('.custom-scroll');
-        const totalHeight = customScroll.scrollHeight - customScroll.clientHeight;
-        const currentScroll = customScroll.scrollTop;
+// function startAutoPlay() {
+//     autoPlayInterval = setInterval(function () {
+//         const customScroll = document.querySelector('.custom-scroll');
+//         const totalHeight = customScroll.scrollHeight - customScroll.clientHeight;
+//         const currentScroll = customScroll.scrollTop;
 
-        // Calculate the remaining percentage based on the current position
-        const remainingPercentage = (totalHeight - currentScroll) / totalHeight * 100;
+//         // Calculate the remaining percentage based on the current position
+//         const remainingPercentage = (totalHeight - currentScroll) / totalHeight * 100;
 
-        incrementProgressBar(100 - remainingPercentage);
+//         incrementProgressBar(100 - remainingPercentage);
 
-        // Increment the current position
-        customScroll.scrollTop += 1; // Adjust the increment value as needed
-    }, intervalValue); // Set the interval using the dynamic value
-}
+//         // Increment the current position
+//         customScroll.scrollTop += 1; // Adjust the increment value as needed
+//     }, intervalValue); // Set the interval using the dynamic value
+// }
 
 
 
-// function for ramp slider for how fast it scrolls
+// // function for ramp slider for how fast it scrolls
+
+
+// let isDragging2 = false;
+
+
+
+
+// function updateramp() {
+//     const sliderBar = document.querySelector('.slider-bar');
+//     const sliderhandle = document.querySelector('.slider-handle');
+
+
+
+//         // Update progress bar
+//         const scrollPercentage = (customScroll.scrollTop / (customScroll.scrollHeight - customScroll.clientHeight)) * 100;
+//         progressBar.style.width = `${scrollPercentage}%`;
+//         sliderMarker.style.left = `calc(${scrollPercentage}% - 7.5px)`; // Adjusted for half of the marker's width
+
+//         // Update start time based on the scroll position
+        
+        
+//         // No overflow, set slider to start and make it non-responsive
+//         sliderBar.style.width = '0%';
+//         sliderhandle.style.left = '0%';
+//         // Reset the time to '00'
+    
+// }
 
 
 let isDragging2 = false;
 
 
-
-
-function updateramp() {
-    const sliderBar = document.querySelector('.slider-bar');
-    const sliderhandle = document.querySelector('.slider-handle');
-
-
-
-        // Update progress bar
-        const scrollPercentage = (customScroll.scrollTop / (customScroll.scrollHeight - customScroll.clientHeight)) * 100;
-        progressBar.style.width = `${scrollPercentage}%`;
-        sliderMarker.style.left = `calc(${scrollPercentage}% - 7.5px)`; // Adjusted for half of the marker's width
-
-        // Update start time based on the scroll position
-        
-        
-        // No overflow, set slider to start and make it non-responsive
-        sliderBar.style.width = '0%';
-        sliderhandle.style.left = '0%';
-        // Reset the time to '00'
-    
-}
-
-
-
-
 const sliderBarContainer = document.querySelector('.slider-container');
 sliderBarContainer.addEventListener('mousedown', startDragEvent);
-sliderBarContainer.addEventListener('click', handleClickEvent);
+// sliderBarContainer.addEventListener('click', handleClickEvent);
 
 
 function startDragEvent() {
@@ -97,23 +98,22 @@ function startDragEvent() {
 
 
 
-function handleClickEvent(event) {
-    if (!isDragging2) {
-        const sliderBarContainer = document.querySelector('.slider-container');
-        const containerRect = sliderBarContainer.getBoundingClientRect();
-        const mouseX = event.clientX - containerRect.left;
-        const percent = (mouseX / containerRect.width) * 100;
+// function handleClickEvent(event) {
+//     if (!isDragging2) {
+//         const sliderBarContainer = document.querySelector('.slider-container');
+//         const containerRect = sliderBarContainer.getBoundingClientRect();
+//         const mouseX = event.clientX - containerRect.left;
+//         const percent = (mouseX / containerRect.width) * 100;
 
-        const cappedPercent = Math.min(100, Math.max(0, percent));
-        intervalValue = Math.round((100 - cappedPercent) * 1.5);
+//         const cappedPercent = Math.min(100, Math.max(0, percent));
 
-        const sliderBar = document.querySelector('.slider-bar');
-        const sliderHandle = document.querySelector('.slider-handle');
+//         const sliderBar = document.querySelector('.slider-bar');
+//         const sliderHandle = document.querySelector('.slider-handle');
 
-        sliderBar.style.width = `${cappedPercent}%`;
-        sliderHandle.style.left = `${cappedPercent}%`;
-    }
-}
+//         sliderBar.style.width = `${cappedPercent}%`;
+//         sliderHandle.style.left = `${cappedPercent}%`;
+//     }
+// }
 function handleDragEvent(event) {
     const sliderBarContainer = document.querySelector('.slider-container');
     const sliderBar = document.querySelector('.slider-bar');
@@ -125,7 +125,6 @@ function handleDragEvent(event) {
 
     // Cap the position between 0 and 100
     const cappedPercent = Math.min(100, Math.max(0, percent));
-    intervalValue = Math.round((100 - cappedPercent) * 1.5);
 
     sliderBar.style.width = `${cappedPercent}%`;
     sliderHandle.style.left = `${cappedPercent}%`; // Adjust the position of the slider handle
