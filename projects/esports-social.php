@@ -11,8 +11,7 @@
 	<link rel="stylesheet" href="../playerproject.css">
 	<link rel="stylesheet" href="../projects.css">
 	<link rel="stylesheet" href="../header.css">
-	<link rel="stylesheet" href="../preloader.css">
-
+ 
 
 
 
@@ -29,22 +28,27 @@
 		@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,200;1,300&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 		:root{
-			--albumcover: url(../Images/Thumbnails/marioworld.webp);
+			--albumcover: url(../Images/Thumbnails/essm2.webp);
 			--phone-bg: #272727;
 			--background-alpha: 0; /* Default alpha value, adjust as needed */
-			--background-rgb: 235, 105, 37; /* Default RGB values, adjust as needed */
-			--artist: 'Jeff'
-
-
+			--background-rgb: 229, 0, 64; /* Default RGB values, adjust as needed */
+			--projectbacker: black;
 
 		}
 
-		#mariofinal {
+		#imgtrack {
+			flex: 1;
+
 
     width: 50%;
-    animation: moveUpDown 7s ease-in-out infinite; /* Adjust duration and timing function as needed */
+    /* animation: moveUpDown 7s ease-in-out infinite;  */
 }
 
+
+.iteration{
+	padding-left: 80px;
+	padding-right: 80px;
+}
 
 
 
@@ -64,26 +68,36 @@
 		@media  only screen and (max-width: 850px) {
 
 		#mariosplit{
-        flex-direction: column-reverse;
+        flex-direction: column;
 
     }
+
+	#splita{
+		flex-direction: column;
+		gap: 60px;
+	}
     
-    #mariofinal{
+
+
+    #imgtrack{
         width: 100%;
 
 
     }	
 
-	.split{
-        flex-direction: column; /* Change flex-direction to column */
-        max-width: 100%;
-   
-    }
+	.iteration{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.split{
+
+    max-width:100%;
+
+  }
 
 
 
-
-	
 }
 
 		
@@ -91,7 +105,7 @@
 	  <script>
 		document.addEventListener('DOMContentLoaded', function() {
   		console.log('Page has been loaded');
- 			document.querySelector('.year').innerHTML = 'August 2021';
+ 			document.querySelector('.year').innerHTML = '2016-2019';
 
 		});
 
@@ -99,7 +113,7 @@
 		console.log('Page has been loaded');
 		var elements = document.querySelectorAll('[id="atitle"]');
 		elements.forEach(function(element) {
-			element.innerHTML = 'Mario World';
+			element.innerHTML = 'Esports & Social Media';
  		 });
 		});
 
@@ -111,13 +125,15 @@
  		 });
 		});
 
+		
+
 	</script>
 
 </head>
 
 
 <body>
-<!-- <div id="loading-screen">
+	<!-- <div id="loading-screen">
     </div>
 	<div id="content"> -->
 
@@ -134,144 +150,12 @@
 	  </div>
 	
 	<div class="container">
-		<div class="sidebar" id="sidebar">
-			<!-- top navigation -->
-			<div class="navigation">
-					<ul class="navpadding">
-						<!-- page logo on side bare -->
-						<a href="" style="cursor: none;">
-							<svg  id="Layer 1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 600 90" width="400" height="100%" class="logo">
-							
-
-							  <path class="cls-1" d="M20.39.01c-1.27,1.35-2.27,2.92-2.94,4.61-.67,1.7-1.03,3.52-1.03,5.38v12.41c0,5.67-4.59,10.27-10.26,10.27-1.74,0-3.45-.43-4.98-1.25l-1.18-.64c1.06-.39,1.93-1.09,2.55-1.97.61-.89.96-1.96.96-3.08v-12.82C3.51,5.79,9.29.01,16.42.01h3.97Z"/>
-							  <circle class="cls-1" cx="116.26" cy="6.27" r="5.34"/>
-							  <path class="cls-1" d="M36.18,6.71c0,3.7-3,6.7-6.7,6.7-2.9,0-5.38-1.85-6.3-4.43-2.17,1.48-3.78,3.35-3.94,3.53C21.94-.77,29.48.01,29.48.01c3.7,0,6.7,3,6.7,6.7Z"/>
-							  <path class="cls-1" d="M48.33,32.68h-8.75l.7-.49V.53l-.7-.49h8.71l-.65.45v31.7l.7.49Z"/>
-							  <path class="cls-1" d="M26.43,19.01s.44.02,1.12,0h-1.12Z"/>
-							  <path class="cls-1" d="M27.13,19.5l-.7-.49s.44.02,1.12,0c1.82-.08,5.38-.51,6.94-2.67v53.34l.69.5h-8.75l.7-.5V19.5Z"/>
-							  <path class="cls-1" d="M74.87,22.7c-.16,2.99-1.35,5.73-3.35,7.73-1.02,1.02-1.92,1.72-2.86,2.25.78-.45,2.82-5.97.33-9.45-1.27-1.8-3.35-2.78-5.32-3.52-2.58-1.02-5.32-1.72-7.57-3.4-2.13-1.51-3.44-3.93-3.64-6.54-.16-2,.29-4.13,1.31-5.89.74-1.31,2.21-2.74,4.13-3.84,0,0-.86,1.15-.94,3.19-.08,2.66.98,4.79,2.78,6.3,1.1.9,2.41,1.43,3.72,1.88,2.86.9,5.93,1.51,8.3,3.52.98.82,1.76,1.8,2.25,2.95.65,1.39.9,3.03.86,4.83ZM53.77,21.23v.9l.08,10.55c1.1-3.11,8.55-.33,8.67-.25-7.24-3.76-8.75-11.21-8.75-11.21ZM73.69.04c-1.15,2.54-8.02,0-8.1-.04,7.61,4.21,8.14,10.63,8.14,10.63V3.64l-.04-3.6Z"/>
-							  <path class="cls-1" d="M79.66,32.19V.53l-.7-.49h8.71l-.65.45v31.7l.7.49h-8.75l.7-.49ZM98.76,32.19l-.04-8.79c0-3.6-3.52-6.75-8.1-7.61h8.14V.53l-.7-.49h8.71l-.65.45v31.7l.7.49h-8.75l.7-.49Z"/>
-							  <path class="cls-1" d="M148.39,32.68h-8.1l.7-.49V.53l-.7-.49h8.1v32.64ZM165.52,23.93c0,8.26-8.92,8.75-11.94,8.75,1.31-.45,3.07-.98,3.35-5.19,0,0,.16-1.8.16-3.56s-.16-3.64-.16-3.64c-.25-3.93-3.84-5.03-3.93-5.03,1.06-.41,2.82-.86,3.03-4.5,0,0,.12-1.6.12-3.11s-.12-3.19-.12-3.19c-.16-3.52-2.09-4.09-2.86-4.42,2.45,0,10.59.94,10.59,7.61,0,5.6-5.48,7.24-8.55,7.49,3.68.16,10.31,2,10.31,8.79Z"/>
-							  <path class="cls-1" d="M133,8.83v19.1c0,1.53,1.13,2.82,2.65,3.03h0s-.09.06-.09.06c-1.67,1.09-3.62,1.67-5.61,1.67h0c-2.41,0-4.36-1.95-4.36-4.36V5.13c0-2.27-1.42-4.31-3.55-5.09h0s2.17,0,2.17,0c4.85,0,8.79,3.94,8.79,8.79Z"/>
-							  <path class="cls-1" d="M61,70.16h-7.95c-4.74,0-5.28-.85-9.97-7.65-2.59-3.66-4.51-6.3-4.51-6.3l5.82-6.16c10.35,13.86,12.1,16.44,12.1,16.44,1.16,1.54,2,2.44,2.69,2.96.69.52,1.24.66,1.82.71Z"/>
-							  <path class="cls-1" d="M60.47,37.7h0c-2.39,0-7.47,3.03-13.56,8.95,2.31-3.54,1.37-8.95-1.19-8.95h14.75Z"/>
-							  <path class="cls-1" d="M110.08,24.05c0,8.26,8.92,8.75,11.94,8.75-1.3-.45-3.06-.98-3.35-5.19,0,0-.16-1.8-.16-3.56s.16-3.64.16-3.64c.25-3.93,3.84-5.03,3.93-5.03-3.68.16-12.52,1.88-12.52,8.67Z"/>
-							  <g>
-								<path class="cls-1" d="M73.66,70.16h-8.73l.69-.49v-31.58l-.69-.49h8.69l-.65.45v31.62l.69.49Z"/>
-								<path class="cls-1" d="M79.66,69.69v-31.58l-.69-.49h8.08v32.07l.61.49h-8.69l.69-.49ZM94.75,62.47c0-4.24-.2-7.83-2.45-8.85.94-.45,2.28-.94,2.49-4.77,0,0,.12-1.67.12-3.26s-.12-3.35-.12-3.35c-.16-3.75-1.8-4.32-2.49-4.65,2.16,0,10.77.98,10.77,8,0,6.32-6.69,7.75-9.59,7.96,1.75.2,7.75,1.1,9.02,6.57.73,3.14-.57,5.1.69,6.85,1.06,1.47,2.94,1.39,4.32.65-.29.33-3.39,3.18-7.63,2.57-4.12-.61-5.14-4.57-5.14-7.71Z"/>
-								<path class="cls-1" d="M161.83,70.26h-4.94l-19.38-32.11-1.06-.45h9.67l14.4,24.44,1.31-5.14v13.26ZM145.06,70.26h-8.12c4.04-2.37,4.2-9.79,4.2-9.79.33,7.34,3.92,9.79,3.92,9.79ZM161.83,46.72c-.29-6.41-3.83-9.02-3.83-9.02h8.04c-4,2.08-4.2,9.02-4.2,9.02Z"/>
-								<circle class="cls-1" cx="116.26" cy="43.83" r="5.34"/>
-								<path class="cls-1" d="M133,46.39v19.1c0,1.53,1.13,2.82,2.65,3.03h0s-.09.06-.09.06c-1.67,1.09-3.62,1.67-5.61,1.67h0c-2.41,0-4.36-1.95-4.36-4.36v-23.19c0-2.27-1.42-4.31-3.55-5.09h0s2.17,0,2.17,0c4.85,0,8.79,3.94,8.79,8.79Z"/>
-								<path class="cls-1" d="M110.08,61.61c0,8.26,8.92,8.75,11.94,8.75-1.3-.45-3.36-1.47-3.49-6.34,0,0-.02-.65-.02-2.41s.16-3.64.16-3.64c.25-3.93,3.84-5.03,3.93-5.03-3.68.16-12.52,1.88-12.52,8.67Z"/>
-							  </g>
-							  <polygon class="cls-1" points="27.13 19.5 27.13 19.52 26.43 19.01 27.13 19.5"/>
-							</svg>								
-						</a>	
-						<li class="paddinghome">
-							
-						</li>
-						<li id="homeItem2" class="paddinghome">
-							<a href="/index.html" class="home2" >
-								<svg data-encore-id="icon" role="img" aria-hidden="true" class="home-active" viewBox="0 0 24 24">
-									<path  d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"></path>
-								</svg>
-								<span>Home</span>
-							</a>
-						</li>
-						<!-- <li>
-							<a href="" class="search" id="searchButton">
-								<svg data-encore-id="icon" role="img" aria-hidden="true" class="search-inactive" viewBox="0 0 24 24">
-									<path d="M15.356 10.558c0 2.623-2.16 4.75-4.823 4.75-2.664 0-4.824-2.127-4.824-4.75s2.16-4.75 4.824-4.75c2.664 0 4.823 2.127 4.823 4.75z"></path>
-									<path d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"></path>
-								</svg>
-								<span>Search</span>
-							</a>
-						</li> -->
-					</ul>
-			
-			</div>
-			<div class="resize-handle" id="resizeHandle"></div>
-			<!-- bottom navigation -->
-			<div class="bottomnav">
-				<a href="" class="about">
-					<svg data-encore-id="icon" role="img" aria-hidden="true" class="home-active" viewBox="-3 0 80 70">
-							  <path  d="M60,0H14C6.28,0,0,6.28,0,14v46c0,7.72,6.28,14,14,14h46c7.72,0,14-6.28,14-14V14c0-7.72-6.28-14-14-14ZM37,12.5c6.08,0,11,4.92,11,11s-4.92,11-11,11-11-4.92-11-11,4.92-11,11-11ZM58,62H16v-7.5c0-6.63,5.37-13.5,12-13.5h18c6.63,0,12,6.87,12,13.5v7.5Z"/>
-					</svg>
-					<span>About</span>
-				</a>
-				<div class="buttons">
-					<button class="me" onclick="toggleButtons(this)">Me</button>
-					<button class="contact" onclick="toggleButtons(this)">Contact</button>
-				</div>
-
-				<div class="metext">
-					<h5> 
-						HEY THERE!
-					</h5>
-					<h4  class="pointer" id="toggleText" onclick="toggleContent()">
-						I'm Rish.
-					</h4>
-				
-					<p id="p">
-						A passionate  designer and recent graduate from the University of Melbourne with a Bachelor of Design, majoring in Graphic Design and User Experience. Hailing from Melbourne, Australia, I thrive on challenges that enable me to acquire new skills and integrate them into my future works.
-						<br>
-						<br>
-						My expertise spans the Adobe Suite, motion design, and a touch of 3D, with a keen interest in expanding my proficiency. As a design enthusiast, I am excited about leveraging my skills to create impactful and visually engaging experiences. Let's connect and explore the endless possibilities of design together!
-					</p>
-
-					<p id="p2">
-						When I'm not designing, you'll find me lost playing video games like Valorant. Whilst I am an avid sport watcher - most recently getting into Formula 1 - I also make time to play cricket and tennis weekly. And if you catch me randomly wielding a lawnmower, don't be surprised; there's something oddly therapeutic about transforming my lawn.
-						<br>
-						<br>
-						If this Spotify-inspired portfolio didn't give it away,  I've got a serious love affair with music. It is my trusty companion while I am designing. Oh, and when I need to release some pent-up frustration, you'll catch me letting it all out on the drums. It's my way of adding a beat to the creative process.
-					</p>
+	<?php include 'sidebarp.php'; ?>
 
 
-
-
-				</div>
-
-				
-
-
-
-				<form  action="https://formsubmit.co/rishabkiran.creative@gmail.com" method="POST" class="contactform">
-					
-					
-					<div class="form-group">
-						<label for="name">Name <span class="required-indicator">*</span></label>
-						<input type="text" id="name" name="FNAME" placeholder="John Doe" required>
-					</div>
-			
-					<div class="form-group">
-						<label for="email">Email <span class="required-indicator">*</span></label>
-						<input type="email" id="email" name="EMAIL" placeholder="john@example.com" required>
-					</div>
-			
-					<div class="form-group">
-						<label for="phone">Phone</label>
-						<input type="tel" id="phone" name="PHONE" placeholder="(+61) 412-345-567">
-					</div>
-			
-					<div class="form-group">
-						<label for="message">Message <span class="required-indicator">*</span></label>
-						<textarea id="message" name="MESSAGE" placeholder="Type your message here" rows="4" required></textarea>
-					</div>
-			
-					<button type="submit" name="Submit" >Submit</button>
-
-					<input type="hidden" name="_captcha" value="false">
-					<input type="hidden" name="_template" value="box">
-					<input type="hidden" name="_next" value="https://rishabkiran.com/success.html">
-
-
-
-
-				</form>
-				
-				
-			</div>
-		</div>
+		<div id="lb-back">
+			<div id="lb-img"></div>
+		  </div>
 		<!-- rightside -->
 		<section class="home-page">
 			
@@ -399,92 +283,169 @@
 				<div class="projects" style="padding-bottom: 50px; background-color: ;">
 
 				
-					<div id="lb-back">
-						<div id="lb-img"></div>
-					  </div>
-
-					<div class="intro">
+				
+					<div class="backer" style="width: 100%;border-radius:6px;overflow: hidden;background-color: rgb(0, 0, 0); " >
+					<div class="intro" style="  z-index: 100">
 						<div class="overview">
 							<h8>Overview</h8>
-							<p>This project explored the concept of flatness and projection which correlates to the spatial relation between 2-Dimensional and 3-Dimensional space. It explores axonometric projection and applies this to an assigned Mario world elevation. These elevations were flat in nature and lack perceivable depth. Being able to physically enter something and observe around objects adds to the immersion of a piece of work. Hence trying to project this as an axonometric drawing meant interpreting the hidden space behind the frontal perspective and ensuring measurements of objects were consistent in relation to the elevation. Creating this projection cohesively was a challenge as compositional considerations had to be made in relation to hierarchy, balance and negative space.</p>
+							<p>
+								
+							In my exploration of esports and social media design, I have curated a diverse collection showcasing my journey within the esports community. This portfolio encapsulates a fusion of commissioned projects and self-directed endeavors, where I've crafted advertisements, headers, and thumbnails. I've enjoyed experimenting with different tools and mediums, moving between 2D and 3D design to create pieces that are both visually appealing and functional. This process has helped me develop my skills and allowed me to better understand client and audience relationships. 
+								
+							</p>
 						</div>
 						<div class="tools">
 							<h8>Tools</h8>
-							<p >Adobe Illustrator</p>
-							<img width="100px" src="../Images/marioworld/runningmario.gif" alt="">
+							<p >
+								Adobe Illustrator
+								<br>
+								Adobe Photoshop
+								<br>
+								Adobe After Effects
+								<br>
+								Maxon Cinema 4D
+
+
+
+
+							</p>
 						</div>
 
 
 					</div>
 
-					<img class="zoomD"    src="../Images/marioworld/elevation.webp" alt="">
+					<style>
+						.video{
+							display: flex;
+							width: 100%;
+						}
 
-					<div class="info">
-						<div class="infotext">
-							<h8>Elevation Extraction</h8>
-							<p>The elevations that I was given  of the Mario world contained a lot of bright and warm tones due to the desert environment. This was quite a jarring elevation and I didn’t want this to be translated in the axonometric, as I felt it would overwhelm or distract the viewer. Hence, choosing which elements to extract was a well considered aspect, with the goal of achieving a pleasing experience to the viewer and reduce the apparent harshness from the elevations.
-								<br><br>
+						.video video {
+							flex: 1; /* To make them equally share the width */
+							height: auto; /* To maintain aspect ratio */
+						}
 
-								I specifically sought out objects that would contrast as well as neutralise the warm blocks in the composition. The chosen six elements were: a pipe, an arrow, a terracotta block, a brick block, an ice block, and a water element. I felt that the ice and water elements provided a good contrast to the pipe, arrow and terracotta blocks, as well gave me inspiration to explore how these elements would interact with each other. The brick block acted as a neutral element that would provide a bit of greenery which also complimented the warm and cool objects.
-								<br><br>
-								I aimed to really intertwine the six objects together and to create a more captivating composition. Additionally experimenting with scale, depth, rotation as well as cutting and joining was a great way to take advantage of the quirks of axonometric projection.</p>
-						</div>
+						.ad1{
 
+						}
+
+						.ad2{
+							
+						}
+
+
+						
+						@media only screen and (max-width: 650px) {
+							.video{
+							flex-direction: column;
+
+							}
+
+							.ad1{
+							width:100% !important;
+						}
+						.ad2{
+							width:100% !important;
+						}
+						}
+					</style>
+					<div class="video fade">
+					<video class="ad1" width="67%" controls autoplay  muted loop>
+						<source src="../Images/essm/ad1.mp4" type="video/mp4">
+					  </video>
+					  <video class="ad2 fade" width="33%" controls autoplay  muted loop>
+						<source src="../Images/essm/ad2.mp4" type="video/mp4">
+					  </video>
 					</div>
+					<img class="zoomD" src="../Images/essm/social.webp" alt="">
+					<img class="zoomD" src="../Images/essm/s1.webp" alt="">
+					<img class="zoomD" src="../Images/essm/s2.webp" alt="">
+					<img class="zoomD" src="../Images/essm/s3.webp" alt="">
+					<img class="zoomD" src="../Images/essm/s4.webp" alt="">
+					<img class="zoomD" src="../Images/essm/s5.webp" alt="">
+					<img class="zoomD" src="../Images/essm/s6.webp" alt="">
+					<img class="zoomD" src="../Images/essm/s7.webp" alt="">
+					<img class="zoomD" src="../Images/essm/s8.webp" alt="">
+					<img class="zoomD" src="../Images/essm/s9.webp" alt="">
+					<img class="zoomD" src="../Images/essm/s10.webp" alt="">
+					<img class="zoomD" src="../Images/essm/s11.webp" alt="">
 
-					<div class="split">
-						<img class="zoomD" src="../Images/marioworld/colours.webp" alt="">
-						<img class="zoomD" src="../Images/marioworld/blocks.webp" alt="">
+					<!-- Pattern for e1 to e9 -->
+					<img class="zoomD" src="../Images/essm/fn..webp" alt="">
 
-
-					</div>
-
-
-					<div class="info">
-						<div class="infotext">
-							<h8>Axonometric Drawing</h8>
-							<p>My projected space aimed to create a centralised composition that maintained contrast and balance. I was trying to achieve a dynamic and flowing framework to guide the viewer throughout the piece. This was approached by having a central tower to dominate the hierarchy of the composition, then coupled with falling water elements that naturally lead the viewer down, towards the bottom.
-								<br><br>
-								Additionally, I wanted to have some ambiguity to the composition by taking advantage of the natural hidden space in axonometric projection. Objects towards the back of the composition were obscured by using the central tower and elongating it. This allowed for me to adjust how the objects receded back  and enabled the composition at the back to be visualised and interpreted by the viewer.</p>
-						</div>
-
-					</div>
 					
-					<img class="zoomD" src="../Images/marioworld/drawing.webp" alt="">
+					<img class="zoomD" src="../Images/essm/e3.webp" alt="">
+					<img class="zoomD" src="../Images/essm/e4.webp" alt="">
+					<img class="zoomD" src="../Images/essm/e5.webp" alt="">
+					<img class="zoomD" src="../Images/essm/e6.webp" alt="">
+					<img class="zoomD" src="../Images/essm/e7.webp" alt="">
+					<img class="zoomD" src="../Images/essm/e8.webp" alt="">
+					<img class="zoomD" src="../Images/essm/e9.webp" alt="">
+					<img class="zoomD" src="../Images/essm/e1.webp" alt="">
+					<img class="zoomD" src="../Images/essm/e2.webp" alt="">
 
+					<img class="zoomD" src="../Images/essm/thumb.webp" alt="">
+					<img class="zoomD" src="../Images/essm/t1.webp" alt="">
+					<img class="zoomD" src="../Images/essm/t2.webp" alt="">
+					<img class="zoomD" src="../Images/essm/t3.webp" alt="">
+					<img class="zoomD" src="../Images/essm/t4.webp" alt="">
+					<img class="zoomD" src="../Images/essm/t5.webp" alt="">
+					<img class="zoomD" src="../Images/essm/thanks.webp" alt="">
 
 					
-					  
+
+				
+
+
+
+
+										
+												
+						
 
 					
 
+					
+				
 
-					<div class="split" id="mariosplit" style="background-color: rgb(0, 0, 0); max-width: 100%; "> 
+					
+					<!-- Animated element -->
+					<div id="animated-element"></div>
+					
+<script>
+    // Access embedded JSON data
+    const jsonData = JSON.parse(document.getElementById('json-data').textContent);
 
+    // Process your JSON data and insert it into the HTML
+    const contentDiv = document.createElement('div');
+    contentDiv.textContent = jsonData.content;
+    document.body.appendChild(contentDiv);
 
+    // Listen for scroll events to control animation
+    window.addEventListener('scroll', handleScroll);
 
-						<!-- <div class='sector'> -->
-						  
-						<img class="zoomD" id="mariofinal" style="" src="../Images/marioworld/final.webp" alt="">
+    function handleScroll() {
+        // Calculate scroll progress
+        const scrollProgress = window.scrollY / (document.body.scrollHeight - window.innerHeight);
 
-
-
-							<!-- </div> -->
-					<div class="info" style="background-color: transparent;" >
-						<div class="infotext" >
-							<h8 class="lasttitle">Colours & Shading</h8>
-							<p style="column-count: 1;"> The final axonometric projection translated the manual drawing to a vector format using Adobe Illustrator. This phase involved refining the positioning of objects and adding colour. I stayed as true as possible to the colour palette of the elevations. Where it differed was the shading and outline process. I opted for a more realistic representation and hence chose to exclude the strong black outlines of the elevations. By using gradients I was able to achieve a seamless transition of edges whilst being able to represent the light source. Gradients was also vital tool to convey texture of objects, such as the pipe and ice block which had a shiny/reflective aspect to them. Furthermore the representation of water was highly explored by incorporating transparent gradients which allowed the viewer to see how objects interacted with the water. This was especially evident with the down-scaled towers rising slightly above the water and a few ice-blocks that had water intersect halfway through them to convey buoyancy. Ultimately, the compositional choices and the colour process, created this cohesive and circular representation of the Mario world.</p>
-						</div>
-
-					</div>
-
-
-
-				</div>
+        // Update animation based on scroll progress
+        const animatedElement = document.getElementById('animated-element');
+        if (scrollProgress > 0.5) {
+            // If scroll progress is over 50%, show the animated element
+            animatedElement.style.opacity = 1;
+        } else {
+            // Otherwise, hide the animated element
+            animatedElement.style.opacity = 0;
+        }
+    }
+</script>
+					
 
 					<div class="list" id="card"   >
 						
 					</div>
+
+				</div>
 				</div>
 	   
 			</div>
@@ -554,6 +515,7 @@
 					
 					</button>
 	
+
 			
 
 					
@@ -655,9 +617,35 @@
 	
 
 	<!-- javascrips -->
+	
+<script>
+	var sc=0;
+	window.addEventListener('scroll', function() {
+		if(sc == 0){
+			sc=1;
+			lottie.loadAnimation({
+				container: document.querySelector('#lottie'),
+				renderer: 'svg',
+				loop: true,
+				autoplay: true,
+				path: 'https://assets10.lottiefiles.com/packages/lf20_wzcckjq4.json'
+			});
+		}
+	});
+	window.onload = function() {
+		window.scrollTo(window.scrollX, window.scrollY - 1);
+		window.scrollTo(window.scrollX, window.scrollY + 1);
+	};
+	</script>
+	<script type="text/javascript" src="https://unpkg.com/lottie-interactive@latest/dist/lottie-interactive.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js" integrity="sha512-w58XJ/0dVbEfZVJoJyBUOTMGBWmIW4jEYJSA0898d2L0Ghpum0FvwK7qTuHhkTctApzrchv3Neli+28ajI4+fg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script>
+
+
 const intro = document.querySelector('.intro');
-const zoomDs = document.querySelectorAll('.zoomD, .info');
+const zoomDs = document.querySelectorAll('.zoomD, .info, .fade,  .backer .lottie-container, .cardview');
 const customScrollContainer = document.querySelector('.custom-scroll');
 
 const fadeInOptions = {
@@ -679,11 +667,26 @@ zoomDs.forEach(zoomD => {
   fadeInObserver.observe(zoomD);
 });
 
+
+LottieInteractivity.create({
+						  player: '#lottie',
+						  mode: 'scroll',
+						  actions: [
+							{
+							  visibility: [0,1],
+							  type: 'seek',
+							  frames: [0, 250],
+							},
+						  ]
+						});
+
+						
 	</script>
     <script src="../js/resize.js"></script>
 	<script src="../js/backforward.js"></script>
 	<script src="../js/colourmode.js"></script>
 	<script src="../js/accent.js"></script> 
+	<!-- <script src="../js/search.js"></script>  -->
 	<script src="../js/cardhover.js"></script> 
 	<script src="../js/about.js"></script> 
 	<script src="../js/phonescroll.js"></script> 
@@ -695,6 +698,7 @@ zoomDs.forEach(zoomD => {
 	<script src="../js/meswap.js"> </script>
 	<script src="../js/preloader.js"> </script>
 	<script src="../js/cursor.js"> </script>
+
 
 
 

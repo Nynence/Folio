@@ -4,19 +4,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Rishab Kiran</title>
-	<link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="/Images/favicon.ico">
 
-	<link rel="stylesheet" href="../home.css">
-	<link rel="stylesheet" href="../lightdark.css">
-	<link rel="stylesheet" href="../playerproject.css">
-	<link rel="stylesheet" href="../projects.css">
-	<link rel="stylesheet" href="../header.css">
-	<link rel="stylesheet" href="../imgslide.css">
-	<link rel="stylesheet" href="../preloader.css">
-
-
- 
-
+	<link rel="stylesheet" href="home.css">
+	<link rel="stylesheet" href="lightdark.css">
+	<link rel="stylesheet" href="player.css">
+	<link rel="stylesheet" href="typewriter.css">
+	<link rel="stylesheet" href="preloader.css">
 
 
 
@@ -26,127 +20,97 @@
 	<link href="https://encore.scdn.co/fonts/CircularSpTitle-Bold-2fbf72b606d7f0b0f771ea4956a8b4d6.woff2" rel="preload" type="font/woff2">
 	<link href="https://encore.scdn.co/fonts/CircularSpTitle-Black-3f9afb402080d53345ca1850226ca724.woff2" rel="preload" type="font/woff2">
 	<link href="https://open.spotifycdn.com/cdn/fonts/spoticon_regular_2.d728648c.woff2" rel="preload" type="font/woff2">
+	<link rel="stylesheet" media="all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait)" href="ipad-portrait.css" />
+<link rel="stylesheet" media="all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape)" href="ipad-landscape.css" />
+
 	<!-- favicon -->
 	<link rel="shortcut icon" href="" type="image/x-icon">
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,200;1,300&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 		:root{
-			--albumcover: url(../Images/Thumbnails/black.webp);
 			--phone-bg: #272727;
 			--background-alpha: 0; /* Default alpha value, adjust as needed */
-			--background-rgb: 245, 200, 103; /* Default RGB values, adjust as needed */
-			--projectbacker: black;
+			--background-rgb: 18, 18, 18; /* Default RGB values, adjust as needed */
+			--banner: url(./Images/banner.png);
+			--bannerphn: url(./Images/bannerphn.png);
+
 
 		}
 
-		#imgtrack {
-			flex: 1;
-
-
-    width: 50%;
-    /* animation: moveUpDown 7s ease-in-out infinite;  */
-}
-
-
-.iteration{
-	padding-left: 80px;
-	padding-right: 80px;
-}
-
-
-
-@keyframes moveUpDown {
-    0%, 100% {
-        transform: translateY(0); /* Start and end position */
-    }
-    50% {
-        transform: translateY(-50px); /* Middle position - adjust as needed */
-    }
-}
-
-        .albumcover img{
-            content: var(--albumcover);
+		.bannerbox img{
+            content: var(--banner);
         }
 
-		@media  only screen and (max-width: 850px) {
+		.bannerboxphn img{
+            content: var(--bannerphn);
+        }
 
-		#mariosplit{
-        flex-direction: column;
+			.sticky-top-bar::before, .backgradient::before {
+    content: '';
+    position: absolute;
 
-    }
-
-	#splita{
-		flex-direction: column;
-		gap: 60px;
-	}
-    
-
-
-    #imgtrack{
-        width: 100%;
-
-
-    }	
-
-	.iteration{
-	padding-left: 0px;
-	padding-right: 0px;
+    filter: saturate(100%) brightness(100%);; 
 }
 
-.split{
-
-    max-width:100%;
-
-  }
+#content {
+    visibility: hidden;
+}
 
 
+.bannerbox {
+    position: relative;
+    overflow: hidden;
+	border-radius: 6px;
 
 }
 
-		
+.banner {
+    display: block;
+}
+
+.highlighting {
+    position: absolute;
+	top: 50%; /* Position from the middle vertically */
+    left: 50%; /* Position from the middle horizontally */
+    width: 350px; /* Adjust the size of the highlight */
+    height: 350px; /* Adjust the size of the highlight */
+    margin-top: -175px; /* Half of the height */
+    margin-left: -175px; 
+    pointer-events: none;
+	mix-blend-mode: overlay; /* Blend mode for overlay effect */
+	background-color: white;
+	filter: blur(40px);
+
+	
+    border-radius: 100%; /* Make it circular */
+    /* box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.5); Circular blur overlay */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-out; /* Smooth transition */
+}
+
+
+	
 	  </style>
-	  <script>
-		document.addEventListener('DOMContentLoaded', function() {
-  		console.log('Page has been loaded');
- 			document.querySelector('.year').innerHTML = '2022';
-
-		});
-
-		document.addEventListener('DOMContentLoaded', function() {
-		console.log('Page has been loaded');
-		var elements = document.querySelectorAll('[id="atitle"]');
-		elements.forEach(function(element) {
-			element.innerHTML = 'Black Orpheus';
- 		 });
-		});
-
-		document.addEventListener('DOMContentLoaded', function() {
-		console.log('Page has been loaded');
-		var elements = document.querySelectorAll('[id="aartist"]');
-		elements.forEach(function(element) {
-			element.innerHTML = 'Rishab Kiran';
- 		 });
-		});
-
-		
-
-	</script>
 
 </head>
-
-
 <body>
+
 	<div id="loading-spinner">
 		<div class="spinner"></div>
-		</div>
-		<div id="lcontent" style="display:none;">
+
+	</div>
+
+	<div id="lcontent" style="display:none;">
+	<div id="loading-screen" style="background-color: var(--sec-color);" width="100%" height="100%">
+		
+		
 	
-	<!-- <div id="loading-screen">
     </div>
-	<div id="content"> -->
+	<div id="content">
 
-
+	
+	
 	<div class="custom-cursor-container">
 		<svg class="custom-cursor" id="Isolation_Mode" data-name="Isolation Mode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.02 22.96">
 		  
@@ -157,11 +121,15 @@
 		  <path  d="M29.02,11.49c0,6.33-5.14,11.47-11.47,11.47-4.98,0-9.21-3.17-10.79-7.6-3.72,2.55-6.49,5.75-6.76,6.06C4.64-1.32,17.55.01,17.55.01,23.88.01,29.02,5.15,29.02,11.49Z"/>
 		</svg>
 	  </div>
+
+
 	
 	<div class="container">
+	
 		<div class="sidebar" id="sidebar">
 			<!-- top navigation -->
 			<div class="navigation">
+				
 					<ul class="navpadding">
 						<!-- page logo on side bare -->
 						<a href="" style="cursor: none;">
@@ -195,15 +163,15 @@
 						<li class="paddinghome">
 							
 						</li>
-						<li id="homeItem2" class="paddinghome">
-							<a href="/index.html" class="home2" >
+						<li id="homeItem" class="paddinghome">
+							<a href="/index.php" class="home" >
 								<svg data-encore-id="icon" role="img" aria-hidden="true" class="home-active" viewBox="0 0 24 24">
 									<path  d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"></path>
 								</svg>
 								<span>Home</span>
 							</a>
 						</li>
-						<!-- <li>
+						<li>
 							<a href="" class="search" id="searchButton">
 								<svg data-encore-id="icon" role="img" aria-hidden="true" class="search-inactive" viewBox="0 0 24 24">
 									<path d="M15.356 10.558c0 2.623-2.16 4.75-4.823 4.75-2.664 0-4.824-2.127-4.824-4.75s2.16-4.75 4.824-4.75c2.664 0 4.823 2.127 4.823 4.75z"></path>
@@ -211,7 +179,7 @@
 								</svg>
 								<span>Search</span>
 							</a>
-						</li> -->
+						</li>
 					</ul>
 			
 			</div>
@@ -229,30 +197,30 @@
 					<button class="contact" onclick="toggleButtons(this)">Contact</button>
 				</div>
 
-				<div class="metext">
+				<div class="metext" >
+
 					<h5> 
 						HEY THERE!
 					</h5>
-					<h4  class="pointer" id="toggleText" onclick="toggleContent()">
+					<!-- <h4 class="pointer" id="toggleText" onclick="toggleContent()"> -->
+					<h4 class="pointer" id="toggleText" >
+				
 						I'm Rish.
 					</h4>
 				
-					<p id="p">
+					<p id="p"  class="typewriter">
 						A passionate  designer and recent graduate from the University of Melbourne with a Bachelor of Design, majoring in Graphic Design and User Experience. Hailing from Melbourne, Australia, I thrive on challenges that enable me to acquire new skills and integrate them into my future works.
 						<br>
 						<br>
 						My expertise spans the Adobe Suite, motion design, and a touch of 3D, with a keen interest in expanding my proficiency. As a design enthusiast, I am excited about leveraging my skills to create impactful and visually engaging experiences. Let's connect and explore the endless possibilities of design together!
 					</p>
 
-					<p id="p2">
+					<!-- <p id="p2">
 						When I'm not designing, you'll find me lost playing video games like Valorant. Whilst I am an avid sport watcher - most recently getting into Formula 1 - I also make time to play cricket and tennis weekly. And if you catch me randomly wielding a lawnmower, don't be surprised; there's something oddly therapeutic about transforming my lawn.
 						<br>
 						<br>
 						If this Spotify-inspired portfolio didn't give it away,  I've got a serious love affair with music. It is my trusty companion while I am designing. Oh, and when I need to release some pent-up frustration, you'll catch me letting it all out on the drums. It's my way of adding a beat to the creative process.
-					</p>
-
-
-
+					</p> -->
 
 				</div>
 
@@ -297,22 +265,16 @@
 				
 			</div>
 		</div>
-
-		<div id="lb-back">
-			<div id="lb-img"></div>
-		  </div>
 		<!-- rightside -->
 		<section class="home-page">
-			
+			<div class="backgradient" id="backgradient"></div>
+
 			
 
-			<span class="backgradient"></span>
-
+			
 			
 			<div class="custom-scroll" onscroll="updateProgressBar()">
-				<div class="sticky-top-bar" id="stickyTopBar">
-
-
+				<div class="sticky-top-bar" id="stickyTopBar" data-color="18, 18, 18" >
 
 					
 
@@ -325,14 +287,15 @@
 					<path d="M36.18,6.71c0,3.7-3,6.7-6.7,6.7-2.9,0-5.38-1.85-6.3-4.43-2.17,1.48-3.78,3.35-3.94,3.53C21.94-.77,29.48,0,29.48,0c3.7,0,6.7,3,6.7,6.7Z"/>
 						</svg>
 						</div>
-						<a href="/index.html" class="phonebtn2" >Home</a>
+						<a href="/index.php" class="phonebtn1">Home</a>
 						<a href="/me.html" class="phonebtn2" >About Me</a>
 						<a href="/contact.html" class="phonebtn3">Contact</a>
 					</div>
 					
 					<!-- Sticky content -->
-					<div class="backforward">
-						<button class="back" onclick="goBack()" data-title="Go back"  id="backButton" >
+					<div class="backforward"  ;
+					opacity: 0.6;>
+						<button class="back" onclick="goBack()"   data-title="Go back" id="backButton" aria-hidden="true">
 							<svg data-encore-id="icon" role="img" aria-hidden="true" class="backarrow" viewBox="0 0 16 16">
 								<path d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"></path>
 							</svg>
@@ -343,14 +306,6 @@
 							</svg>
 						</button>
 					</div>
-
-					<div class="scrolling-text hidden">
-						<!-- Your scrolling text content here -->
-						<div id="atitle"></div>
-					</div>
-
-					
-
 					<div class="search-box" id="searchBox">
 						<div class="search-icon">
 							<svg data-encore-id="icon" role="img" aria-hidden="true" class="search-icon-svg" viewBox="0 0 24 24">
@@ -397,297 +352,207 @@
 						
 				
 				</div>
-
-
-			
-				<span class="gradient">
-					
-
-				</span>
-
 				
-				<div class="headerwork">
 
-					<img style="content: var(--albumcover)"  alt="" >
+				<div class="projects" >
+					<div class="bannerbox"> 
+					
+					<img width="100%" class="banner" src="" alt="">
+					<div class="highlighting"></div>
 
-					<div class="albumcontainer">
-						<div class="titlebox"> 
-							<div id="atitle"></div>
-						</div>
-						<div class="subtext">
-							<h7 id="aartist">Rishab Kiran</h7>
-							<span class="year"  >2021</span>
-						</div>
+					</div>
+					<div class="bannerboxphn"> 
+
+					<img width="100%" class="bannerphn" src="./Images/bannerphn.png" alt="">
+					</div>
+
+
+				<!-- <h2>Browse projects</h2> -->
+				<!-- <div class="list" id="card"   > -->
+
+					<div class="list" id=""  style="margin-top: 40px;" >
+						<a href="/projects/bartr.php"  class="item"  data-tags="November 2023, app, ui, ux" >
+							<div class="imgbox">
+								<img id="mgImage" src="./Images/Thumbnails/bartr.webp" alt="" >
+							</div>
+
+							<div class="play">
+								<span>
+									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+								</span>
+							</div>
+							<h3>Bartr App</h3>
+							<style>
+								 .truncate {
+									display: -webkit-box;
+									-webkit-line-clamp: 2;
+									-webkit-box-orient: vertical;
+									overflow: hidden;
+								}
+							  </style>
+							<p class="truncate">Rishab Kiran, Stephanie Cheng, Miranda Prestage, Freya Rush, Xinyu Choot, Ed Gu</p>
+
+
+
+						</a>
+						<a href="/projects/buxton.php"  class="item"  data-tags="2022" >
+							<div class="imgbox">
+								<img id="mgImage" src="./Images/Thumbnails/bux.webp" alt="" >
+							</div>
+
+							<div class="play">
+								<span>
+									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+								</span>
+							</div>
+							<h3>Buxton Contemporary</h3>
+							<p class="truncate" style="-webkit-line-clamp: 1;
+							">Rishab Kiran, Ronald Liao, Xinyu Choot</p> 
+						</a>
+						<a href="/projects/mandala.php"  class="item"  data-tags="November 2023, AR, VR, augmented reality. " >
+							<div class="imgbox">
+								<img id="mgImage" src="./Images/Thumbnails/man.webp" alt="" >
+							</div>
+
+							<div class="play">
+								<span>
+									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+								</span>
+							</div>
+							<h3>The Mandala Journal</h3>
+							<p>Rishab Kiran</p> 
+						</a>
+
+						<a href="/projects/black-orpheus.php"  class="item"  data-tags="2022, ux, ui, website, app" >
+							<div class="imgbox">
+								<img id="mgImage" src="./Images/Thumbnails/black.webp" alt="" >
+							</div>
+
+							<div class="play">
+								<span>
+									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+								</span>
+							</div>
+							<h3>Black Orpheus</h3>
+							<p>Rishab Kiran</p> 
+						</a>
+
+						<a href="/projects/transurban.php"  class="item"  data-tags="May 2018, transurban, ui, ux, app" >
+							<div class="imgbox">
+								<img id="mgImage" src="./Images/Thumbnails/transurban.webp" alt="" >
+							</div>
+
+							<div class="play">
+								<span>
+									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+								</span>
+							</div>
+							<h3>Transurban T5</h3>
+							<style>
+								 .truncate {
+									display: -webkit-box;
+									-webkit-line-clamp: 2;
+									-webkit-box-orient: vertical;
+									overflow: hidden;
+								}
+							  </style>
+							<p class="truncate">Rishab Kiran</p>
+
+
+
+						</a>
+						<a href="/projects/eye.php"  class="item"  data-tags="April 2022, Movie, shortfilm, book," >
+							<div class="imgbox">
+								<img id="mgImage" src="./Images/Thumbnails/eye.webp" alt="" >
+							</div>
+
+							<div class="play">
+								<span>
+									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+								</span>
+							</div>
+							<h3>Eye of the Lacquer</h3>
+							<p>Rishab Kiran</p> 
+						</a>
+						<a href="/projects/vsi.php"  class="item"  data-tags="October 2023, book, print" >
+							<div class="imgbox">
+								<img id="mgImage" src="./Images/Thumbnails/vsi.webp" alt="" >
+							</div>
+
+							<div class="play">
+								<span>
+									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+								</span>
+							</div>
+							<h3>Very Short Introductions</h3>
+							<p>Rishab Kiran</p> 
+						</a>
+						<a href="/projects/marioworld.php"  class="item"  data-tags="August 2021, mario, world, axonometric, Illustrator" >
+							<div class="imgbox">
+								<img id="mgImage"  src="./Images/Thumbnails/marioworld.webp" alt="" >
+							</div>
+							<div class="play">
+								<span>
+									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+								</span>
+							</div>
+							<h3>Mario World</h3>
+							<p>Rishab Kiran</p> 
+						</a>
+						<a href="/projects/pattern-surface.php"  class="item"  data-tags="September 2021, pattern, surface, fabrication, 3d, render" >
+							<div class="imgbox">
+							<img id="mgImage" src="./Images/Thumbnails/pattern.webp" alt="" >
+								</div>
+							<div class="play">
+								<span>
+									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+								</span>
+							</div>
+							<h3>Raphael 2.0</h3>
+							<p>Rishab Kiran</p> 
+						</a>
+						<a href="/projects/isidora.php"  class="item"  data-tags="October 2021, frame, field, 3d" >
+							<div class="imgbox">
+								<img id="mgImage" src="./Images/Thumbnails/isidora.webp" alt="" >
+							</div>
+
+							<div class="play">
+								<span>
+									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+								</span>
+							</div>
+							<h3>City of Isidora</h3>
+							<p>Rishab Kiran</p> 
+						</a>
+						<a href="/projects/sydneysamurais.php"  class="item"  data-tags="2020" >
+							<div class="imgbox">
+								<img id="mgImage" src="./Images/Thumbnails/sydney.webp" alt="" >
+							</div>
+
+							<div class="play">
+								<span>
+									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+								</span>
+							</div>
+							<h3>Sydney Samurais</h3>
+							<p>Rishab Kiran</p> 
+						</a>
+						<a href="/projects/esports-social.php"  class="item"  data-tags="2016, 2017, 2018, 2019" >
+							<div class="imgbox">
+								<img id="mgImage" src="./Images/Thumbnails/essm.webp" alt="" >
+							</div>
+
+							<div class="play">
+								<span>
+									<svg width="24" height="24" viewBox="0 0 24 24"><path class="colored-path" d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+								</span>
+							</div>
+							<h3>Esports & Social Media</h3>
+							<p>Rishab Kiran</p> 
+						</a>
 						
-					
-					</div>
-
-
-				</div >
-
-					<style>
-						:root{
-							--white: #ffffff;
-						}
-
-
-						.linkclass{
-							color: rgb(167, 126, 15);
-							padding-left: 6px;
-						}
-						.linkclass:hover{
-							color: rgb(94, 94, 94);
-							cursor: none;
-						}
-					</style>
-				<div class="projects" style="padding-bottom: 50px; background-color: ;">
-
-				
-				
-					<div class="backer" style="width: 100%;border-radius:6px;overflow: hidden;background-color: rgb(0, 0, 0); " >
-					<div class="intro" style="  z-index: 100; color: black!important; background-color: rgb(0, 0, 0);">
-						<div class="overview">
-							<h8 style="color: var(--white)!important;">Overview</h8>
-							<p style="color: var(--white)!important;">
-								
-								
-								
-								This project involved a comprehensive redesign of the website "Black Orpheus" from inception to completion. Beginning with an in-depth analysis of the existing website and its competitors, the process transitioned into the creation of wireframes and low-fidelity mockups to visualize the new design direction. Subsequently, art direction was explored to establish the aesthetic vision for the website. The final phase focused on translating the mockups into a fully realised website implementation. Throughout the project, I gained valuable insights into the entire web design process and acquired familiarity with HTML, CSS, and JavaScript.
-
-
-								<br><br>
-						The complete project pdf can be accessed from here:<a target=”_blank” class="linkclass" style="
-						text-decoration: none; cursor: none ; text-decoration: underline;" href="https://drive.google.com/file/d/18b3s2eCJmMM4rQzL7Yu0p3pgl1s68qcG/view?usp=sharing">Black Orpheus.pdf</a>
-						<br>
-						The finalised website can be viewed from here:<a target=”_blank” class="linkclass" style="
-						text-decoration: none; cursor: none ; text-decoration: underline;" href="https://rishabkrn.github.io/Black-Orpheus/">Black Orpheus</a>
-
-
-							</p>
-						</div>
-						<div  class="tools">
-							<h8 style="color: var(--white)!important;" >Tools</h8>
-							<p  style="color: var(--white)!important;" >
-								Adobe Illustrator
-								<br>
-								Adobe XD
-								<br>
-								Visual Studio Code
-								<br>	
-
-							
-
-
-
-
-							</p>
-						</div>
-
-
-					</div>
-
-					<style>
-				 .video-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .video-container {
-    width: calc(100% / 8); /* Adjust width for 8 videos per row */
-    margin: 10px;
-    position: relative;
-    overflow: hidden;
-  }
-  .video-container video {
-    width: 100%;
-    height: auto;
-  }
-				
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
-    /* grid-gap: 10px; gap between grid items */
-}
-
-.grid-item {
-    width: 100%; /* Ensure each item takes up full width of its container */
-}
-
-					</style>
-
-				<div style="background-color: white;">
-
-				
-				<img class="zoomD" src= "../Images/bo/bo.webp" alt="" loading="lazy">
-				<img class="zoomD" src= "../Images/bo/bo2.webp" alt="" loading="lazy">
-				<img class="zoomD" src= "../Images/bo/bo3.webp" alt="" loading="lazy">
-
-				<div class="grid-container">
-					<div class="grid-item">
-						<img class="zoomD" src="../Images/bo/bo4.webp" alt="" loading="lazy">
-					</div>
-					<div class="grid-item">
-						<img class="zoomD" src="../Images/bo/bo5.webp" alt="" loading="lazy" >
-					</div>
-					<div class="grid-item">
-						<img class="zoomD" src="../Images/bo/bo6.webp" alt="" loading="lazy">
-					</div>
-					<div class="grid-item">
-						<img class="zoomD" src="../Images/bo/bo7.webp" alt="" loading="lazy">
-					</div>
-				</div>
-				
-				<img class="zoomD" src= "../Images/bo/bo8.webp" alt="" loading="lazy">
-
-				
-	
-
-				
-				<div class="imgslider fade slider1">
-					<div class="imglist">
-						<div class="imgitem">
-							<img src= "../Images/bo/bo9.webp" alt="" loading="lazy">
-						</div>
-						<div class="imgitem">
-							<img src="../Images/bo/bo10.webp" alt="" loading="lazy" >
-						</div>
-						<div class="imgitem">
-							<img src="../Images/bo/bo11.webp" alt="" loading="lazy" >
-						</div>
-						<div class="imgitem">
-							<img src="../Images/bo/bo12.webp" alt="" loading="lazy">
-						</div>
-						<div class="imgitem">
-							<img src="../Images/bo/bo13.webp" alt="" loading="lazy">
-						</div>
-						<div class="imgitem">
-							<img src="../Images/bo/bo14.webp" alt="" loading="lazy">
-						</div>
-						<div class="imgitem">
-							<img src="../Images/bo/bo15.webp" alt="" loading="lazy">
-						</div>
-						<div class="imgitem">
-							<img src="../Images/bo/bo16.webp" alt="" loading="lazy">
-						</div>
-						<div class="imgitem">
-							<img src="../Images/bo/bo17.webp" alt="" loading="lazy">
-						</div>
-						<div class="imgitem">
-							<img src="../Images/bo/bo18.webp" alt="" loading="lazy">
-						</div>
-						<div class="imgitem">
-							<img src="../Images/bo/bo19.webp" alt="" loading="lazy">
-						</div>
-						<div class="imgitem">
-							<img src="../Images/bo/bo20.webp" alt="" loading="lazy">
-						</div>
-					</div>
-					<div class="buttons">
-						<button class="prev"><</button>
-						<button class="next">></button>
-					</div>
-					<ul class="dots">
-						<li class="active"></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-
-
-
-					</ul>
-				</div>
-			
-				<img class="zoomD" src="../Images/bo/bo21.webp" alt="" loading="lazy">
-				<img class="zoomD" src="../Images/bo/bo22.webp" alt="" loading="lazy">
-				<img class="zoomD" src="../Images/bo/bo23.webp" alt="" loading="lazy">
-				<img class="zoomD" src="../Images/bo/bo24.webp" alt="" loading="lazy">
-				<img class="zoomD" src="../Images/bo/bo25.webp" alt="" loading="lazy">
-				<img class="zoomD" src="../Images/bo/bo26.webp" alt="" loading="lazy">
-				<img class="zoomD" src="../Images/bo/bo27.webp" alt="" loading="lazy">
-				<img class="zoomD" src="../Images/bo/bo28.webp" alt="" loading="lazy">
-				<img class="zoomD" src="../Images/bo/bo29.webp" alt="" loading="lazy">
-				<img class="zoomD" src="../Images/bo/bo30.webp" alt="" loading="lazy">
-				<img class="zoomD" src="../Images/bo/bo31.webp" alt="" loading="lazy">
-				<img class="zoomD" src="../Images/bo/bo32.webp" alt="" loading="lazy">
-				<img class="zoomD" src="../Images/bo/bo33.webp" alt="" loading="lazy">
-				<img class="zoomD" src="../Images/bo/bo34.webp" alt="" loading="lazy">
-				<img class="zoomD" src="../Images/bo/bo35.webp" alt="" loading="lazy">
-				<img class="zoomD" src="../Images/bo/bo36.webp" alt="" loading="lazy">
-				<img class="zoomD" src="../Images/bo/bo37.webp" alt="" loading="lazy">
-				<img class="zoomD" src="../Images/bo/bo38.webp" alt="" loading="lazy">
-				<img class="zoomD" src="../Images/bo/bo39.webp" alt="" loading="lazy">
-				<img class="zoomD" src="../Images/bo/bo40.webp" alt="" loading="lazy">
-				<img class="zoomD" src="../Images/bo/bo41.webp" alt="" loading="lazy">
-				<img class="zoomD" src="../Images/bo/bo42.webp" alt="" loading="lazy">
-			</div>	
-				<img class="zoomD" src="../Images/bo/bo43.webp" alt="" loading="lazy">
-				<img class="zoomD" src="../Images/bo/bo44.webp" alt="" loading="lazy">
-				<img class="zoomD" src="../Images/bo/bo45.webp" alt="" loading="lazy">
-				<img class="zoomD" src="../Images/bo/bo46.webp" alt="" loading="lazy">
-				<img class="zoomD" src="../Images/bo/bo47.webp" alt="" loading="lazy">
-
-
-
-			
-									
-
-
-
-
-										
-												
-						
-
-					
-
-					
-				
-
-					
-					<!-- Animated element -->
-					<div id="animated-element"></div>
-					
-<script>
-    // Access embedded JSON data
-    const jsonData = JSON.parse(document.getElementById('json-data').textContent);
-
-    // Process your JSON data and insert it into the HTML
-    const contentDiv = document.createElement('div');
-    contentDiv.textContent = jsonData.content;
-    document.body.appendChild(contentDiv);
-
-    // Listen for scroll events to control animation
-    window.addEventListener('scroll', handleScroll);
-
-    function handleScroll() {
-        // Calculate scroll progress
-        const scrollProgress = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-
-        // Update animation based on scroll progress
-        const animatedElement = document.getElementById('animated-element');
-        if (scrollProgress > 0.5) {
-            // If scroll progress is over 50%, show the animated element
-            animatedElement.style.opacity = 1;
-        } else {
-            // Otherwise, hide the animated element
-            animatedElement.style.opacity = 0;
-        }
-    }
-</script>
-					
-
-					<div class="list" id="card"   >
 						
 					</div>
-
 				</div>
 	   
 			</div>
@@ -699,11 +564,11 @@
 			</div>
 			<div class="song-details">
 				<div class="image-backer">
-				<div class="albumcover" style="background-color: none;"> <img src="" alt=""> </div>
+				<div class="albumcover" style="background-color: var(--accent-color)"> <img src="./Images/home-r-album.png" alt=""> </div>
 				</div>
 				<div class="song-info"> 
-					<div id="atitle" class="song-title">Browse Projects</div>
-					<div class="artist" id="aartist">Rishab Kiran</div>
+					<div class="song-title">Browse Projects</div>
+					<div class="artist">Rishab Kiran</div>
 				</div>
 				
 			</div>
@@ -719,44 +584,43 @@
 						</div>
 					
 
-						<button style="--button-size: 32px;" class="rightbtn" data-title="Scroll to top">
-							<svg  data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="totop">
-								<path d="M3.3 1a.7.7 0 0 1 .7.7v5.15l9.95-5.744a.7.7 0 0 1 1.05.606v12.575a.7.7 0 0 1-1.05.607L4 9.149V14.3a.7.7 0 0 1-.7.7H1.7a.7.7 0 0 1-.7-.7V1.7a.7.7 0 0 1 .7-.7h1.6z"></path>						</svg>
-							</button>
-	
-							
+				<button style="--button-size: 32px;" class="rightbtn" data-title="Scroll to top">
+						<svg  data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="totop">
+							<path d="M3.3 1a.7.7 0 0 1 .7.7v5.15l9.95-5.744a.7.7 0 0 1 1.05.606v12.575a.7.7 0 0 1-1.05.607L4 9.149V14.3a.7.7 0 0 1-.7.7H1.7a.7.7 0 0 1-.7-.7V1.7a.7.7 0 0 1 .7-.7h1.6z"></path>						</svg>
+						</button>
+
 						
-					<input type="checkbox" id="play-toggle" class="play-toggle">
-					<label for="play-toggle" class="play-button">
-						<svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 -1 18 18" class="start">
-							<path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"></path>
-						</svg>
-						<svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="1 0 16 16" class="swap">
-							<path d="M2.7 1a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7H2.7zm8 0a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-2.6z"></path>
-						</svg>
-						<span class="tooltip-text">Auto Scroll</span>
-	
-					</label>
-	
-	
-					<input type="checkbox" id="phone-toggle" class="phone-toggle">
-					<label for="phone-toggle" class="phone-button">
-						<svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 -1 18 18" class="phone-start">
-							<path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"></path>
-						</svg>
-						<svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="1 0 16 16" class="phone-swap">
-							<path d="M2.7 1a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7H2.7zm8 0a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-2.6z"></path>
-						</svg>
-					</label>
 					
-	
-					<button style="--button-size: 32px;" class="leftbtn" data-title="Scroll to bottom">
-					<svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="tobottom">
-						<path d="M12.7 1a.7.7 0 0 0-.7.7v5.15L2.05 1.107A.7.7 0 0 0 1 1.712v12.575a.7.7 0 0 0 1.05.607L12 9.149V14.3a.7.7 0 0 0 .7.7h1.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-1.6z"></path>
+				<input type="checkbox" id="play-toggle" class="play-toggle">
+				<label for="play-toggle" class="play-button">
+					<svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 -1 18 18" class="start">
+						<path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"></path>
 					</svg>
-					
-					</button>
-	
+					<svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="1 0 16 16" class="swap">
+						<path d="M2.7 1a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7H2.7zm8 0a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-2.6z"></path>
+					</svg>
+					<span class="tooltip-text">Auto Scroll</span>
+
+				</label>
+
+
+				<input type="checkbox" id="phone-toggle" class="phone-toggle">
+				<label for="phone-toggle" class="phone-button">
+					<svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 -1 18 18" class="phone-start">
+						<path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"></path>
+					</svg>
+					<svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="1 0 16 16" class="phone-swap">
+						<path d="M2.7 1a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7H2.7zm8 0a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-2.6z"></path>
+					</svg>
+				</label>
+				
+
+				<button style="--button-size: 32px;" class="leftbtn" data-title="Scroll to bottom">
+				<svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="tobottom">
+					<path d="M12.7 1a.7.7 0 0 0-.7.7v5.15L2.05 1.107A.7.7 0 0 0 1 1.712v12.575a.7.7 0 0 0 1.05.607L12 9.149V14.3a.7.7 0 0 0 .7.7h1.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-1.6z"></path>
+				</svg>
+				
+				</button>
 
 			
 
@@ -786,6 +650,7 @@
 				
 				
 			</div>
+			
 			<div class="sideplayer">
 				<!-- <div> -->
 
@@ -849,79 +714,78 @@
 		</span>
 		</section>
 
+
+
 		
 
 		
 	</div>
 
-	</div>
+</div>
 
 	
 
 	<!-- javascrips -->
-	
+    <script src="/js/resize.js"></script>
+	<script src="/js/backforward.js"></script>
+	<script src="/js/colourmode.js"></script>
+	<script src="/js/accent.js"></script> 
+	<script src="/js/search.js"></script> 
+	<script src="/js/cardhover.js"></script> 
+	<script src="/js/about.js"></script> 
+	<script src="/js/phonescroll.js"></script> 
+	<script src="/js/player.js"> </script>
+	<script src="/js/playbtn.js"> </script>
+	<script src="/js/fullscreen.js"> </script>
+	<script src="/js/topbar.js"> </script>
+	<script src="/js/meswap.js"> </script>
+	<script src="/js/preloader.js"> </script>
+	<script src="/js/cursor.js"> </script>
+
+
+
 
 	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var items = document.querySelectorAll('.item');
+			items.forEach(function(item, index) {
+				item.style.animationDelay = (index * 0.1) + 's';
+			});
+		});
+		
+// Select the container element
+const container = document.getElementById('card');
 
+// Select all items inside the container
+const items = Array.from(container.getElementsByClassName('item'));
 
-const intro = document.querySelector('.intro');
-const zoomDs = document.querySelectorAll('.zoomD, .info, .fade,  .backer .lottie-container, .cardview');
-const customScrollContainer = document.querySelector('.custom-scroll');
-
-const fadeInOptions = {
-  threshold: [0, 0.5, 0.1]
-};
-
-const fadeInObserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.intersectionRatio > 0) {
-      entry.target.classList.add('visible');
-    } else {
-      entry.target.classList.remove('visible');
-    }
-  });
-}, fadeInOptions);
-
-fadeInObserver.observe(intro);
-zoomDs.forEach(zoomD => {
-  fadeInObserver.observe(zoomD);
+// Sort the items based on the date in data-tags attribute
+items.sort((a, b) => {
+    const dateA = new Date(a.getAttribute('data-tags').split(',')[0]);
+    const dateB = new Date(b.getAttribute('data-tags').split(',')[0]);
+    return dateB - dateA;
 });
 
+// Remove all items from the container
+while (container.firstChild) {
+    container.removeChild(container.firstChild);
+}
 
+// Append the sorted items back to the container
+items.forEach(item => {
+    container.appendChild(item);
+});
 
-						// JavaScript code to dynamically adjust height based on width
-// JavaScript code to dynamically adjust height based on width of the parent container
+		
+		</script>
 
-						
-	</script>
-    <script src="../js/resize.js"></script>
-	<script src="../js/backforward.js"></script>
-	<script src="../js/colourmode.js"></script>
-	<script src="../js/accent.js"></script> 
-	<!-- <script src="../js/search.js"></script>  -->
-	<script src="../js/cardhover.js"></script> 
-	<script src="../js/about.js"></script> 
-	<script src="../js/phonescroll.js"></script> 
-	<script src="../js/player.js"> </script>
-	<script src="../js/playbtn.js"> </script>
-	<script src="../js/fullscreen.js"> </script>
-	<script src="../js/topbar.js"> </script>
-	<script src="../js/imgzoom.js"> </script>
-	<script src="../js/meswap.js"> </script>
-	<script src="../js/preloader.js"> </script>
-	<script src="../js/slideapp.js"> </script>
-	<script src="../js/cursor.js"> </script>
+	
 
 
 
 
 
-
-
-
-
-
-
+<script src="about_me.js"></script>
 
 
 
