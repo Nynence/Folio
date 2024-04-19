@@ -963,6 +963,8 @@ button.forward:not(.disabled) {
 }
 
 
+
+
 .banner{
     content: attr();
     display: block !important;

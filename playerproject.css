@@ -222,6 +222,46 @@
     border: none;
 }
 
+
+.leftbtn{
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+
+
+.rightbtn::after, .leftbtn::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: 68px;
+    left: 49.8%;
+    font-family: 'cbook';
+    font-weight: 400;
+    letter-spacing: 0px;
+    transform: translateX(-50%);
+    background-color: rgb(66, 66, 66);
+    color: #ffffff;
+    padding: 5px 10px 7px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    -webkit-box-shadow: 0 7px 10px rgba(0,0,0,.3);
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.2s, transform 0.2s ease; /* Add opacity transition */
+    transition-delay: 0.2s; /* Delay the transition by 0.2s */
+    -webkit-font-smoothing: antialiased;
+    z-index: 100;
+    overflow: visible; /* or auto, scroll, hidden, depending on your layout */
+
+
+}
+
+.rightbtn:hover::after, .leftbtn:hover::after {
+    opacity: 1;
+}
+
 .play-button svg.swap {
     display: none;
 }
@@ -554,6 +594,40 @@
 
 }
 
+
+.play-button  .tooltip-text{
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    font-family: 'cbook';
+    font-weight: 400;
+    letter-spacing: 0px;
+    transform: translateX(-50%);
+    background-color: rgb(66, 66, 66);
+    color: #ffffff;
+    padding: 5px 10px 7px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    -webkit-box-shadow: 0 7px 10px rgba(0,0,0,.3);
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.2s, transform 0.2s ease; /* Add opacity transition */
+    transition-delay: 0.2s; /* Delay the transition by 0.2s */
+    -webkit-font-smoothing: antialiased;
+    z-index: 100;
+    overflow: visible; /* or auto, scroll, hidden, depending on your layout */
+
+
+}
+
+.play-button:hover .tooltip-text {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+    overflow: visible; /* or auto, scroll, hidden, depending on your layout */
+    z-index: 100;
+
+}
 
 .fstitle {
     position: relative;
