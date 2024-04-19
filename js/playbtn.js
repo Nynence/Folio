@@ -81,20 +81,28 @@
 // }
 
 
-let isDragging2 = false;
 
 
-const sliderBarContainer = document.querySelector('.slider-container');
-sliderBarContainer.addEventListener('mousedown', startDragEvent);
-// sliderBarContainer.addEventListener('click', handleClickEvent);
 
 
-function startDragEvent() {
-    isDragging2 = true;
 
-    document.addEventListener('mousemove', handleDragEvent);
-    document.addEventListener('mouseup', stopDragEvent);
-}
+
+
+
+// let isDragging2 = false;
+
+
+// const sliderBarContainer = document.querySelector('.slider-container');
+// sliderBarContainer.addEventListener('mousedown', startDragEvent);
+// // sliderBarContainer.addEventListener('click', handleClickEvent);
+
+
+// function startDragEvent(event) {
+//     isDragging2 = true;
+
+//     document.addEventListener('mousemove', handleDragEvent);
+//     document.addEventListener('mouseup', stopDragEvent);
+// }
 
 
 
@@ -114,28 +122,40 @@ function startDragEvent() {
 //         sliderHandle.style.left = `${cappedPercent}%`;
 //     }
 // }
-function handleDragEvent(event) {
-    const sliderBarContainer = document.querySelector('.slider-container');
-    const sliderBar = document.querySelector('.slider-bar');
-    const sliderHandle = document.querySelector('.slider-handle');
+// function handleDragEvent(event) {
+//     const sliderBarContainer = document.querySelector('.slider-container');
+//     const sliderBar = document.querySelector('.slider-bar');
+//     const sliderHandle = document.querySelector('.slider-handle');
 
-    const containerRect = sliderBarContainer.getBoundingClientRect();
-    const mouseX = event.clientX - containerRect.left;
-    const percent = (mouseX / containerRect.width) * 100;
+//     const containerRect = sliderBarContainer.getBoundingClientRect();
+//     const mouseX = event.clientX - containerRect.left;
+//     const percent = (mouseX / containerRect.width) * 100;
 
-    // Cap the position between 0 and 100
-    const cappedPercent = Math.min(100, Math.max(0, percent));
+//     // Cap the position between 0 and 100
+//     const cappedPercent = Math.min(100, Math.max(0, percent));
 
-    sliderBar.style.width = `${cappedPercent}%`;
-    sliderHandle.style.left = `${cappedPercent}%`; // Adjust the position of the slider handle
-}
+//     sliderBar.style.width = `${cappedPercent}%`;
+//     sliderHandle.style.left = `${cappedPercent}%`; // Adjust the position of the slider handle
 
-    function stopDragEvent() {
-        isDragging2 = false;
+//     // Update speed regardless of dragging status
+//     updateSpeed(cappedPercent, 100);
 
-        document.removeEventListener('mousemove', handleDragEvent);
-        document.removeEventListener('mouseup', stopDragEvent);
-    }
+//     if (!isDragging) {
+//         if (isScrolling) {
+//             clearInterval(scrollInterval);
+//             startScrolling();
+//         }
+//     }
+// }
+
+
+//     function stopDragEvent() {
+//         isDragging2 = false;
+
+//         document.removeEventListener('mousemove', handleDragEvent);
+//         document.removeEventListener('mouseup', stopDragEvent);
+//     }
+
 
 
 

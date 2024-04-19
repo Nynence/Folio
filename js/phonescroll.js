@@ -118,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 clearInterval(scrollInterval);
                 startScrolling();
             }
+            
         }
     });
 
@@ -143,14 +144,70 @@ document.addEventListener('DOMContentLoaded', function () {
                 clearInterval(scrollInterval);
                 startScrolling();
             }
+            
         }
+    }
+
+
+    let isDragging2 = false;
+
+    const sliderBarContainer = document.querySelector('.slider-container');
+    sliderBarContainer.addEventListener('mousedown', startDragEvent);
+    
+    function startDragEvent(event) {
+        isDragging2 = true;
+    
+        document.addEventListener('mousemove', handleDragEvent);
+        document.addEventListener('mouseup', stopDragEvent);
+    }
+    
+    function handleDragEvent(event) {
+        const sliderBarContainer = document.querySelector('.slider-container');
+        const sliderBar = document.querySelector('.slider-bar');
+        const sliderHandle = document.querySelector('.slider-handle');
+    
+        const containerRect = sliderBarContainer.getBoundingClientRect();
+        const mouseX = event.clientX - containerRect.left;
+        const percent = (mouseX / containerRect.width) * 100;
+    
+        // Cap the position between 0 and 100
+        const cappedPercent = Math.min(100, Math.max(0, percent));
+    
+        sliderBar.style.width = `${cappedPercent}%`;
+        sliderHandle.style.left = `${cappedPercent}%`; // Adjust the position of the slider handle
+    
+        const maxPosition = sliderContainer.offsetWidth - sliderHandle.offsetWidth; // Maximum position of slider handle
+        
+        console.log('cappedPercent:', cappedPercent);
+        console.log('maxPosition:', maxPosition);
+    
+        updateSpeed(cappedPercent, maxPosition); // Update speed during dragging
+    
+        if (isScrolling) {
+            clearInterval(scrollInterval);
+            startScrolling();
+        }
+    }
+    
+    
+    function stopDragEvent() {
+        isDragging = false;
+    
+        document.removeEventListener('mousemove', handleDragEvent);
+        document.removeEventListener('mouseup', stopDragEvent);
     }
 
     // Function to update speed based on slider position
     function updateSpeed(position, maxPosition) {
+    
         speed = minSpeed + (maxSpeed - minSpeed) * (1 - position / maxPosition);
+       
     }
+
+
+    
 });
+
 
 
 // phone progress
