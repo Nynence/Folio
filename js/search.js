@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
             browseProjectsText.style.opacity = '0';
             setTimeout(function () {
                 bannerImage.style.display = 'none';
-                bannerImage.style.marginTop = '-200px'; // Use = for assignment
+                bannerImage.style.marginTop = '-800px'; // Use = for assignment
 
                 browseProjectsText.style.display = 'none';
             }, 300); // Adjust the duration to match the CSS transition duration

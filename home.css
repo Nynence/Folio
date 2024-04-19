@@ -286,7 +286,7 @@ body.light-mode p {
     -webkit-tap-highlight-color: transparent;
     margin-block: 0px;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 200;
     font-family: cbold;
     text-decoration: none;
     transition: stroke 0.3s ease, fill 0.3s ease;  /* Add transition for both stroke and fill */
@@ -359,7 +359,7 @@ body.light-mode p {
     -webkit-tap-highlight-color: transparent;
     margin-block: 0px;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 200;
     font-family: cbold;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
@@ -559,7 +559,7 @@ a .cls-1 {
     -webkit-tap-highlight-color: transparent;
     margin-block: 0px;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 200;
     font-family: cbold;
     color: var(--t2-color);
     text-decoration: none;
