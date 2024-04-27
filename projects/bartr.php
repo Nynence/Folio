@@ -656,7 +656,24 @@
 
 			</style>
 			<div class="figmapro"   >
-			<iframe class="figma" loading="lazy" style="border: 0px solid rgba(0, 0, 0, 0.1); margin-top: -10px;" width="100%" height="950px" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F7KbFeY2xwPZm5nic9w0gWN%2FUX-Capstone%3Ftype%3Ddesign%26node-id%3D346-995%26t%3D1oHHJsmN6nvBvRNS-1%26scaling%3Dscale-down%26page-id%3D64%253A2%26starting-point-node-id%3D346%253A995%26mode%3Ddesign&hide-ui=1" allowfullscreen ></iframe>
+			<iframe id="figmaIframe" class="figma" loading="lazy" style="border: 0px solid rgba(0, 0, 0, 0.1); margin-top: -10px;" width="100%" height="950px" allowfullscreen></iframe>
+
+<script>
+// Function to load the iframe if the viewport width is greater than 500px
+function loadIframeIfWideViewport() {
+    var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    if (viewportWidth > 500) {
+        var iframe = document.getElementById("figmaIframe");
+        iframe.src = "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F7KbFeY2xwPZm5nic9w0gWN%2FUX-Capstone%3Ftype%3Ddesign%26node-id%3D346-995%26t%3D1oHHJsmN6nvBvRNS-1%26scaling%3Dscale-down%26page-id%3D64%253A2%26starting-point-node-id%3D346%253A995%26mode%3Ddesign&hide-ui=1";
+    }
+}
+
+// Check viewport width on page load
+window.addEventListener("load", loadIframeIfWideViewport);
+
+// Check viewport width on window resize
+window.addEventListener("resize", loadIframeIfWideViewport);
+</script>
 
 			<div class="figtext" style="align-items: center;">
 			<div class="info" style="background-color: transparent; color: black!important;">
