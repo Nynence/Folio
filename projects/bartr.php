@@ -195,7 +195,7 @@
 					<path d="M36.18,6.71c0,3.7-3,6.7-6.7,6.7-2.9,0-5.38-1.85-6.3-4.43-2.17,1.48-3.78,3.35-3.94,3.53C21.94-.77,29.48,0,29.48,0c3.7,0,6.7,3,6.7,6.7Z"/>
 						</svg>
 						</div>
-						<a href="/index.php" class="phonebtn2" >Home</a>
+						<a href="/index.html" class="phonebtn2" >Home</a>
 						<a href="/me.html" class="phonebtn2" >About Me</a>
 						<a href="/contact.html" class="phonebtn3">Contact</a>
 					</div>
