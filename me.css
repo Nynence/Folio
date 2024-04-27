@@ -929,13 +929,53 @@ a .cls-1 {
 }
 
 .metext p{
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 1.3rem;
+    font-weight: 100;
     font-family: cbook;
     color: var(--t1-color);
     letter-spacing: auto;
     -webkit-font-smoothing: antialiased;
 }
+
+
+.social-links {
+    font-family: cbook;
+    font-size: 1.3rem;
+
+}
+
+.social-link {
+    cursor: none;
+    display: block;
+    color: var(--t1-color);
+    text-decoration: none;
+    margin-bottom: 10px; /* Adjust spacing between links */
+    transition: color 0.3s, font-family 0.3s, letter-spacing 0.3s; /* Smooth transition for color change */
+}
+
+.social-link:hover {
+    color: var(--accent-color); /* Change color on hover */
+    font-family: cbold;
+    font-size: 1.225rem; /* Keep the same font size */
+    font-weight: normal; /* Keep the same font weight */
+    letter-spacing: 0.5px;
+
+}
+
+/* Specific styling for each link */
+.social-link.email {
+    /* Add any specific styles for Email link */
+}
+
+.social-link.linkedin {
+    /* Add any specific styles for LinkedIn link */
+}
+
+.social-link.instagram {
+    /* Add any specific styles for Instagram link */
+}
+
+
 .contactform {
     width: 100%;
     margin-top: -70px;

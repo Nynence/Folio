@@ -24,6 +24,12 @@
 
 }
 
+@font-face{
+    font-family: CBlack; 
+    src:url(./fonts/CircularStd-Black.otf)
+
+}
+
 #loading-screen {
     position: fixed;
     top: 0;
@@ -114,6 +120,8 @@
     --bg-color: #000000; /* Background color */
     /* section */
     --sec-color: #121212;
+    --sec-color-trans: #12121200;
+
     --secgrad-color1: rgba(18, 18, 18, 0);
     --secgrad-color2: rgba(18, 18, 18, 1);
 
@@ -280,6 +288,7 @@ body.light-mode p {
     transition: opacity 0.3s ease-in-out;
 }
 
+
 .home,
 .greyed-out {
     box-sizing: border-box;
@@ -290,7 +299,7 @@ body.light-mode p {
     font-family: cbold;
     text-decoration: none;
     transition: stroke 0.3s ease, fill 0.3s ease;  /* Add transition for both stroke and fill */
-    
+
 }
 
 
@@ -299,8 +308,12 @@ body.light-mode p {
 .home {
     cursor: none !important;
     color: var(--t1-color);
+    letter-spacing: 0px;
+
     transition: color 0.3s ease;  /* Adjust the duration and timing function as needed */
     transition: stroke 0.3s ease, fill 0.3s ease;  /* Add transition for both stroke and fill */
+    transition: letter-spacing 0.3s ease;  /* Adjust the duration and timing function as needed */
+
 }
 
 .greyed-out path {
@@ -329,6 +342,10 @@ body.light-mode p {
     color: var(--t1-color); /* Change to your desired color on hover */
     fill: var(--t1-color);
     transition: all 0.3s ease;  /* Adjust the duration and timing function as needed */
+    letter-spacing: 0.5px;
+    transition: letter-spacing 0.3s ease;  /* Adjust the duration and timing function as needed */
+
+
 
 
 }
@@ -364,6 +381,9 @@ body.light-mode p {
     text-decoration: none;
     transition: color 0.3s ease-in-out;
     color: var(--t2-color);
+    transition: letter-spacing 0.3s ease;  /* Adjust the duration and timing function as needed */
+
+    
 
 
 }
@@ -418,13 +438,13 @@ body.light-mode p {
     z-index: -1;
     background-color: var(--searchbox-hover);
     transition: background-color 0.1s ease-in-out;
+   
 }
 #searchInput:focus {
         color: var(--t1-color); /* Change the text color on focus */
         appearance: none;
         outline: solid 2px var(--t1-color);
         
-
 }
 
 #searchInput:focus + .search-box .search-icon .search-icon-svg {
@@ -465,6 +485,8 @@ body.light-mode p {
 /* Change color on hover */
 .search:hover {
     color: var(--t1-color);
+    letter-spacing: 0.5px;
+    transition: letter-spacing 0.3s ease;  /* Adjust the duration and timing function as needed */
 }
 
 /* Change the color when the search box is open */
@@ -511,6 +533,17 @@ a .cls-1 {
 .navigation:hover{
     background-color: var(--back-hover);
     transition: all  0.3s ease-in-out;
+}
+
+.bottomnav::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* Height of the gradient */
+    background: linear-gradient(to bottom, var(--sec-color-trans) 0%, var(--sec-color) 100%);
+    pointer-events: none; /* To prevent interaction with the gradient */
 }
 
 .bottomnav{
@@ -1357,17 +1390,56 @@ button.forward:not(.disabled) {
     text-decoration: underline;
     text-underline-offset: 6px;
     transition: all 0.3s ease-in-out;
+    letter-spacing: 1px;
+    transition: letter-spacing 0.3s ease;
+
 
 }
 .metext p{
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 1.225rem;
+    font-weight: 100;
     font-family: cbook;
     color: var(--t1-color);
     letter-spacing: auto;
     -webkit-font-smoothing: antialiased;
 }
 
+.social-links {
+    font-family: cbook;
+    font-size: 1.225rem;
+
+}
+
+.social-link {
+    cursor: none;
+    display: block;
+    color: var(--t1-color);
+    text-decoration: none;
+    margin-bottom: 10px; /* Adjust spacing between links */
+    transition: color 0.3s, font-family 0.3s, letter-spacing 0.3s; /* Smooth transition for color change */
+}
+
+.social-link:hover {
+    color: var(--accent-color); /* Change color on hover */
+    font-family: cbold;
+    font-size: 1.225rem; /* Keep the same font size */
+    font-weight: normal; /* Keep the same font weight */
+    letter-spacing: 0.5px;
+
+}
+
+/* Specific styling for each link */
+.social-link.email {
+    /* Add any specific styles for Email link */
+}
+
+.social-link.linkedin {
+    /* Add any specific styles for LinkedIn link */
+}
+
+.social-link.instagram {
+    /* Add any specific styles for Instagram link */
+}
 
 
 #p2 {

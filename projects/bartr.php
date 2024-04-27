@@ -109,7 +109,11 @@
 	  <script>
 		document.addEventListener('DOMContentLoaded', function() {
   		console.log('Page has been loaded');
- 			document.querySelector('.year').innerHTML = 'October 2023';
+		var elements = document.querySelectorAll('[id="year"]');
+		elements.forEach(function(element) {
+			element.innerHTML = 'October 2023';
+		});
+
 
 		});
 
@@ -275,18 +279,18 @@
 
 					@media only screen and (min-width: 620px)  and (max-width: 1460px) {
 						.bartist{
-							margin-top: 60px;
+							margin-top: 10px;
 							max-width: 350px;
 							letter-spacing: 0px;
 					}
 
 						.titlebox{
-							padding-bottom: 20px!important;
+							/* padding-bottom: 20px!important; */
 						}
 
 
 						.year{
-							margin-left: -40px;
+							/* margin-left: -40px; */
 						}
 }
 					@media only screen and (max-width: 620px) {
@@ -294,19 +298,19 @@
 					.subtext{
 						max-width: 400px;
 						text-align: center;
-						padding: 20px;
+						padding: 10px;
 						flex-direction: column;
 						align-items: center;
 					}
 
 					.year{
-						padding-top: 8px ;
+						/* padding-top: 8px ; */
 						text-align: center;
 					}
 
 					.year::after {
-						content: "•";
-						margin: 0px 4px;
+						/* content: "•"; */
+						/* margin: 0px 4px; */
 					}
 				}
 				</style>
@@ -321,8 +325,8 @@
 							<div class="bitle" id="atitle"></div>
 						</div>
 						<div class="subtext">
-							<h7 class="bartist" id="aartist">Rishab Kiran</h7>
-							<span class="year"  >2024</span>
+							<!-- <h7 class="bartist" id="aartist">Rishab Kiran</h7> -->
+							<span class="year" id="year"  >2024</span>
 						</div>
 						
 					
@@ -896,7 +900,7 @@
 				<div class="song-info" > 
 					<div id="atitle" class="song-title">Browse Projects</div>
 					<div width="289px">
-					<div class="artist"  style="text-overflow: ellipsis;width: 200px; white-space: nowrap; overflow: hidden; " >Rishab Kiran, Stephanie Cheng, Miranda Prestage, Freya Rush, Xinyu Choot, Ed Gu
+					<div class="artist"  id="year" style="text-overflow: ellipsis;width: 200px; white-space: nowrap; overflow: hidden; " >Rishab Kiran, Stephanie Cheng, Miranda Prestage, Freya Rush, Xinyu Choot, Ed Gu
 					</div>
 					</div>
 				</div>
