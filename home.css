@@ -206,7 +206,7 @@ body.light-mode {
     --resize: url('./Images/resizeb.png');
 
 
-    --banner: url(./Images/bannerw.png);
+    --banner: url(./bannern_w.webp);
     --bannerphn: url(./Images/bannerphnw.png);
 
 
@@ -1715,6 +1715,29 @@ and (-webkit-min-device-pixel-ratio: 1.5) { */
 
     /* and (min-device-width: 400px) and */
  
+    @media only screen and (min-width: 1200px) and (max-width: 1380px) {
+    
+        
+.metext h5{
+    font-size: 1rem;
+   
+}
+
+.metext h4{
+    font-size: 2rem;
+    
+    
+    }
+    
+
+.metext p{
+    font-size: 1.125rem;
+   
+}
+
+
+    }
+
     @media only screen and (max-device-width: 1180px) {
       
 /* @media only screen and (max-width: 1366px) { */

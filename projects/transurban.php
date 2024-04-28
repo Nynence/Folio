@@ -118,6 +118,17 @@
 		});
 
 		document.addEventListener('DOMContentLoaded', function() {
+   		 console.log('Page has been loaded');
+
+   		 // Hide the specific project based on its ID
+   		 var projectID = 'transurban'; // Change this to the ID of the project you want to hide
+    	var projectElement = document.getElementById(projectID);
+   		 if (projectElement) {
+        projectElement.style.display = 'none';
+    	}	
+		});
+
+		document.addEventListener('DOMContentLoaded', function() {
 		console.log('Page has been loaded');
 		var elements = document.querySelectorAll('[id="aartist"]');
 		elements.forEach(function(element) {
@@ -529,6 +540,7 @@ Throughout this experience, I honed my skills and gained insights into applicati
 
 					
 				
+				
 
 					
 					<!-- Animated element -->
@@ -569,7 +581,8 @@ Throughout this experience, I honed my skills and gained insights into applicati
 
 				</div>
 				</div>
-	   
+				<?php include '../related.php'; ?>
+
 			</div>
 		</section>
 		<section class="bottomplayer">
