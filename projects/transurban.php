@@ -118,15 +118,21 @@
 		});
 
 		document.addEventListener('DOMContentLoaded', function() {
-   		 console.log('Page has been loaded');
+    console.log('Page has been loaded');
 
-   		 // Hide the specific project based on its ID
-   		 var projectID = 'transurban'; // Change this to the ID of the project you want to hide
-    	var projectElement = document.getElementById(projectID);
-   		 if (projectElement) {
+    // Get the filename from the URL
+    var filename = window.location.pathname.split('/').pop(); // Extract filename from path
+
+    // Remove file extension if present
+    var projectID = filename.replace(/\.[^/.]+$/, ""); // Remove extension
+
+    // Hide the specific project based on its ID
+    var projectElement = document.getElementById(projectID);
+    if (projectElement) {
         projectElement.style.display = 'none';
-    	}	
-		});
+    }   
+});
+
 
 		document.addEventListener('DOMContentLoaded', function() {
 		console.log('Page has been loaded');

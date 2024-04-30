@@ -28,6 +28,12 @@
 
 }
 
+#lcontent{
+    width: 100vw
+}
+
+
+
 @keyframes floatIna {
     0% {
       transform: translateY(30%);

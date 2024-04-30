@@ -238,11 +238,6 @@ display: none;
 
 
 
-<script>
-
-
-
-</script>
 
 	<h2 style="padding: 0px 0px 0px 30px" >More Projects</h2>
 
