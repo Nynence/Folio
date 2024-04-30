@@ -494,8 +494,19 @@
     text-decoration: none;
     transition: color 0.3s ease, stroke 0.3s ease, fill 0.3s ease;  /* Combine transitions into a single line */
     color: var(--t2-color);
+    letter-spacing: 0px;
+
+    transition: letter-spacing 0.3s ease;  /* Adjust the duration and timing function as needed */
+
 }
 
+
+.home2:hover{
+    letter-spacing: 0.5px;
+    transition: letter-spacing 0.3s ease;  /* Adjust the duration and timing function as needed */
+
+
+}
 #homeItem2 svg path {
     stroke-width: 2px;
     stroke-linejoin: round;
