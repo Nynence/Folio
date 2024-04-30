@@ -105,8 +105,10 @@
 	  <script>
 		document.addEventListener('DOMContentLoaded', function() {
   		console.log('Page has been loaded');
- 			document.querySelector('.year').innerHTML = '2023';
-
+		var elements = document.querySelectorAll('[id="year"]');
+		elements.forEach(function(element) {
+			element.innerHTML = '2023';
+		});
 		});
 
 		document.addEventListener('DOMContentLoaded', function() {
@@ -288,8 +290,8 @@
 							<div id="atitle"></div>
 						</div>
 						<div class="subtext">
-							<h7 id="aartist">Rishab Kiran</h7>
-							<span class="year"  >2021</span>
+							<!-- <h7 id="aartist">Rishab Kiran</h7> -->
+							<span class="year" id="year" >2021</span>
 						</div>
 						
 					
@@ -441,7 +443,7 @@
 				</div>
 				<div class="song-info"> 
 					<div id="atitle" class="song-title">Browse Projects</div>
-					<div class="artist" id="aartist">Rishab Kiran</div>
+					<div class="artist" id="year">Rishab Kiran</div>
 				</div>
 				
 			</div>

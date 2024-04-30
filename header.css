@@ -29,7 +29,7 @@
 }
 
 #lcontent{
-    width: 100vw
+    width: 100%;
 }
 
 
@@ -84,7 +84,7 @@
     letter-spacing: -2px;
     -webkit-font-smoothing: antialiased;
     padding: 0;
-    margin-bottom: 0;
+    margin-bottom: 0px;
     max-width: 100%;
     line-height: 6rem;
 
@@ -218,7 +218,7 @@
         letter-spacing: -2px;
         -webkit-font-smoothing: antialiased;
         padding: 0;
-        margin-bottom: 0;
+        margin-bottom: 8px;
         line-height: 4rem;
 
         
@@ -387,7 +387,7 @@
         letter-spacing: -1px;
         -webkit-font-smoothing: antialiased;
         padding: 0;
-        margin-bottom: 0;
+        margin-bottom: 0px;
         
         
     }
